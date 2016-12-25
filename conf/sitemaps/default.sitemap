@@ -1,0 +1,8 @@
+sitemap demo label="Main Menu"
+{
+	Frame label="Room"{
+        Group item=bedroom
+        Group item=bathroom
+        Group item=livingroom
+	}
+}

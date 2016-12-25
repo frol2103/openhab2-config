@@ -1,0 +1,10 @@
+rule "automatically turn on and off ampli"
+when
+        Item TV_Cons changed
+then
+      if(TV_Cons.state > 2){
+        sendCommand(Ampli, ON)
+      } else {
+        sendCommand(Ampli, OFF)
+      }
+end

@@ -1,0 +1,10 @@
+var Timer timer
+
+rule "restart router after 10 seconds"
+when
+    Item Router changed to OFF
+then
+    timer = createTimer(now.plusSeconds(10)) [|
+        sendCommand(Router, ON)
+    ]
+end

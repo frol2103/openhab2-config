@@ -1,0 +1,10 @@
+import org.joda.time.*
+
+
+rule "open heater every work day"
+when 
+    Time cron "0 40 5 ? * MON-FRI"
+then
+    sendCommand(heater, ON)
+end
+

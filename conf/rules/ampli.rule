@@ -1,0 +1,6 @@
+rule "automatically turn on and off ampli"
+when
+        Item TV_Cons changed
+then
+      say("test " + TV_Cons.state)
+end

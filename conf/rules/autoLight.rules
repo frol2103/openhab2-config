@@ -1,0 +1,12 @@
+
+    rule "auto light when coming home or sun out"
+when
+    Item general changed or
+    Item daylight changed
+then
+    if(general.state == ON && daylight.state == OFF){
+        sendCommand(Light_Deco, ON);
+    } else {
+        sendCommand(Light_Deco, OFF);
+    }
+end
