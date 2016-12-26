@@ -1,4 +1,4 @@
-sitemap demo label="Main Menu"
+sitemap default label="Main Menu"
 {
 	Frame label="Room"{
         Group item=bedroom
