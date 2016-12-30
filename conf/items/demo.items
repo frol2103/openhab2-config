@@ -5,32 +5,27 @@ Group bedroom 	    "Bedroom" 	<bedroom> 	(ALL)
 Group bathroom 	    "Bathroom" 	<bath> 	(ALL)
 Group livingroom 	"Livingroom" 	<sofa> 	(ALL)
 
+Switch Blanket_Switch "Blanket" <socket> (bedroom, OnlyWhenPresent) {channel="zwave:device:2e7f75dc:node2:switch_binary"} 
+Number Blanket_Power "Blanket power [%.1f W]" (bedroom) {channel="zwave:device:2e7f75dc:node2:meter_watts"}
 
-Switch Blanket_Switch "Blanket" <socket> (bedroom, OnlyWhenPresent) {zwave="2:command=switch_binary"} 
-Number Blanket_Power "Blanket power [%.1f W]" (bedroom) {zwave="2:command=sensor_multilevel"}
-
-
-
-Contact SDB_Switch "SDBSensor" <contact> (bathroom) {zwave="4:command=sensor_binary"} 
-Number SDB_Temp "SDBSensor temp [%.1f °C]" <temperature> (bathroom) {zwave="4:command=sensor_multilevel,sensor_type=1"}
-
+Contact SDB_Switch "SDBSensor" <contact> (bathroom) {channel="zwave:device:2e7f75dc:node4:sensor_binary"} 
+Number SDB_Temp "SDBSensor temp [%.1f °C]" <temperature> (bathroom) {channel="zwave:device:2e7f75dc:node4:sensor_multilevel,sensor_type=1"}
 
 
 Switch Floor_Lamp "Floor Lamp" (livingroom, OnlyWhenPresent) {channel="zwave:device:2e7f75dc:node3:switch_binary"} 
+Switch heater  (bathroom, OnlyWhenPresent) {channel="zwave:device:2e7f75dc:node8:switch_binary"} 
 
-Switch heater  (bathroom, OnlyWhenPresent) {zwave="8:command=switch_binary"} 
-
-Switch Light_Living "Living" (livingroom, OnlyWhenPresent) {zwave="5:2:command=switch_binary"} 
-Switch Light_Dining "Dining" (livingroom, OnlyWhenPresent) {zwave="5:0:command=switch_binary"} 
+Switch Light_Living "Living" (livingroom, OnlyWhenPresent) {channel="zwave:device:2e7f75dc:node5:switch_binary2"} 
+Switch Light_Dining "Dining" (livingroom, OnlyWhenPresent) {channel="zwave:device:2e7f75dc:node5:switch_binary1"} 
 Rollershutter volume  (livingroom) {samsungtv="UP:TV:KEY_VOLUP, DOWN:TV:KEY_VOLDOWN"}
 
-
-Switch Tree <socket> (livingroom, OnlyWhenPresent)  {zwave="7:1:command=switch_binary"} 
+Switch Tree <socket> (livingroom, OnlyWhenPresent)  {channel="zwave:device:2e7f75dc:node7:switch_binary1"} 
 Switch Router <socket> (livingroom)  {zwave="7:2:command=switch_binary"} 
-Switch Decoder <socket> (livingroom)  {zwave="7:3:command=switch_binary"} 
+Switch Decoder <socket> (livingroom)  {czwave="7:3:command=switch_binary"} 
 Switch Ampli "Ampli" <socket> (livingroom, OnlyWhenPresent)  {zwave="7:4:command=switch_binary"} 
 Switch TV <socket> (livingroom)  {zwave="7:5:command=switch_binary"} 
 Switch Light_Deco "Deco" (livingroom, OnlyWhenPresent) {zwave="7:6:command=switch_binary"} 
+
 
 
 Number TV_Cons "TV power [%.1f W]" <socket> (livingroom)  {zwave="7:5:command=METER,meter_scale=E_W, refresh_interval=5"} 
