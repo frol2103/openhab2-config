@@ -16,7 +16,7 @@ Number SDB_Temp "SDBSensor temp [%.1f °C]" <temperature> (bathroom) {zwave="4:c
 
 
 
-Switch Floor_Lamp "Floor Lamp" (livingroom, OnlyWhenPresent) {zwave="3:command=switch_binary"} 
+Switch Floor_Lamp "Floor Lamp" (livingroom, OnlyWhenPresent) {channel="zwave:device:2e7f75dc:node3:switch_binary"} 
 
 Switch heater  (bathroom, OnlyWhenPresent) {zwave="8:command=switch_binary"} 
 

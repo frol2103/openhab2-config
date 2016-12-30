@@ -1,5 +1,6 @@
-#!bin/bash
+#!/bin/bash
 
+docker rm -vf openhab
 docker run \
         --name openhab \
         -v /etc/localtime:/etc/localtime:ro \
@@ -9,5 +10,5 @@ docker run \
         -d \
         -p 8080:8080 \
         --restart=always \
-        --device=/dev/ttyUSB1 \
+        --device=/dev/ttyUSB0 \
         openhab/openhab:amd64-offline
