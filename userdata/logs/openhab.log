@@ -1,0 +1,327 @@
+2017-07-14 23:36:13.284 [WARN ] [org.apache.felix.fileinstall        ] - Error while starting bundle: file:/openhab/addons/org.openhab.binding.zwave-1.10.0.jar
+org.osgi.framework.BundleException: Could not resolve module: org.openhab.binding.zwave [11]
+  Unresolved requirement: Import-Package: gnu.io
+
+	at org.eclipse.osgi.container.Module.start(Module.java:434)[org.eclipse.osgi-3.10.101.v20150820-1432.jar:]
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.start(EquinoxBundle.java:392)[org.eclipse.osgi-3.10.101.v20150820-1432.jar:]
+	at org.apache.felix.fileinstall.internal.DirectoryWatcher.startBundle(DirectoryWatcher.java:1253)[4:org.apache.felix.fileinstall:3.5.6]
+	at org.apache.felix.fileinstall.internal.DirectoryWatcher.startBundles(DirectoryWatcher.java:1225)[4:org.apache.felix.fileinstall:3.5.6]
+	at org.apache.felix.fileinstall.internal.DirectoryWatcher.doProcess(DirectoryWatcher.java:512)[4:org.apache.felix.fileinstall:3.5.6]
+	at org.apache.felix.fileinstall.internal.DirectoryWatcher.process(DirectoryWatcher.java:361)[4:org.apache.felix.fileinstall:3.5.6]
+	at org.apache.felix.fileinstall.internal.DirectoryWatcher.run(DirectoryWatcher.java:312)[4:org.apache.felix.fileinstall:3.5.6]
+2017-07-14 23:36:14.946 [WARN ] [org.eclipse.smarthome.core          ] - FrameworkEvent WARNING - org.eclipse.smarthome.core
+org.osgi.framework.ServiceException: Recursive ServiceFactory call in org.apache.felix.scr.impl.manager.SingleComponentManager.getService()
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.getService(ServiceFactoryUse.java:104)[org.eclipse.osgi-3.10.101.v20150820-1432.jar:]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceConsumer$2.getService(ServiceConsumer.java:45)[org.eclipse.osgi-3.10.101.v20150820-1432.jar:]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.getService(ServiceRegistrationImpl.java:496)[org.eclipse.osgi-3.10.101.v20150820-1432.jar:]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.getService(ServiceRegistry.java:461)[org.eclipse.osgi-3.10.101.v20150820-1432.jar:]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.getService(BundleContextImpl.java:619)[org.eclipse.osgi-3.10.101.v20150820-1432.jar:]
+	at org.apache.felix.scr.impl.manager.SingleRefPair.getServiceObject(SingleRefPair.java:72)[32:org.apache.felix.scr:2.0.6]
+	at org.apache.felix.scr.impl.inject.BindMethod.getServiceObject(BindMethod.java:648)[32:org.apache.felix.scr:2.0.6]
+	at org.apache.felix.scr.impl.manager.DependencyManager.getServiceObject(DependencyManager.java:2201)[32:org.apache.felix.scr:2.0.6]
+	at org.apache.felix.scr.impl.manager.DependencyManager$SingleDynamicCustomizer.prebind(DependencyManager.java:925)[32:org.apache.felix.scr:2.0.6]
+	at org.apache.felix.scr.impl.manager.DependencyManager.prebind(DependencyManager.java:1520)[32:org.apache.felix.scr:2.0.6]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager.collectDependencies(AbstractComponentManager.java:1005)[32:org.apache.felix.scr:2.0.6]
+	at org.apache.felix.scr.impl.manager.SingleComponentManager.getServiceInternal(SingleComponentManager.java:859)[32:org.apache.felix.scr:2.0.6]
+	at org.apache.felix.scr.impl.manager.SingleComponentManager.getService(SingleComponentManager.java:823)[32:org.apache.felix.scr:2.0.6]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse$1.run(ServiceFactoryUse.java:212)[org.eclipse.osgi-3.10.101.v20150820-1432.jar:]
+	at java.security.AccessController.doPrivileged(Native Method)[:1.8.0_112]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.factoryGetService(ServiceFactoryUse.java:210)[org.eclipse.osgi-3.10.101.v20150820-1432.jar:]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.getService(ServiceFactoryUse.java:111)[org.eclipse.osgi-3.10.101.v20150820-1432.jar:]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceConsumer$2.getService(ServiceConsumer.java:45)[org.eclipse.osgi-3.10.101.v20150820-1432.jar:]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.getService(ServiceRegistrationImpl.java:496)[org.eclipse.osgi-3.10.101.v20150820-1432.jar:]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.getService(ServiceRegistry.java:461)[org.eclipse.osgi-3.10.101.v20150820-1432.jar:]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.getService(BundleContextImpl.java:619)[org.eclipse.osgi-3.10.101.v20150820-1432.jar:]
+	at org.eclipse.smarthome.core.internal.events.OSGiEventManager$EventSubscriberServiceTracker.addingService(OSGiEventManager.java:67)
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:941)[org.osgi.core-6.0.0.jar:]
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:870)[org.osgi.core-6.0.0.jar:]
+	at org.osgi.util.tracker.AbstractTracked.trackAdding(AbstractTracked.java:256)[org.osgi.core-6.0.0.jar:]
+	at org.osgi.util.tracker.AbstractTracked.trackInitial(AbstractTracked.java:183)[org.osgi.core-6.0.0.jar:]
+	at org.osgi.util.tracker.ServiceTracker.open(ServiceTracker.java:318)[org.osgi.core-6.0.0.jar:]
+	at org.osgi.util.tracker.ServiceTracker.open(ServiceTracker.java:261)[org.osgi.core-6.0.0.jar:]
+	at org.eclipse.smarthome.core.internal.events.OSGiEventManager.activate(OSGiEventManager.java:96)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)[:1.8.0_112]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)[:1.8.0_112]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)[:1.8.0_112]
+	at java.lang.reflect.Method.invoke(Method.java:498)[:1.8.0_112]
+	at org.apache.felix.scr.impl.inject.BaseMethod.invokeMethod(BaseMethod.java:224)
+	at org.apache.felix.scr.impl.inject.BaseMethod.access$500(BaseMethod.java:39)
+	at org.apache.felix.scr.impl.inject.BaseMethod$Resolved.invoke(BaseMethod.java:617)
+	at org.apache.felix.scr.impl.inject.BaseMethod.invoke(BaseMethod.java:501)
+	at org.apache.felix.scr.impl.inject.ActivateMethod.invoke(ActivateMethod.java:302)
+	at org.apache.felix.scr.impl.inject.ActivateMethod.invoke(ActivateMethod.java:294)
+	at org.apache.felix.scr.impl.manager.SingleComponentManager.createImplementationObject(SingleComponentManager.java:297)[32:org.apache.felix.scr:2.0.6]
+	at org.apache.felix.scr.impl.manager.SingleComponentManager.createComponent(SingleComponentManager.java:108)[32:org.apache.felix.scr:2.0.6]
+	at org.apache.felix.scr.impl.manager.SingleComponentManager.getService(SingleComponentManager.java:906)[32:org.apache.felix.scr:2.0.6]
+	at org.apache.felix.scr.impl.manager.SingleComponentManager.getServiceInternal(SingleComponentManager.java:879)[32:org.apache.felix.scr:2.0.6]
+	at org.apache.felix.scr.impl.manager.SingleComponentManager.getService(SingleComponentManager.java:823)[32:org.apache.felix.scr:2.0.6]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse$1.run(ServiceFactoryUse.java:212)[org.eclipse.osgi-3.10.101.v20150820-1432.jar:]
+	at java.security.AccessController.doPrivileged(Native Method)[:1.8.0_112]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.factoryGetService(ServiceFactoryUse.java:210)[org.eclipse.osgi-3.10.101.v20150820-1432.jar:]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.getService(ServiceFactoryUse.java:111)[org.eclipse.osgi-3.10.101.v20150820-1432.jar:]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceConsumer$2.getService(ServiceConsumer.java:45)[org.eclipse.osgi-3.10.101.v20150820-1432.jar:]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.getService(ServiceRegistrationImpl.java:496)[org.eclipse.osgi-3.10.101.v20150820-1432.jar:]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.getService(ServiceRegistry.java:461)[org.eclipse.osgi-3.10.101.v20150820-1432.jar:]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.getService(BundleContextImpl.java:619)[org.eclipse.osgi-3.10.101.v20150820-1432.jar:]
+	at org.apache.felix.scr.impl.manager.SingleRefPair.getServiceObject(SingleRefPair.java:72)[32:org.apache.felix.scr:2.0.6]
+	at org.apache.felix.scr.impl.inject.BindMethod.getServiceObject(BindMethod.java:648)[32:org.apache.felix.scr:2.0.6]
+	at org.apache.felix.scr.impl.manager.DependencyManager.getServiceObject(DependencyManager.java:2201)[32:org.apache.felix.scr:2.0.6]
+	at org.apache.felix.scr.impl.manager.DependencyManager$SingleDynamicCustomizer.prebind(DependencyManager.java:925)[32:org.apache.felix.scr:2.0.6]
+	at org.apache.felix.scr.impl.manager.DependencyManager.prebind(DependencyManager.java:1520)[32:org.apache.felix.scr:2.0.6]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager.collectDependencies(AbstractComponentManager.java:1005)[32:org.apache.felix.scr:2.0.6]
+	at org.apache.felix.scr.impl.manager.SingleComponentManager.getServiceInternal(SingleComponentManager.java:859)[32:org.apache.felix.scr:2.0.6]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager.activateInternal(AbstractComponentManager.java:748)[32:org.apache.felix.scr:2.0.6]
+	at org.apache.felix.scr.impl.manager.DependencyManager$SingleDynamicCustomizer.addedService(DependencyManager.java:799)[32:org.apache.felix.scr:2.0.6]
+	at org.apache.felix.scr.impl.manager.DependencyManager$SingleDynamicCustomizer.addedService(DependencyManager.java:743)[32:org.apache.felix.scr:2.0.6]
+	at org.apache.felix.scr.impl.manager.ServiceTracker$Tracked.customizerAdded(ServiceTracker.java:1215)[32:org.apache.felix.scr:2.0.6]
+	at org.apache.felix.scr.impl.manager.ServiceTracker$Tracked.customizerAdded(ServiceTracker.java:1136)[32:org.apache.felix.scr:2.0.6]
+	at org.apache.felix.scr.impl.manager.ServiceTracker$AbstractTracked.trackAdding(ServiceTracker.java:945)[32:org.apache.felix.scr:2.0.6]
+	at org.apache.felix.scr.impl.manager.ServiceTracker$AbstractTracked.track(ServiceTracker.java:881)[32:org.apache.felix.scr:2.0.6]
+	at org.apache.felix.scr.impl.manager.ServiceTracker$Tracked.serviceChanged(ServiceTracker.java:1167)[32:org.apache.felix.scr:2.0.6]
+	at org.apache.felix.scr.impl.BundleComponentActivator$ListenerInfo.serviceChanged(BundleComponentActivator.java:127)[32:org.apache.felix.scr:2.0.6]
+	at org.eclipse.osgi.internal.serviceregistry.FilteredServiceListener.serviceChanged(FilteredServiceListener.java:109)[org.eclipse.osgi-3.10.101.v20150820-1432.jar:]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.dispatchEvent(BundleContextImpl.java:914)[org.eclipse.osgi-3.10.101.v20150820-1432.jar:]
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)[org.eclipse.osgi-3.10.101.v20150820-1432.jar:]
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)[org.eclipse.osgi-3.10.101.v20150820-1432.jar:]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEventPrivileged(ServiceRegistry.java:862)[org.eclipse.osgi-3.10.101.v20150820-1432.jar:]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEvent(ServiceRegistry.java:801)[org.eclipse.osgi-3.10.101.v20150820-1432.jar:]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.register(ServiceRegistrationImpl.java:127)[org.eclipse.osgi-3.10.101.v20150820-1432.jar:]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.registerService(ServiceRegistry.java:225)[org.eclipse.osgi-3.10.101.v20150820-1432.jar:]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.registerService(BundleContextImpl.java:464)[org.eclipse.osgi-3.10.101.v20150820-1432.jar:]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager$3.register(AbstractComponentManager.java:886)[32:org.apache.felix.scr:2.0.6]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager$3.register(AbstractComponentManager.java:873)[32:org.apache.felix.scr:2.0.6]
+	at org.apache.felix.scr.impl.manager.RegistrationManager.changeRegistration(RegistrationManager.java:132)[32:org.apache.felix.scr:2.0.6]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager.registerService(AbstractComponentManager.java:940)[32:org.apache.felix.scr:2.0.6]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager.activateInternal(AbstractComponentManager.java:740)[32:org.apache.felix.scr:2.0.6]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager.enableInternal(AbstractComponentManager.java:674)[32:org.apache.felix.scr:2.0.6]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager.enable(AbstractComponentManager.java:429)[32:org.apache.felix.scr:2.0.6]
+	at org.apache.felix.scr.impl.manager.ConfigurableComponentHolder.enableComponents(ConfigurableComponentHolder.java:657)[32:org.apache.felix.scr:2.0.6]
+	at org.apache.felix.scr.impl.BundleComponentActivator.initialEnable(BundleComponentActivator.java:341)[32:org.apache.felix.scr:2.0.6]
+	at org.apache.felix.scr.impl.Activator.loadComponents(Activator.java:403)[32:org.apache.felix.scr:2.0.6]
+	at org.apache.felix.scr.impl.Activator.access$200(Activator.java:54)[32:org.apache.felix.scr:2.0.6]
+	at org.apache.felix.scr.impl.Activator$ScrExtension.start(Activator.java:278)[32:org.apache.felix.scr:2.0.6]
+	at org.apache.felix.utils.extender.AbstractExtender.createExtension(AbstractExtender.java:259)[32:org.apache.felix.scr:2.0.6]
+	at org.apache.felix.utils.extender.AbstractExtender.modifiedBundle(AbstractExtender.java:232)[32:org.apache.felix.scr:2.0.6]
+	at org.osgi.util.tracker.BundleTracker$Tracked.customizerModified(BundleTracker.java:482)[org.osgi.core-6.0.0.jar:]
+	at org.osgi.util.tracker.BundleTracker$Tracked.customizerModified(BundleTracker.java:415)[org.osgi.core-6.0.0.jar:]
+	at org.osgi.util.tracker.AbstractTracked.track(AbstractTracked.java:232)[org.osgi.core-6.0.0.jar:]
+	at org.osgi.util.tracker.BundleTracker$Tracked.bundleChanged(BundleTracker.java:444)[org.osgi.core-6.0.0.jar:]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.dispatchEvent(BundleContextImpl.java:902)[org.eclipse.osgi-3.10.101.v20150820-1432.jar:]
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)[org.eclipse.osgi-3.10.101.v20150820-1432.jar:]
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)[org.eclipse.osgi-3.10.101.v20150820-1432.jar:]
+	at org.eclipse.osgi.internal.framework.EquinoxEventPublisher.publishBundleEventPrivileged(EquinoxEventPublisher.java:165)[org.eclipse.osgi-3.10.101.v20150820-1432.jar:]
+	at org.eclipse.osgi.internal.framework.EquinoxEventPublisher.publishBundleEvent(EquinoxEventPublisher.java:75)[org.eclipse.osgi-3.10.101.v20150820-1432.jar:]
+	at org.eclipse.osgi.internal.framework.EquinoxEventPublisher.publishBundleEvent(EquinoxEventPublisher.java:67)[org.eclipse.osgi-3.10.101.v20150820-1432.jar:]
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor.publishModuleEvent(EquinoxContainerAdaptor.java:102)[org.eclipse.osgi-3.10.101.v20150820-1432.jar:]
+	at org.eclipse.osgi.container.Module.publishEvent(Module.java:466)[org.eclipse.osgi-3.10.101.v20150820-1432.jar:]
+	at org.eclipse.osgi.container.Module.start(Module.java:457)[org.eclipse.osgi-3.10.101.v20150820-1432.jar:]
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.start(EquinoxBundle.java:392)[org.eclipse.osgi-3.10.101.v20150820-1432.jar:]
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.start(EquinoxBundle.java:411)[org.eclipse.osgi-3.10.101.v20150820-1432.jar:]
+	at org.apache.karaf.features.internal.service.FeaturesServiceImpl.startBundle(FeaturesServiceImpl.java:1287)[8:org.apache.karaf.features.core:4.0.8]
+	at org.apache.karaf.features.internal.service.Deployer.deploy(Deployer.java:860)[8:org.apache.karaf.features.core:4.0.8]
+	at org.apache.karaf.features.internal.service.FeaturesServiceImpl.doProvision(FeaturesServiceImpl.java:1176)[8:org.apache.karaf.features.core:4.0.8]
+	at org.apache.karaf.features.internal.service.FeaturesServiceImpl$1.call(FeaturesServiceImpl.java:1074)[8:org.apache.karaf.features.core:4.0.8]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)[:1.8.0_112]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)[:1.8.0_112]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)[:1.8.0_112]
+	at java.lang.Thread.run(Thread.java:745)[:1.8.0_112]
+2017-07-14 23:36:14.954 [WARN ] [rg.eclipse.smarthome.core.autoupdate] - FrameworkEvent WARNING - org.eclipse.smarthome.core.autoupdate
+org.osgi.framework.ServiceException: org.apache.felix.scr.impl.manager.SingleComponentManager.getService() returned a null service object
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.factoryGetService(ServiceFactoryUse.java:232)[org.eclipse.osgi-3.10.101.v20150820-1432.jar:]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.getService(ServiceFactoryUse.java:111)[org.eclipse.osgi-3.10.101.v20150820-1432.jar:]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceConsumer$2.getService(ServiceConsumer.java:45)[org.eclipse.osgi-3.10.101.v20150820-1432.jar:]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.getService(ServiceRegistrationImpl.java:496)[org.eclipse.osgi-3.10.101.v20150820-1432.jar:]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.getService(ServiceRegistry.java:461)[org.eclipse.osgi-3.10.101.v20150820-1432.jar:]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.getService(BundleContextImpl.java:619)[org.eclipse.osgi-3.10.101.v20150820-1432.jar:]
+	at org.eclipse.smarthome.core.internal.events.OSGiEventManager$EventSubscriberServiceTracker.addingService(OSGiEventManager.java:67)
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:941)[org.osgi.core-6.0.0.jar:]
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:870)[org.osgi.core-6.0.0.jar:]
+	at org.osgi.util.tracker.AbstractTracked.trackAdding(AbstractTracked.java:256)[org.osgi.core-6.0.0.jar:]
+	at org.osgi.util.tracker.AbstractTracked.trackInitial(AbstractTracked.java:183)[org.osgi.core-6.0.0.jar:]
+	at org.osgi.util.tracker.ServiceTracker.open(ServiceTracker.java:318)[org.osgi.core-6.0.0.jar:]
+	at org.osgi.util.tracker.ServiceTracker.open(ServiceTracker.java:261)[org.osgi.core-6.0.0.jar:]
+	at org.eclipse.smarthome.core.internal.events.OSGiEventManager.activate(OSGiEventManager.java:96)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)[:1.8.0_112]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)[:1.8.0_112]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)[:1.8.0_112]
+	at java.lang.reflect.Method.invoke(Method.java:498)[:1.8.0_112]
+	at org.apache.felix.scr.impl.inject.BaseMethod.invokeMethod(BaseMethod.java:224)
+	at org.apache.felix.scr.impl.inject.BaseMethod.access$500(BaseMethod.java:39)
+	at org.apache.felix.scr.impl.inject.BaseMethod$Resolved.invoke(BaseMethod.java:617)
+	at org.apache.felix.scr.impl.inject.BaseMethod.invoke(BaseMethod.java:501)
+	at org.apache.felix.scr.impl.inject.ActivateMethod.invoke(ActivateMethod.java:302)
+	at org.apache.felix.scr.impl.inject.ActivateMethod.invoke(ActivateMethod.java:294)
+	at org.apache.felix.scr.impl.manager.SingleComponentManager.createImplementationObject(SingleComponentManager.java:297)[32:org.apache.felix.scr:2.0.6]
+	at org.apache.felix.scr.impl.manager.SingleComponentManager.createComponent(SingleComponentManager.java:108)[32:org.apache.felix.scr:2.0.6]
+	at org.apache.felix.scr.impl.manager.SingleComponentManager.getService(SingleComponentManager.java:906)[32:org.apache.felix.scr:2.0.6]
+	at org.apache.felix.scr.impl.manager.SingleComponentManager.getServiceInternal(SingleComponentManager.java:879)[32:org.apache.felix.scr:2.0.6]
+	at org.apache.felix.scr.impl.manager.SingleComponentManager.getService(SingleComponentManager.java:823)[32:org.apache.felix.scr:2.0.6]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse$1.run(ServiceFactoryUse.java:212)[org.eclipse.osgi-3.10.101.v20150820-1432.jar:]
+	at java.security.AccessController.doPrivileged(Native Method)[:1.8.0_112]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.factoryGetService(ServiceFactoryUse.java:210)[org.eclipse.osgi-3.10.101.v20150820-1432.jar:]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.getService(ServiceFactoryUse.java:111)[org.eclipse.osgi-3.10.101.v20150820-1432.jar:]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceConsumer$2.getService(ServiceConsumer.java:45)[org.eclipse.osgi-3.10.101.v20150820-1432.jar:]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.getService(ServiceRegistrationImpl.java:496)[org.eclipse.osgi-3.10.101.v20150820-1432.jar:]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.getService(ServiceRegistry.java:461)[org.eclipse.osgi-3.10.101.v20150820-1432.jar:]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.getService(BundleContextImpl.java:619)[org.eclipse.osgi-3.10.101.v20150820-1432.jar:]
+	at org.apache.felix.scr.impl.manager.SingleRefPair.getServiceObject(SingleRefPair.java:72)[32:org.apache.felix.scr:2.0.6]
+	at org.apache.felix.scr.impl.inject.BindMethod.getServiceObject(BindMethod.java:648)[32:org.apache.felix.scr:2.0.6]
+	at org.apache.felix.scr.impl.manager.DependencyManager.getServiceObject(DependencyManager.java:2201)[32:org.apache.felix.scr:2.0.6]
+	at org.apache.felix.scr.impl.manager.DependencyManager$SingleDynamicCustomizer.prebind(DependencyManager.java:925)[32:org.apache.felix.scr:2.0.6]
+	at org.apache.felix.scr.impl.manager.DependencyManager.prebind(DependencyManager.java:1520)[32:org.apache.felix.scr:2.0.6]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager.collectDependencies(AbstractComponentManager.java:1005)[32:org.apache.felix.scr:2.0.6]
+	at org.apache.felix.scr.impl.manager.SingleComponentManager.getServiceInternal(SingleComponentManager.java:859)[32:org.apache.felix.scr:2.0.6]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager.activateInternal(AbstractComponentManager.java:748)[32:org.apache.felix.scr:2.0.6]
+	at org.apache.felix.scr.impl.manager.DependencyManager$SingleDynamicCustomizer.addedService(DependencyManager.java:799)[32:org.apache.felix.scr:2.0.6]
+	at org.apache.felix.scr.impl.manager.DependencyManager$SingleDynamicCustomizer.addedService(DependencyManager.java:743)[32:org.apache.felix.scr:2.0.6]
+	at org.apache.felix.scr.impl.manager.ServiceTracker$Tracked.customizerAdded(ServiceTracker.java:1215)[32:org.apache.felix.scr:2.0.6]
+	at org.apache.felix.scr.impl.manager.ServiceTracker$Tracked.customizerAdded(ServiceTracker.java:1136)[32:org.apache.felix.scr:2.0.6]
+	at org.apache.felix.scr.impl.manager.ServiceTracker$AbstractTracked.trackAdding(ServiceTracker.java:945)[32:org.apache.felix.scr:2.0.6]
+	at org.apache.felix.scr.impl.manager.ServiceTracker$AbstractTracked.track(ServiceTracker.java:881)[32:org.apache.felix.scr:2.0.6]
+	at org.apache.felix.scr.impl.manager.ServiceTracker$Tracked.serviceChanged(ServiceTracker.java:1167)[32:org.apache.felix.scr:2.0.6]
+	at org.apache.felix.scr.impl.BundleComponentActivator$ListenerInfo.serviceChanged(BundleComponentActivator.java:127)[32:org.apache.felix.scr:2.0.6]
+	at org.eclipse.osgi.internal.serviceregistry.FilteredServiceListener.serviceChanged(FilteredServiceListener.java:109)[org.eclipse.osgi-3.10.101.v20150820-1432.jar:]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.dispatchEvent(BundleContextImpl.java:914)[org.eclipse.osgi-3.10.101.v20150820-1432.jar:]
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)[org.eclipse.osgi-3.10.101.v20150820-1432.jar:]
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)[org.eclipse.osgi-3.10.101.v20150820-1432.jar:]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEventPrivileged(ServiceRegistry.java:862)[org.eclipse.osgi-3.10.101.v20150820-1432.jar:]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEvent(ServiceRegistry.java:801)[org.eclipse.osgi-3.10.101.v20150820-1432.jar:]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.register(ServiceRegistrationImpl.java:127)[org.eclipse.osgi-3.10.101.v20150820-1432.jar:]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.registerService(ServiceRegistry.java:225)[org.eclipse.osgi-3.10.101.v20150820-1432.jar:]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.registerService(BundleContextImpl.java:464)[org.eclipse.osgi-3.10.101.v20150820-1432.jar:]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager$3.register(AbstractComponentManager.java:886)[32:org.apache.felix.scr:2.0.6]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager$3.register(AbstractComponentManager.java:873)[32:org.apache.felix.scr:2.0.6]
+	at org.apache.felix.scr.impl.manager.RegistrationManager.changeRegistration(RegistrationManager.java:132)[32:org.apache.felix.scr:2.0.6]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager.registerService(AbstractComponentManager.java:940)[32:org.apache.felix.scr:2.0.6]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager.activateInternal(AbstractComponentManager.java:740)[32:org.apache.felix.scr:2.0.6]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager.enableInternal(AbstractComponentManager.java:674)[32:org.apache.felix.scr:2.0.6]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager.enable(AbstractComponentManager.java:429)[32:org.apache.felix.scr:2.0.6]
+	at org.apache.felix.scr.impl.manager.ConfigurableComponentHolder.enableComponents(ConfigurableComponentHolder.java:657)[32:org.apache.felix.scr:2.0.6]
+	at org.apache.felix.scr.impl.BundleComponentActivator.initialEnable(BundleComponentActivator.java:341)[32:org.apache.felix.scr:2.0.6]
+	at org.apache.felix.scr.impl.Activator.loadComponents(Activator.java:403)[32:org.apache.felix.scr:2.0.6]
+	at org.apache.felix.scr.impl.Activator.access$200(Activator.java:54)[32:org.apache.felix.scr:2.0.6]
+	at org.apache.felix.scr.impl.Activator$ScrExtension.start(Activator.java:278)[32:org.apache.felix.scr:2.0.6]
+	at org.apache.felix.utils.extender.AbstractExtender.createExtension(AbstractExtender.java:259)[32:org.apache.felix.scr:2.0.6]
+	at org.apache.felix.utils.extender.AbstractExtender.modifiedBundle(AbstractExtender.java:232)[32:org.apache.felix.scr:2.0.6]
+	at org.osgi.util.tracker.BundleTracker$Tracked.customizerModified(BundleTracker.java:482)[org.osgi.core-6.0.0.jar:]
+	at org.osgi.util.tracker.BundleTracker$Tracked.customizerModified(BundleTracker.java:415)[org.osgi.core-6.0.0.jar:]
+	at org.osgi.util.tracker.AbstractTracked.track(AbstractTracked.java:232)[org.osgi.core-6.0.0.jar:]
+	at org.osgi.util.tracker.BundleTracker$Tracked.bundleChanged(BundleTracker.java:444)[org.osgi.core-6.0.0.jar:]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.dispatchEvent(BundleContextImpl.java:902)[org.eclipse.osgi-3.10.101.v20150820-1432.jar:]
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)[org.eclipse.osgi-3.10.101.v20150820-1432.jar:]
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)[org.eclipse.osgi-3.10.101.v20150820-1432.jar:]
+	at org.eclipse.osgi.internal.framework.EquinoxEventPublisher.publishBundleEventPrivileged(EquinoxEventPublisher.java:165)[org.eclipse.osgi-3.10.101.v20150820-1432.jar:]
+	at org.eclipse.osgi.internal.framework.EquinoxEventPublisher.publishBundleEvent(EquinoxEventPublisher.java:75)[org.eclipse.osgi-3.10.101.v20150820-1432.jar:]
+	at org.eclipse.osgi.internal.framework.EquinoxEventPublisher.publishBundleEvent(EquinoxEventPublisher.java:67)[org.eclipse.osgi-3.10.101.v20150820-1432.jar:]
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor.publishModuleEvent(EquinoxContainerAdaptor.java:102)[org.eclipse.osgi-3.10.101.v20150820-1432.jar:]
+	at org.eclipse.osgi.container.Module.publishEvent(Module.java:466)[org.eclipse.osgi-3.10.101.v20150820-1432.jar:]
+	at org.eclipse.osgi.container.Module.start(Module.java:457)[org.eclipse.osgi-3.10.101.v20150820-1432.jar:]
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.start(EquinoxBundle.java:392)[org.eclipse.osgi-3.10.101.v20150820-1432.jar:]
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.start(EquinoxBundle.java:411)[org.eclipse.osgi-3.10.101.v20150820-1432.jar:]
+	at org.apache.karaf.features.internal.service.FeaturesServiceImpl.startBundle(FeaturesServiceImpl.java:1287)[8:org.apache.karaf.features.core:4.0.8]
+	at org.apache.karaf.features.internal.service.Deployer.deploy(Deployer.java:860)[8:org.apache.karaf.features.core:4.0.8]
+	at org.apache.karaf.features.internal.service.FeaturesServiceImpl.doProvision(FeaturesServiceImpl.java:1176)[8:org.apache.karaf.features.core:4.0.8]
+	at org.apache.karaf.features.internal.service.FeaturesServiceImpl$1.call(FeaturesServiceImpl.java:1074)[8:org.apache.karaf.features.core:4.0.8]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)[:1.8.0_112]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)[:1.8.0_112]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)[:1.8.0_112]
+	at java.lang.Thread.run(Thread.java:745)[:1.8.0_112]
+2017-07-14 23:36:17.511 [WARN ] [g.eclipse.smarthome.core.net.NetUtil] - Found multiple local interfaces - ignoring 192.168.1.42
+2017-07-14 23:36:17.513 [INFO ] [.dashboard.internal.DashboardService] - Started dashboard at http://172.18.0.1:8080
+2017-07-14 23:36:17.514 [WARN ] [g.eclipse.smarthome.core.net.NetUtil] - Found multiple local interfaces - ignoring 192.168.1.42
+2017-07-14 23:36:17.514 [INFO ] [.dashboard.internal.DashboardService] - Started dashboard at https://172.18.0.1:8443
+2017-07-14 23:36:19.299 [INFO ] [el.core.internal.ModelRepositoryImpl] - Loading model '_default.sitemap'
+2017-07-14 23:36:20.537 [INFO ] [el.core.internal.ModelRepositoryImpl] - Loading model 'link_living_lamps.rules'
+2017-07-14 23:36:21.162 [INFO ] [el.core.internal.ModelRepositoryImpl] - Loading model 'switch_lights_living.rules'
+2017-07-14 23:36:21.313 [INFO ] [el.core.internal.ModelRepositoryImpl] - Loading model 'general.rules'
+2017-07-14 23:36:21.431 [INFO ] [el.core.internal.ModelRepositoryImpl] - Validation issues found in configuration model 'heater_start_morning.rules', using it anyway:
+The use of wildcard imports is deprecated.
+2017-07-14 23:36:21.433 [INFO ] [el.core.internal.ModelRepositoryImpl] - Loading model 'heater_start_morning.rules'
+2017-07-14 23:36:21.573 [INFO ] [el.core.internal.ModelRepositoryImpl] - Loading model 'heater_stop.rules'
+2017-07-14 23:36:21.644 [INFO ] [el.core.internal.ModelRepositoryImpl] - Loading model 'router_restart.rules'
+2017-07-14 23:36:21.736 [INFO ] [el.core.internal.ModelRepositoryImpl] - Loading model 'demo.rules'
+2017-07-14 23:36:21.822 [INFO ] [el.core.internal.ModelRepositoryImpl] - Loading model 'autoLight.rules'
+2017-07-14 23:36:21.903 [INFO ] [el.core.internal.ModelRepositoryImpl] - Loading model 'ampli.rules'
+2017-07-14 23:36:21.976 [INFO ] [el.core.internal.ModelRepositoryImpl] - Loading model 'demo.items'
+2017-07-14 23:36:22.028 [ERROR] [el.item.internal.GenericItemProvider] - Binding configuration of type 'channel' of item 'SDB_Temp' could not be parsed correctly.
+org.eclipse.smarthome.model.item.BindingConfigParseException: UID must have at least 4 segments.
+	at org.eclipse.smarthome.model.thing.internal.GenericItemChannelLinkProvider.createItemChannelLink(GenericItemChannelLinkProvider.java:77)
+	at org.eclipse.smarthome.model.thing.internal.GenericItemChannelLinkProvider.processBindingConfiguration(GenericItemChannelLinkProvider.java:67)
+	at org.eclipse.smarthome.model.item.internal.GenericItemProvider.internalDispatchBindings(GenericItemProvider.java:325)
+	at org.eclipse.smarthome.model.item.internal.GenericItemProvider.internalDispatchBindings(GenericItemProvider.java:297)
+	at org.eclipse.smarthome.model.item.internal.GenericItemProvider.processBindingConfigsFromModel(GenericItemProvider.java:182)
+	at org.eclipse.smarthome.model.item.internal.GenericItemProvider.modelChanged(GenericItemProvider.java:351)
+	at org.eclipse.smarthome.model.core.internal.ModelRepositoryImpl.notifyListeners(ModelRepositoryImpl.java:286)
+	at org.eclipse.smarthome.model.core.internal.ModelRepositoryImpl.addOrRefreshModel(ModelRepositoryImpl.java:120)
+	at org.eclipse.smarthome.model.core.internal.folder.FolderObserver.checkFile(FolderObserver.java:234)
+	at org.eclipse.smarthome.model.core.internal.folder.FolderObserver.addModelsToRepo(FolderObserver.java:166)
+	at org.eclipse.smarthome.model.core.internal.folder.FolderObserver.activate(FolderObserver.java:111)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)[:1.8.0_112]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)[:1.8.0_112]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)[:1.8.0_112]
+	at java.lang.reflect.Method.invoke(Method.java:498)[:1.8.0_112]
+	at org.apache.felix.scr.impl.inject.BaseMethod.invokeMethod(BaseMethod.java:224)[32:org.apache.felix.scr:2.0.6]
+	at org.apache.felix.scr.impl.inject.BaseMethod.access$500(BaseMethod.java:39)[32:org.apache.felix.scr:2.0.6]
+	at org.apache.felix.scr.impl.inject.BaseMethod$Resolved.invoke(BaseMethod.java:617)[32:org.apache.felix.scr:2.0.6]
+	at org.apache.felix.scr.impl.inject.BaseMethod.invoke(BaseMethod.java:501)[32:org.apache.felix.scr:2.0.6]
+	at org.apache.felix.scr.impl.inject.ActivateMethod.invoke(ActivateMethod.java:302)[32:org.apache.felix.scr:2.0.6]
+	at org.apache.felix.scr.impl.inject.ActivateMethod.invoke(ActivateMethod.java:294)[32:org.apache.felix.scr:2.0.6]
+	at org.apache.felix.scr.impl.manager.SingleComponentManager.createImplementationObject(SingleComponentManager.java:297)[32:org.apache.felix.scr:2.0.6]
+	at org.apache.felix.scr.impl.manager.SingleComponentManager.createComponent(SingleComponentManager.java:108)[32:org.apache.felix.scr:2.0.6]
+	at org.apache.felix.scr.impl.manager.SingleComponentManager.getService(SingleComponentManager.java:906)[32:org.apache.felix.scr:2.0.6]
+	at org.apache.felix.scr.impl.manager.SingleComponentManager.getServiceInternal(SingleComponentManager.java:879)[32:org.apache.felix.scr:2.0.6]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager.activateInternal(AbstractComponentManager.java:748)[32:org.apache.felix.scr:2.0.6]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager.enableInternal(AbstractComponentManager.java:674)[32:org.apache.felix.scr:2.0.6]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager.enable(AbstractComponentManager.java:429)[32:org.apache.felix.scr:2.0.6]
+	at org.apache.felix.scr.impl.manager.ConfigurableComponentHolder.configurationUpdated(ConfigurableComponentHolder.java:431)[32:org.apache.felix.scr:2.0.6]
+	at org.apache.felix.scr.impl.manager.RegionConfigurationSupport.configurationEvent(RegionConfigurationSupport.java:273)[32:org.apache.felix.scr:2.0.6]
+	at org.apache.felix.cm.impl.ConfigurationManager$FireConfigurationEvent.sendEvent(ConfigurationManager.java:2068)[3:org.apache.felix.configadmin:1.8.12]
+	at org.apache.felix.cm.impl.ConfigurationManager$FireConfigurationEvent.run(ConfigurationManager.java:2036)[3:org.apache.felix.configadmin:1.8.12]
+	at org.apache.felix.cm.impl.UpdateThread.run0(UpdateThread.java:141)[3:org.apache.felix.configadmin:1.8.12]
+	at org.apache.felix.cm.impl.UpdateThread.run(UpdateThread.java:109)[3:org.apache.felix.configadmin:1.8.12]
+	at java.lang.Thread.run(Thread.java:745)[:1.8.0_112]
+2017-07-14 23:36:24.562 [WARN ] [org.apache.felix.fileinstall        ] - Error while starting bundle: file:/openhab/addons/org.openhab.binding.zwave-1.10.0.jar
+org.osgi.framework.BundleException: Could not resolve module: org.openhab.binding.zwave [11]
+  Unresolved requirement: Import-Package: gnu.io
+
+	at org.eclipse.osgi.container.Module.start(Module.java:434)[org.eclipse.osgi-3.10.101.v20150820-1432.jar:]
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.start(EquinoxBundle.java:392)[org.eclipse.osgi-3.10.101.v20150820-1432.jar:]
+	at org.apache.felix.fileinstall.internal.DirectoryWatcher.startBundle(DirectoryWatcher.java:1253)[4:org.apache.felix.fileinstall:3.5.6]
+	at org.apache.felix.fileinstall.internal.DirectoryWatcher.startBundles(DirectoryWatcher.java:1225)[4:org.apache.felix.fileinstall:3.5.6]
+	at org.apache.felix.fileinstall.internal.DirectoryWatcher.doProcess(DirectoryWatcher.java:512)[4:org.apache.felix.fileinstall:3.5.6]
+	at org.apache.felix.fileinstall.internal.DirectoryWatcher.process(DirectoryWatcher.java:361)[4:org.apache.felix.fileinstall:3.5.6]
+	at org.apache.felix.fileinstall.internal.DirectoryWatcher.run(DirectoryWatcher.java:312)[4:org.apache.felix.fileinstall:3.5.6]
+2017-07-14 23:36:30.056 [INFO ] [ng.zwave.internal.ZWaveActiveBinding] - Update config, port = /dev/ttyUSB0
+2017-07-14 23:36:30.061 [INFO ] [b.core.service.AbstractActiveService] - ZWave Refresh Service has been started
+2017-07-14 23:36:30.066 [INFO ] [ve.internal.protocol.ZWaveController] - Starting Z-Wave controller
+2017-07-14 23:36:30.066 [INFO ] [ve.internal.protocol.ZWaveController] - Z-Wave timeout is set to 5000ms. Soft reset is false.
+2017-07-14 23:36:30.067 [INFO ] [ve.internal.protocol.ZWaveController] - Connecting to serial port /dev/ttyUSB0
+2017-07-14 23:36:30.079 [ERROR] [ve.internal.protocol.ZWaveController] - Serial Error: Port /dev/ttyUSB0 does not exist
+2017-07-14 23:36:30.080 [ERROR] [org.apache.felix.configadmin        ] - [org.osgi.service.event.EventHandler, org.osgi.service.cm.ManagedService, id=270, bundle=11/file:/openhab/addons/org.openhab.binding.zwave-1.10.0.jar]: Updating property port of configuration org.openhab.zwave caused a problem: Port /dev/ttyUSB0 does not exist
+org.osgi.service.cm.ConfigurationException: port : Port /dev/ttyUSB0 does not exist
+	at org.openhab.binding.zwave.internal.ZWaveActiveBinding.initialise(ZWaveActiveBinding.java:312)[11:org.openhab.binding.zwave:1.10.0]
+	at org.openhab.binding.zwave.internal.ZWaveActiveBinding.updated(ZWaveActiveBinding.java:420)[11:org.openhab.binding.zwave:1.10.0]
+	at org.apache.felix.cm.impl.helper.ManagedServiceTracker.updated(ManagedServiceTracker.java:189)[3:org.apache.felix.configadmin:1.8.12]
+	at org.apache.felix.cm.impl.helper.ManagedServiceTracker.updateService(ManagedServiceTracker.java:152)[3:org.apache.felix.configadmin:1.8.12]
+	at org.apache.felix.cm.impl.helper.ManagedServiceTracker.provideConfiguration(ManagedServiceTracker.java:85)[3:org.apache.felix.configadmin:1.8.12]
+	at org.apache.felix.cm.impl.ConfigurationManager$ManagedServiceUpdate.provide(ConfigurationManager.java:1461)[3:org.apache.felix.configadmin:1.8.12]
+	at org.apache.felix.cm.impl.ConfigurationManager$ManagedServiceUpdate.run(ConfigurationManager.java:1417)[3:org.apache.felix.configadmin:1.8.12]
+	at org.apache.felix.cm.impl.UpdateThread.run0(UpdateThread.java:141)[3:org.apache.felix.configadmin:1.8.12]
+	at org.apache.felix.cm.impl.UpdateThread.run(UpdateThread.java:109)[3:org.apache.felix.configadmin:1.8.12]
+	at java.lang.Thread.run(Thread.java:745)[:1.8.0_112]
+Caused by: org.openhab.binding.zwave.internal.protocol.SerialInterfaceException: Port /dev/ttyUSB0 does not exist
+	at org.openhab.binding.zwave.internal.protocol.ZWaveController.connect(ZWaveController.java:356)[11:org.openhab.binding.zwave:1.10.0]
+	at org.openhab.binding.zwave.internal.protocol.ZWaveController.<init>(ZWaveController.java:167)[11:org.openhab.binding.zwave:1.10.0]
+	at org.openhab.binding.zwave.internal.ZWaveActiveBinding.initialise(ZWaveActiveBinding.java:290)[11:org.openhab.binding.zwave:1.10.0]
+	... 9 more
+Caused by: gnu.io.NoSuchPortException
+	at gnu.io.CommPortIdentifier.getPortIdentifier(CommPortIdentifier.java:273)[178:com.neuronrobotics.nrjavaserial:3.12.0.OH]
+	at org.openhab.binding.zwave.internal.protocol.ZWaveController.connect(ZWaveController.java:334)[11:org.openhab.binding.zwave:1.10.0]
+	... 11 more
+2017-07-14 23:36:30.097 [INFO ] [assic.internal.servlet.WebAppServlet] - Started Classic UI at /classicui/app
+2017-07-14 23:36:30.178 [INFO ] [ui.habmin.internal.servlet.HABminApp] - Started HABmin servlet at /habmin
+2017-07-14 23:36:30.258 [INFO ] [basic.internal.servlet.WebAppServlet] - Started Basic UI at /basicui/app
+2017-07-14 23:36:30.277 [INFO ] [arthome.ui.paper.internal.PaperUIApp] - Started Paper UI at /paperui
+2017-07-14 23:36:34.324 [INFO ] [panel.internal.HABPanelDashboardTile] - Started HABPanel at /habpanel
+2017-07-14 23:36:35.062 [INFO ] [b.core.service.AbstractActiveService] - ZWave Refresh Service has been shut down
+2017-07-14 23:36:40.729 [WARN ] [sitemap.internal.SitemapProviderImpl] - Filename `_default.sitemap` does not match the name `default` of the sitemap - please fix this as you might see unexpected behavior otherwise.
