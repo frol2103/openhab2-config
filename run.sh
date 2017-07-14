@@ -1,14 +1,19 @@
 #!/bin/bash
 
+DIR=$(cd $(dirname $0) && pwd)
+
 docker rm -vf openhab
 docker run \
         --name openhab \
+        --net=host \
         -v /etc/localtime:/etc/localtime:ro \
         -v /etc/timezone:/etc/timezone:ro \
-        -v /srv/openhab/conf:/openhab/conf \
-        -v /srv/openhab/userdata:/openhab/userdata \
+        -v $DIR/openhab/conf:/openhab/conf \
+        -v $DIR/openhab/userdata:/openhab/userdata \
+        -v $DIR/openhab/addons:/openhab/addons\
         -d \
         -p 8080:8080 \
         --restart=always \
-        --device=/dev/ttyUSB0 \
-        openhab/openhab:amd64-offline
+        openhab/openhab:2.1.0-amd64
+ 
+#       --device=/dev/ttyUSB0 \
