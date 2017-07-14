@@ -8,9 +8,9 @@ docker run \
         --net=host \
         -v /etc/localtime:/etc/localtime:ro \
         -v /etc/timezone:/etc/timezone:ro \
-        -v $DIR/openhab/conf:/openhab/conf \
-        -v $DIR/openhab/userdata:/openhab/userdata \
-        -v $DIR/openhab/addons:/openhab/addons\
+        -v $DIR/conf:/openhab/conf \
+        -v $DIR/userdata:/openhab/userdata \
+        -v $DIR/addons:/openhab/addons\
         -d \
         -p 8080:8080 \
         --restart=always \
