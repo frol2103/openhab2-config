@@ -1,0 +1,156 @@
+{
+  "zwave:serial_zstick:15d4b33e34c": {
+    "class": "org.eclipse.smarthome.core.thing.internal.BridgeImpl",
+    "value": {
+      "label": "Z-Wave Serial Controller",
+      "channels": [
+        {
+          "acceptedItemType": "Number",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "zwave",
+              "serial_zstick",
+              "15d4b33e34c",
+              "serial_sof"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "zwave",
+              "serial_sof"
+            ]
+          },
+          "configuration": {
+            "properties": {}
+          },
+          "properties": {},
+          "defaultTags": []
+        },
+        {
+          "acceptedItemType": "Number",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "zwave",
+              "serial_zstick",
+              "15d4b33e34c",
+              "serial_ack"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "zwave",
+              "serial_ack"
+            ]
+          },
+          "configuration": {
+            "properties": {}
+          },
+          "properties": {},
+          "defaultTags": []
+        },
+        {
+          "acceptedItemType": "Number",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "zwave",
+              "serial_zstick",
+              "15d4b33e34c",
+              "serial_nak"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "zwave",
+              "serial_nak"
+            ]
+          },
+          "configuration": {
+            "properties": {}
+          },
+          "properties": {},
+          "defaultTags": []
+        },
+        {
+          "acceptedItemType": "Number",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "zwave",
+              "serial_zstick",
+              "15d4b33e34c",
+              "serial_can"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "zwave",
+              "serial_can"
+            ]
+          },
+          "configuration": {
+            "properties": {}
+          },
+          "properties": {},
+          "defaultTags": []
+        },
+        {
+          "acceptedItemType": "Number",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "zwave",
+              "serial_zstick",
+              "15d4b33e34c",
+              "serial_oof"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "zwave",
+              "serial_oof"
+            ]
+          },
+          "configuration": {
+            "properties": {}
+          },
+          "properties": {},
+          "defaultTags": []
+        }
+      ],
+      "configuration": {
+        "properties": {
+          "controller_softreset": 0.0,
+          "security_networkkey": "99 A6 58 C7 D5 78 5C ED 20 F2 90 48 36 53 E5 44",
+          "security_inclusionmode": 0.0,
+          "controller_suc": false,
+          "controller_sync": 0.0,
+          "port": "/dev/ttyUSB0",
+          "controller_master": true,
+          "inclusion_mode": 2.0,
+          "controller_wakeupperiod": 3600.0,
+          "heal_time": 2.0,
+          "controller_exclude": 0.0,
+          "controller_inclusiontimeout": 30.0,
+          "controller_hardreset": 0.0
+        }
+      },
+      "properties": {},
+      "uid": {
+        "segments": [
+          "zwave",
+          "serial_zstick",
+          "15d4b33e34c"
+        ]
+      },
+      "thingTypeUID": {
+        "segments": [
+          "zwave",
+          "serial_zstick"
+        ]
+      }
+    }
+  }
+}
