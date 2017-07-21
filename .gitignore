@@ -1,0 +1,5 @@
+*.log
+userdata/*.zip
+userdata/tmp
+userdata/logs
+userdata/cache
