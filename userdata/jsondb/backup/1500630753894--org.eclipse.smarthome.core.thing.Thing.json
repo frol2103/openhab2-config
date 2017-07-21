@@ -137,10 +137,7 @@
           "controller_hardreset": 0
         }
       },
-      "properties": {
-        "zwave_neighbours": "2,3,5",
-        "zwave_nodeid": "1"
-      },
+      "properties": {},
       "uid": {
         "segments": [
           "zwave",
