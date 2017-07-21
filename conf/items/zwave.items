@@ -1,0 +1,42 @@
+Group All
+Group OnlyWhenPresent
+
+Group bedroom 	    "Bedroom" 	<bedroom> 	(ALL)
+Group bathroom 	    "Bathroom" 	<bath> 	(ALL)
+Group livingroom 	"Livingroom" 	<sofa> 	(ALL)
+
+Switch Blanket_Switch "Blanket" <socket> (bedroom, OnlyWhenPresent) {channel="zwave:device:5259a243:node2:switch_binary"} 
+Number Blanket_Power "Blanket power [%.1f W]" (bedroom) {channel="zwave:device:5259a243:node2:meter_watts"}
+
+
+
+Switch Floor_Lamp "Floor Lamp" (livingroom, OnlyWhenPresent) {channel="zwave:device:5259a243:node3:switch_binary"} 
+Switch heater  (bathroom, OnlyWhenPresent) {channel="zwave:device:5259a243:node8:switch_binary"} 
+
+Switch Light_Living "Living" (livingroom, OnlyWhenPresent) {channel="zwave:device:5259a243:node5:switch_binary2"} 
+Switch Light_Dining "Dining" (livingroom, OnlyWhenPresent) {channel="zwave:device:5259a243:node5:switch_binary1"} 
+Rollershutter volume  (livingroom) {samsungtv="UP:TV:KEY_VOLUP, DOWN:TV:KEY_VOLDOWN"}
+
+Switch Tree <socket> (livingroom, OnlyWhenPresent)  {channel="zwave:device:5259a243:node7:switch_binary1"} 
+Switch Router <socket> (livingroom)  {channel="zwave:device:5259a243:node7:switch_binary2"} 
+Switch Decoder <socket> (livingroom)  {cchannel="zwave:device:5259a243:node7:switch_binary3"} 
+Switch Ampli "Ampli" <socket> (livingroom, OnlyWhenPresent)  {channel="zwave:device:5259a243:node7:switch_binary4"} 
+Switch TV <socket> (livingroom)  {channel="zwave:device:5259a243:node7:switch_binary5"} 
+Switch Light_Deco "Deco" (livingroom, OnlyWhenPresent) {channel="zwave:device:5259a243:node7:switch_binary6"} 
+
+
+
+Number TV_Cons "TV power [%.1f W]" <socket> (livingroom) {channel="zwave:device:5259a243:node7:meter_watts5"} 
+
+Switch switch_living_dining "MultiSwitch"  {enocean="{id=00:29:5C:5E,eep=F6:02:01, channel=A}"} 
+Switch switch_living_living "MultiSwitch2"  {enocean="{id=00:29:5C:5E,eep=F6:02:01, channel=B}"} 
+
+Switch someone_in  {enocean="{id=00:29:5C:6A,eep=F6:02:01, channel=A}"}
+Switch awake  {enocean="{id=00:29:5C:6A,eep=F6:02:01, channel=B}"} 
+Switch general
+
+String CurrentTrack    "Current track [%s]" (livingroom) { mpd="TITLE:livingroompi:tracktitle" }
+String CurrentArtist    "Current artist [%s]" (livingroom) { mpd="ARTIST:livingroompi:trackartist" }
+Switch Mpd_Livingroom_play   "Start/Stop"    (livingroom)  { mpd="ON:livingroompi:play, OFF:livingroompi:stop" }
+Dimmer Mpd_Bathroom_VolumeControl   "Volume [%d%%]"       (livingroom)  { mpd="INCREASE:livingroompi:volume_increase, DECREASE:livingroompi:volume_decrease, PERCENT:livingroompi:volume" }
+
