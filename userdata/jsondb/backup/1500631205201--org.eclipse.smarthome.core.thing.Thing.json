@@ -1,0 +1,445 @@
+{
+  "zwave:serial_zstick:5259a243": {
+    "class": "org.eclipse.smarthome.core.thing.internal.BridgeImpl",
+    "value": {
+      "label": "Z-Wave Serial Controller",
+      "channels": [
+        {
+          "acceptedItemType": "Number",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "zwave",
+              "serial_zstick",
+              "5259a243",
+              "serial_sof"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "zwave",
+              "serial_sof"
+            ]
+          },
+          "configuration": {
+            "properties": {}
+          },
+          "properties": {},
+          "defaultTags": []
+        },
+        {
+          "acceptedItemType": "Number",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "zwave",
+              "serial_zstick",
+              "5259a243",
+              "serial_ack"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "zwave",
+              "serial_ack"
+            ]
+          },
+          "configuration": {
+            "properties": {}
+          },
+          "properties": {},
+          "defaultTags": []
+        },
+        {
+          "acceptedItemType": "Number",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "zwave",
+              "serial_zstick",
+              "5259a243",
+              "serial_nak"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "zwave",
+              "serial_nak"
+            ]
+          },
+          "configuration": {
+            "properties": {}
+          },
+          "properties": {},
+          "defaultTags": []
+        },
+        {
+          "acceptedItemType": "Number",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "zwave",
+              "serial_zstick",
+              "5259a243",
+              "serial_can"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "zwave",
+              "serial_can"
+            ]
+          },
+          "configuration": {
+            "properties": {}
+          },
+          "properties": {},
+          "defaultTags": []
+        },
+        {
+          "acceptedItemType": "Number",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "zwave",
+              "serial_zstick",
+              "5259a243",
+              "serial_oof"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "zwave",
+              "serial_oof"
+            ]
+          },
+          "configuration": {
+            "properties": {}
+          },
+          "properties": {},
+          "defaultTags": []
+        }
+      ],
+      "configuration": {
+        "properties": {
+          "controller_softreset": 0.0,
+          "security_networkkey": "4D CD 83 13 00 92 C6 DF 17 69 A6 69 17 FE 9D AF",
+          "security_inclusionmode": 0.0,
+          "controller_suc": false,
+          "controller_sync": 0.0,
+          "port": "/dev/ttyUSB0",
+          "controller_master": true,
+          "inclusion_mode": 2.0,
+          "controller_wakeupperiod": 3600.0,
+          "heal_time": 2.0,
+          "controller_exclude": 0.0,
+          "controller_inclusiontimeout": 30.0,
+          "controller_hardreset": 0.0
+        }
+      },
+      "properties": {
+        "zwave_neighbours": "2,3,5",
+        "zwave_nodeid": "1"
+      },
+      "uid": {
+        "segments": [
+          "zwave",
+          "serial_zstick",
+          "5259a243"
+        ]
+      },
+      "thingTypeUID": {
+        "segments": [
+          "zwave",
+          "serial_zstick"
+        ]
+      }
+    }
+  },
+  "zwave:device:5259a243:node3": {
+    "class": "org.eclipse.smarthome.core.thing.internal.ThingImpl",
+    "value": {
+      "label": "Z-Wave Node 3: FGWP101 Metered Wall Plug Switch",
+      "bridgeUID": {
+        "segments": [
+          "zwave",
+          "serial_zstick",
+          "5259a243"
+        ]
+      },
+      "channels": [
+        {
+          "acceptedItemType": "Switch",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "zwave",
+              "device",
+              "5259a243",
+              "node3",
+              "switch_binary"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "zwave",
+              "switch_binary"
+            ]
+          },
+          "label": "Switch",
+          "configuration": {
+            "properties": {}
+          },
+          "properties": {
+            "binding:*:OnOffType": "SWITCH_BINARY,BASIC"
+          },
+          "defaultTags": []
+        },
+        {
+          "acceptedItemType": "Number",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "zwave",
+              "device",
+              "5259a243",
+              "node3",
+              "sensor_power"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "zwave",
+              "sensor_power"
+            ]
+          },
+          "label": "Sensor (power)",
+          "configuration": {
+            "properties": {}
+          },
+          "properties": {
+            "binding:*:DecimalType": "SENSOR_MULTILEVEL;type\u003dPOWER"
+          },
+          "defaultTags": []
+        },
+        {
+          "acceptedItemType": "Number",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "zwave",
+              "device",
+              "5259a243",
+              "node3",
+              "meter_kwh"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "zwave",
+              "meter_kwh"
+            ]
+          },
+          "label": "Electric meter (kWh)",
+          "configuration": {
+            "properties": {}
+          },
+          "properties": {
+            "binding:*:DecimalType": "METER;type\u003dE_KWh"
+          },
+          "defaultTags": []
+        },
+        {
+          "acceptedItemType": "Number",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "zwave",
+              "device",
+              "5259a243",
+              "node3",
+              "meter_watts"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "zwave",
+              "meter_watts"
+            ]
+          },
+          "label": "Electric meter (watts)",
+          "configuration": {
+            "properties": {}
+          },
+          "properties": {
+            "binding:*:DecimalType": "METER;type\u003dE_W"
+          },
+          "defaultTags": []
+        },
+        {
+          "acceptedItemType": "Switch",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "zwave",
+              "device",
+              "5259a243",
+              "node3",
+              "meter_reset"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "zwave",
+              "meter_reset"
+            ]
+          },
+          "label": "Reset the total power consumption",
+          "configuration": {
+            "properties": {}
+          },
+          "properties": {
+            "binding:*:OnOffType": "METER"
+          },
+          "defaultTags": []
+        },
+        {
+          "acceptedItemType": "Number",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "zwave",
+              "device",
+              "5259a243",
+              "node3",
+              "config_decimal_param61"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "zwave",
+              "fibaro_fgwp101_00_000_config_decimal_param61"
+            ]
+          },
+          "label": "LED color when device is on",
+          "configuration": {
+            "properties": {}
+          },
+          "properties": {
+            "binding:*:DecimalType": "CONFIGURATION;parameter\u003d61"
+          },
+          "defaultTags": []
+        },
+        {
+          "acceptedItemType": "Number",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "zwave",
+              "device",
+              "5259a243",
+              "node3",
+              "config_decimal_param62"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "zwave",
+              "fibaro_fgwp101_00_000_config_decimal_param62"
+            ]
+          },
+          "label": "LED color when device is off",
+          "configuration": {
+            "properties": {}
+          },
+          "properties": {
+            "binding:*:DecimalType": "CONFIGURATION;parameter\u003d62"
+          },
+          "defaultTags": []
+        },
+        {
+          "acceptedItemType": "Number",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "zwave",
+              "device",
+              "5259a243",
+              "node3",
+              "notification_send"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "zwave",
+              "notification_send"
+            ]
+          },
+          "label": "Start Alarm LED Illumination",
+          "configuration": {
+            "properties": {}
+          },
+          "properties": {
+            "binding:*:DecimalType": "ALARM;event1\u003dSMOKE:1,event3\u003dBURGLAR:1"
+          },
+          "defaultTags": []
+        }
+      ],
+      "configuration": {
+        "properties": {
+          "config_42_1": 15,
+          "config_51_2": 500,
+          "config_52_1": 6,
+          "config_63_1": 1,
+          "config_43_1": 30,
+          "config_60_2": 25000,
+          "config_61_1": 1,
+          "config_62_1": 8,
+          "config_40_1": 80,
+          "config_50_2": 300,
+          "config_70_2": -1,
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@66b613de": [],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@69eae9ce": [],
+          "config_1_1": 1,
+          "config_16_1": 1,
+          "config_49_1": 0,
+          "config_39_2": 600,
+          "config_34_1": 63,
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@51fba927": [],
+          "config_35_1": 0,
+          "config_45_1": 10,
+          "config_47_2": 3600
+        }
+      },
+      "properties": {
+        "zwave_class_basic": "ROUTING_SLAVE",
+        "zwave_class_generic": "BINARY_SWITCH",
+        "zwave_frequent": "false",
+        "zwave_neighbours": "1,2,5,7,8",
+        "zwave_version": "25.25",
+        "zwave_listening": "true",
+        "zwave_deviceid": "4096",
+        "zwave_nodeid": "3",
+        "zwave_routing": "true",
+        "zwave_beaming": "true",
+        "zwave_class_specific": "NOT_USED",
+        "zwave_manufacturer": "271",
+        "zwave_devicetype": "1536"
+      },
+      "uid": {
+        "segments": [
+          "zwave",
+          "device",
+          "5259a243",
+          "node3"
+        ]
+      },
+      "thingTypeUID": {
+        "segments": [
+          "zwave",
+          "fibaro_fgwp101_00_000"
+        ]
+      }
+    }
+  }
+}

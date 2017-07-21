@@ -1,0 +1,46 @@
+{
+  "zwave:device:5259a243:node3": {
+    "class": "org.eclipse.smarthome.config.discovery.internal.DiscoveryResultImpl",
+    "value": {
+      "bridgeUID": {
+        "segments": [
+          "zwave",
+          "serial_zstick",
+          "5259a243"
+        ]
+      },
+      "thingUID": {
+        "segments": [
+          "zwave",
+          "device",
+          "5259a243",
+          "node3"
+        ]
+      },
+      "thingTypeUID": {
+        "segments": [
+          "zwave",
+          "device"
+        ]
+      },
+      "properties": {
+        "zwave_class_basic": "ROUTING_SLAVE",
+        "zwave_class_generic": "BINARY_SWITCH",
+        "zwave_frequent": "false",
+        "zwave_version": "25.25",
+        "zwave_listening": "true",
+        "zwave_deviceid": "4096",
+        "zwave_nodeid": "3",
+        "zwave_routing": "true",
+        "zwave_beaming": "true",
+        "zwave_class_specific": "NOT_USED",
+        "zwave_manufacturer": "271",
+        "zwave_devicetype": "1536"
+      },
+      "flag": "NEW",
+      "label": "Z-Wave Node 3: FGWP101 Metered Wall Plug Switch",
+      "timestamp": 1500631173995,
+      "timeToLive": -1
+    }
+  }
+}
