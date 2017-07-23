@@ -40,3 +40,4 @@ String CurrentArtist    "Current artist [%s]" (livingroom) { mpd="ARTIST:livingr
 Switch Mpd_Livingroom_play   "Start/Stop"    (livingroom)  { mpd="ON:livingroompi:play, OFF:livingroompi:stop" }
 Dimmer Mpd_Bathroom_VolumeControl   "Volume [%d%%]"       (livingroom)  { mpd="INCREASE:livingroompi:volume_increase, DECREASE:livingroompi:volume_decrease, PERCENT:livingroompi:volume" }
 
+Dimmer LivingLight "Living" (livingroom) {channel="zwave:device:5259a243:node9:switch_dimmer1"}
