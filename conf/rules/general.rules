@@ -1,0 +1,18 @@
+    rule "link general with in and awake"
+when
+    Item someone_in received update ON or
+    Item awake received update ON 
+then
+    sendCommand(general, ON)
+end
+
+
+
+    rule "link general with in and awake OFF"
+when
+    Item someone_in received update OFF or
+    Item awake received update OFF 
+then
+    sendCommand(OnlyWhenPresent, OFF)
+end
+

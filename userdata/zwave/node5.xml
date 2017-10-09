@@ -2,14 +2,14 @@
   <deviceClass>
     <basicDeviceClass>ROUTING_SLAVE</basicDeviceClass>
     <genericDeviceClass>BINARY_SWITCH</genericDeviceClass>
-    <specificDeviceClass>NOT_USED</specificDeviceClass>
+    <specificDeviceClass>POWER_SWITCH_BINARY</specificDeviceClass>
   </deviceClass>
   <homeId>0x184eba7</homeId>
-  <nodeId>3</nodeId>
+  <nodeId>5</nodeId>
   <version>4</version>
   <manufacturer>0x10f</manufacturer>
-  <deviceId>0x1000</deviceId>
-  <deviceType>0x600</deviceType>
+  <deviceId>0x100a</deviceId>
+  <deviceType>0x200</deviceType>
   <listening>true</listening>
   <frequentlyListening>false</frequentlyListening>
   <routing>true</routing>
@@ -22,11 +22,11 @@
     <commandClass>CONFIGURATION</commandClass>
     <commandClass>ASSOCIATION</commandClass>
     <commandClass>MULTI_INSTANCE_ASSOCIATION</commandClass>
+    <commandClass>MULTI_INSTANCE</commandClass>
     <commandClass>SWITCH_BINARY</commandClass>
-    <commandClass>POWERLEVEL</commandClass>
-    <commandClass>METER</commandClass>
-    <commandClass>SENSOR_MULTILEVEL</commandClass>
+    <commandClass>SWITCH_ALL</commandClass>
     <commandClass>FIRMWARE_UPDATE_MD</commandClass>
+    <commandClass>POWERLEVEL</commandClass>
   </nodeInformationFrame>
   <supportedCommandClasses>
     <entry>
@@ -37,8 +37,8 @@
         <versionSupported>1</versionSupported>
         <initSerialNumber>false</initSerialNumber>
         <deviceManufacturer>271</deviceManufacturer>
-        <deviceType>1536</deviceType>
-        <deviceId>4096</deviceId>
+        <deviceType>512</deviceType>
+        <deviceId>4106</deviceId>
       </manufacturerSpecificCommandClass>
     </entry>
     <entry>
@@ -48,27 +48,9 @@
         <instances>1</instances>
         <versionSupported>1</versionSupported>
         <libraryType>LIB_SLAVE_ENHANCED</libraryType>
-        <protocolVersion>3.52</protocolVersion>
-        <applicationVersion>25.25</applicationVersion>
+        <protocolVersion>3.42</protocolVersion>
+        <applicationVersion>2.1</applicationVersion>
       </versionCommandClass>
-    </entry>
-    <entry>
-      <commandClass>BASIC</commandClass>
-      <basicCommandClass>
-        <version>1</version>
-        <instances>1</instances>
-        <versionSupported>1</versionSupported>
-        <isGetSupported>true</isGetSupported>
-      </basicCommandClass>
-    </entry>
-    <entry>
-      <commandClass>MULTI_INSTANCE_ASSOCIATION</commandClass>
-      <multiAssociationCommandClass>
-        <version>2</version>
-        <instances>1</instances>
-        <versionSupported>2</versionSupported>
-        <maxGroups>2</maxGroups>
-      </multiAssociationCommandClass>
     </entry>
     <entry>
       <commandClass>ASSOCIATION</commandClass>
@@ -78,6 +60,25 @@
         <versionSupported>2</versionSupported>
         <maxGroups>3</maxGroups>
       </associationCommandClass>
+    </entry>
+    <entry>
+      <commandClass>SWITCH_ALL</commandClass>
+      <switchAllCommandClass>
+        <version>1</version>
+        <instances>1</instances>
+        <versionSupported>1</versionSupported>
+        <isGetSupported>true</isGetSupported>
+        <mode>SWITCH_ALL_INCLUDE_ON_OFF</mode>
+      </switchAllCommandClass>
+    </entry>
+    <entry>
+      <commandClass>BASIC</commandClass>
+      <basicCommandClass>
+        <version>1</version>
+        <instances>1</instances>
+        <versionSupported>1</versionSupported>
+        <isGetSupported>true</isGetSupported>
+      </basicCommandClass>
     </entry>
     <entry>
       <commandClass>NO_OPERATION</commandClass>
@@ -105,9 +106,29 @@
         <versionSupported>1</versionSupported>
         <configParameters>
           <entry>
+            <int>32</int>
+            <configurationParameter>
+              <index>32</index>
+              <size>1</size>
+              <value>3</value>
+              <readOnly>false</readOnly>
+              <writeOnly>false</writeOnly>
+            </configurationParameter>
+          </entry>
+          <entry>
             <int>1</int>
             <configurationParameter>
               <index>1</index>
+              <size>1</size>
+              <value>-1</value>
+              <readOnly>false</readOnly>
+              <writeOnly>false</writeOnly>
+            </configurationParameter>
+          </entry>
+          <entry>
+            <int>33</int>
+            <configurationParameter>
+              <index>33</index>
               <size>1</size>
               <value>1</value>
               <readOnly>false</readOnly>
@@ -115,19 +136,9 @@
             </configurationParameter>
           </entry>
           <entry>
-            <int>34</int>
+            <int>3</int>
             <configurationParameter>
-              <index>34</index>
-              <size>1</size>
-              <value>63</value>
-              <readOnly>false</readOnly>
-              <writeOnly>false</writeOnly>
-            </configurationParameter>
-          </entry>
-          <entry>
-            <int>35</int>
-            <configurationParameter>
-              <index>35</index>
+              <index>3</index>
               <size>1</size>
               <value>0</value>
               <readOnly>false</readOnly>
@@ -135,11 +146,41 @@
             </configurationParameter>
           </entry>
           <entry>
-            <int>70</int>
+            <int>4</int>
             <configurationParameter>
-              <index>70</index>
+              <index>4</index>
               <size>2</size>
-              <value>-1</value>
+              <value>0</value>
+              <readOnly>false</readOnly>
+              <writeOnly>false</writeOnly>
+            </configurationParameter>
+          </entry>
+          <entry>
+            <int>5</int>
+            <configurationParameter>
+              <index>5</index>
+              <size>2</size>
+              <value>0</value>
+              <readOnly>false</readOnly>
+              <writeOnly>false</writeOnly>
+            </configurationParameter>
+          </entry>
+          <entry>
+            <int>6</int>
+            <configurationParameter>
+              <index>6</index>
+              <size>1</size>
+              <value>0</value>
+              <readOnly>false</readOnly>
+              <writeOnly>false</writeOnly>
+            </configurationParameter>
+          </entry>
+          <entry>
+            <int>7</int>
+            <configurationParameter>
+              <index>7</index>
+              <size>1</size>
+              <value>0</value>
               <readOnly>false</readOnly>
               <writeOnly>false</writeOnly>
             </configurationParameter>
@@ -159,7 +200,17 @@
             <configurationParameter>
               <index>40</index>
               <size>1</size>
-              <value>80</value>
+              <value>3</value>
+              <readOnly>false</readOnly>
+              <writeOnly>false</writeOnly>
+            </configurationParameter>
+          </entry>
+          <entry>
+            <int>41</int>
+            <configurationParameter>
+              <index>41</index>
+              <size>1</size>
+              <value>2</value>
               <readOnly>false</readOnly>
               <writeOnly>false</writeOnly>
             </configurationParameter>
@@ -169,7 +220,7 @@
             <configurationParameter>
               <index>42</index>
               <size>1</size>
-              <value>15</value>
+              <value>3</value>
               <readOnly>false</readOnly>
               <writeOnly>false</writeOnly>
             </configurationParameter>
@@ -179,27 +230,37 @@
             <configurationParameter>
               <index>43</index>
               <size>1</size>
-              <value>30</value>
+              <value>1</value>
               <readOnly>false</readOnly>
               <writeOnly>false</writeOnly>
             </configurationParameter>
           </entry>
           <entry>
-            <int>45</int>
+            <int>13</int>
             <configurationParameter>
-              <index>45</index>
+              <index>13</index>
               <size>1</size>
-              <value>10</value>
+              <value>0</value>
               <readOnly>false</readOnly>
               <writeOnly>false</writeOnly>
             </configurationParameter>
           </entry>
           <entry>
-            <int>47</int>
+            <int>14</int>
             <configurationParameter>
-              <index>47</index>
-              <size>2</size>
-              <value>3600</value>
+              <index>14</index>
+              <size>1</size>
+              <value>1</value>
+              <readOnly>false</readOnly>
+              <writeOnly>false</writeOnly>
+            </configurationParameter>
+          </entry>
+          <entry>
+            <int>15</int>
+            <configurationParameter>
+              <index>15</index>
+              <size>1</size>
+              <value>0</value>
               <readOnly>false</readOnly>
               <writeOnly>false</writeOnly>
             </configurationParameter>
@@ -215,81 +276,21 @@
             </configurationParameter>
           </entry>
           <entry>
-            <int>49</int>
+            <int>30</int>
             <configurationParameter>
-              <index>49</index>
+              <index>30</index>
               <size>1</size>
-              <value>0</value>
+              <value>3</value>
               <readOnly>false</readOnly>
               <writeOnly>false</writeOnly>
             </configurationParameter>
           </entry>
           <entry>
-            <int>50</int>
+            <int>31</int>
             <configurationParameter>
-              <index>50</index>
-              <size>2</size>
-              <value>300</value>
-              <readOnly>false</readOnly>
-              <writeOnly>false</writeOnly>
-            </configurationParameter>
-          </entry>
-          <entry>
-            <int>51</int>
-            <configurationParameter>
-              <index>51</index>
-              <size>2</size>
-              <value>500</value>
-              <readOnly>false</readOnly>
-              <writeOnly>false</writeOnly>
-            </configurationParameter>
-          </entry>
-          <entry>
-            <int>52</int>
-            <configurationParameter>
-              <index>52</index>
+              <index>31</index>
               <size>1</size>
-              <value>6</value>
-              <readOnly>false</readOnly>
-              <writeOnly>false</writeOnly>
-            </configurationParameter>
-          </entry>
-          <entry>
-            <int>60</int>
-            <configurationParameter>
-              <index>60</index>
-              <size>2</size>
-              <value>25000</value>
-              <readOnly>false</readOnly>
-              <writeOnly>false</writeOnly>
-            </configurationParameter>
-          </entry>
-          <entry>
-            <int>61</int>
-            <configurationParameter>
-              <index>61</index>
-              <size>1</size>
-              <value>1</value>
-              <readOnly>false</readOnly>
-              <writeOnly>false</writeOnly>
-            </configurationParameter>
-          </entry>
-          <entry>
-            <int>62</int>
-            <configurationParameter>
-              <index>62</index>
-              <size>1</size>
-              <value>8</value>
-              <readOnly>false</readOnly>
-              <writeOnly>false</writeOnly>
-            </configurationParameter>
-          </entry>
-          <entry>
-            <int>63</int>
-            <configurationParameter>
-              <index>63</index>
-              <size>1</size>
-              <value>1</value>
+              <value>2</value>
               <readOnly>false</readOnly>
               <writeOnly>false</writeOnly>
             </configurationParameter>
@@ -298,20 +299,91 @@
       </configurationCommandClass>
     </entry>
     <entry>
-      <commandClass>METER</commandClass>
-      <meterCommandClass>
+      <commandClass>MULTI_INSTANCE</commandClass>
+      <multiInstanceCommandClass>
         <version>2</version>
         <instances>1</instances>
         <versionSupported>2</versionSupported>
-        <meterType>ELECTRIC</meterType>
-        <meterScales>
-          <meterScale>E_W</meterScale>
-          <meterScale>E_KWh</meterScale>
-        </meterScales>
-        <canReset>true</canReset>
-        <isGetSupported>true</isGetSupported>
-        <isSupportRequestSupported>true</isSupportRequestSupported>
-      </meterCommandClass>
+        <endpoints>
+          <entry>
+            <int>1</int>
+            <endPoint>
+              <deviceClass>
+                <basicDeviceClass>ROUTING_SLAVE</basicDeviceClass>
+                <genericDeviceClass>BINARY_SWITCH</genericDeviceClass>
+                <specificDeviceClass>POWER_SWITCH_BINARY</specificDeviceClass>
+              </deviceClass>
+              <endpointId>1</endpointId>
+              <supportedCommandClasses>
+                <entry>
+                  <commandClass>BASIC</commandClass>
+                  <basicCommandClass>
+                    <endpoint reference="../../../.."/>
+                    <version>0</version>
+                    <instances>0</instances>
+                    <versionSupported>0</versionSupported>
+                    <isGetSupported>true</isGetSupported>
+                  </basicCommandClass>
+                </entry>
+                <entry>
+                  <commandClass>SWITCH_BINARY</commandClass>
+                  <binarySwitchCommandClass>
+                    <endpoint reference="../../../.."/>
+                    <version>1</version>
+                    <instances>1</instances>
+                    <versionSupported>1</versionSupported>
+                    <isGetSupported>true</isGetSupported>
+                  </binarySwitchCommandClass>
+                </entry>
+              </supportedCommandClasses>
+            </endPoint>
+          </entry>
+          <entry>
+            <int>2</int>
+            <endPoint>
+              <deviceClass>
+                <basicDeviceClass>ROUTING_SLAVE</basicDeviceClass>
+                <genericDeviceClass>BINARY_SWITCH</genericDeviceClass>
+                <specificDeviceClass>POWER_SWITCH_BINARY</specificDeviceClass>
+              </deviceClass>
+              <endpointId>2</endpointId>
+              <supportedCommandClasses>
+                <entry>
+                  <commandClass>BASIC</commandClass>
+                  <basicCommandClass>
+                    <endpoint reference="../../../.."/>
+                    <version>0</version>
+                    <instances>0</instances>
+                    <versionSupported>0</versionSupported>
+                    <isGetSupported>true</isGetSupported>
+                  </basicCommandClass>
+                </entry>
+                <entry>
+                  <commandClass>SWITCH_BINARY</commandClass>
+                  <binarySwitchCommandClass>
+                    <endpoint reference="../../../.."/>
+                    <version>1</version>
+                    <instances>1</instances>
+                    <versionSupported>1</versionSupported>
+                    <isGetSupported>true</isGetSupported>
+                  </binarySwitchCommandClass>
+                </entry>
+              </supportedCommandClasses>
+            </endPoint>
+          </entry>
+        </endpoints>
+        <useDestEndpointAsSource>false</useDestEndpointAsSource>
+        <endpointsAreTheSameDeviceClass>true</endpointsAreTheSameDeviceClass>
+      </multiInstanceCommandClass>
+    </entry>
+    <entry>
+      <commandClass>MULTI_INSTANCE_ASSOCIATION</commandClass>
+      <multiAssociationCommandClass>
+        <version>1</version>
+        <instances>1</instances>
+        <versionSupported>1</versionSupported>
+        <maxGroups>2</maxGroups>
+      </multiAssociationCommandClass>
     </entry>
     <entry>
       <commandClass>FIRMWARE_UPDATE_MD</commandClass>
@@ -322,24 +394,6 @@
       </firmwareUpdateCommandClass>
     </entry>
     <entry>
-      <commandClass>SENSOR_MULTILEVEL</commandClass>
-      <multiLevelSensorCommandClass>
-        <version>2</version>
-        <instances>1</instances>
-        <versionSupported>2</versionSupported>
-        <sensors>
-          <entry>
-            <multilevelSensorType>POWER</multilevelSensorType>
-            <multilevelSensor>
-              <sensorType>POWER</sensorType>
-              <initialised>true</initialised>
-            </multilevelSensor>
-          </entry>
-        </sensors>
-        <isGetSupported>true</isGetSupported>
-      </multiLevelSensorCommandClass>
-    </entry>
-    <entry>
       <commandClass>SWITCH_BINARY</commandClass>
       <binarySwitchCommandClass>
         <version>1</version>
@@ -348,17 +402,6 @@
         <isGetSupported>true</isGetSupported>
       </binarySwitchCommandClass>
     </entry>
-    <entry>
-      <commandClass>ALARM</commandClass>
-      <alarmCommandClass>
-        <version>1</version>
-        <instances>1</instances>
-        <versionSupported>1</versionSupported>
-        <alarms/>
-        <v1Supported>false</v1Supported>
-        <isGetSupported>true</isGetSupported>
-      </alarmCommandClass>
-    </entry>
   </supportedCommandClasses>
   <securedCommandClasses/>
   <associationGroups>
@@ -366,14 +409,24 @@
       <int>1</int>
       <associationGroup>
         <index>1</index>
-        <associations/>
+        <associations>
+          <associationMember>
+            <node>1</node>
+            <endpoint>0</endpoint>
+          </associationMember>
+        </associations>
       </associationGroup>
     </entry>
     <entry>
       <int>2</int>
       <associationGroup>
         <index>2</index>
-        <associations/>
+        <associations>
+          <associationMember>
+            <node>1</node>
+            <endpoint>0</endpoint>
+          </associationMember>
+        </associations>
       </associationGroup>
     </entry>
     <entry>
@@ -387,12 +440,11 @@
   <nodeNeighbors>
     <int>1</int>
     <int>2</int>
-    <int>5</int>
+    <int>3</int>
+    <int>6</int>
     <int>7</int>
-    <int>8</int>
-    <int>11</int>
     <int>12</int>
   </nodeNeighbors>
-  <lastSent>2017-10-08 19:59:06.317 UTC</lastSent>
-  <lastReceived>2017-10-08 19:59:06.344 UTC</lastReceived>
+  <lastSent>2017-10-08 19:59:05.589 UTC</lastSent>
+  <lastReceived>2017-10-08 19:59:05.616 UTC</lastReceived>
 </node>

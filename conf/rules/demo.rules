@@ -1,0 +1,10 @@
+rule "automatically turn off blanket"
+when
+        Item SDB_Switch changed
+then
+      if(SDB_Switch.state == ON){
+        sendCommand(TV_Switch, ON)
+      } else {
+        sendCommand(TV_Switch, OFF)
+      }
+end

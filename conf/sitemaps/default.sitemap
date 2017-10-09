@@ -4,5 +4,7 @@ sitemap default label="Main Menu"
         Group item=bedroom
         Group item=bathroom
         Group item=livingroom
+        Group item=kitchen
+        Group item=outdoor
 	}
 }

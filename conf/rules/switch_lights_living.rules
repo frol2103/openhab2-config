@@ -1,0 +1,25 @@
+
+rule "control light living"
+when
+        Item switch_living_living received command
+then
+      if(switch_living_living.state == ON){
+        sendCommand(Light_Living, ON)
+        sendCommand(Floor_Lamp, ON)
+      } else {
+        sendCommand(Light_Living, OFF)
+        sendCommand(Floor_Lamp, OFF)
+      }
+end
+
+
+rule "control light dining"
+when
+        Item switch_living_dining received command
+then
+      if(switch_living_dining.state == ON){
+        sendCommand(Light_Dining, ON)
+      } else {
+        sendCommand(Light_Dining, OFF)
+      }
+end

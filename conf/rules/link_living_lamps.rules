@@ -1,0 +1,10 @@
+    rule "link living room roof lamp and floor lamp "
+when
+    Item Light_Living  changed
+then
+      if(Light_Living.state == ON){
+        sendCommand(Floor_Lamp, ON)
+      } else {
+        sendCommand(Floor_Lamp, OFF)
+      }
+end

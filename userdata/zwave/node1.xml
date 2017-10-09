@@ -18,14 +18,6 @@
   <maxBaudRate>40000</maxBaudRate>
   <supportedCommandClasses>
     <entry>
-      <commandClass>NO_OPERATION</commandClass>
-      <noOperationCommandClass>
-        <version>1</version>
-        <instances>0</instances>
-        <versionSupported>1</versionSupported>
-      </noOperationCommandClass>
-    </entry>
-    <entry>
       <commandClass>BASIC</commandClass>
       <basicCommandClass>
         <version>0</version>
@@ -33,6 +25,14 @@
         <versionSupported>0</versionSupported>
         <isGetSupported>true</isGetSupported>
       </basicCommandClass>
+    </entry>
+    <entry>
+      <commandClass>NO_OPERATION</commandClass>
+      <noOperationCommandClass>
+        <version>1</version>
+        <instances>0</instances>
+        <versionSupported>1</versionSupported>
+      </noOperationCommandClass>
     </entry>
   </supportedCommandClasses>
   <securedCommandClasses/>

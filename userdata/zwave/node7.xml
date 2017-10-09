@@ -33,36 +33,45 @@
   </nodeInformationFrame>
   <supportedCommandClasses>
     <entry>
-      <commandClass>NO_OPERATION</commandClass>
-      <noOperationCommandClass>
+      <commandClass>MANUFACTURER_SPECIFIC</commandClass>
+      <manufacturerSpecificCommandClass>
         <version>1</version>
-        <instances>1</instances>
-        <versionSupported>1</versionSupported>
-      </noOperationCommandClass>
-    </entry>
-    <entry>
-      <commandClass>CRC_16_ENCAP</commandClass>
-      <crc16EncapsulationCommandClass>
-        <version>1</version>
-        <instances>1</instances>
-        <versionSupported>1</versionSupported>
-      </crc16EncapsulationCommandClass>
-    </entry>
-    <entry>
-      <commandClass>METER</commandClass>
-      <meterCommandClass>
-        <version>2</version>
         <instances>1</instances>
         <versionSupported>2</versionSupported>
-        <meterType>ELECTRIC</meterType>
-        <meterScales>
-          <meterScale>E_KWh</meterScale>
-          <meterScale>E_W</meterScale>
-        </meterScales>
-        <canReset>true</canReset>
+        <initSerialNumber>false</initSerialNumber>
+        <deviceManufacturer>153</deviceManufacturer>
+        <deviceType>3</deviceType>
+        <deviceId>4</deviceId>
+      </manufacturerSpecificCommandClass>
+    </entry>
+    <entry>
+      <commandClass>VERSION</commandClass>
+      <versionCommandClass>
+        <version>1</version>
+        <instances>1</instances>
+        <versionSupported>1</versionSupported>
+        <libraryType>LIB_SLAVE_ENHANCED</libraryType>
+        <protocolVersion>3.41</protocolVersion>
+        <applicationVersion>4.27</applicationVersion>
+      </versionCommandClass>
+    </entry>
+    <entry>
+      <commandClass>BASIC</commandClass>
+      <basicCommandClass>
+        <version>1</version>
+        <instances>1</instances>
+        <versionSupported>1</versionSupported>
         <isGetSupported>true</isGetSupported>
-        <isSupportRequestSupported>true</isSupportRequestSupported>
-      </meterCommandClass>
+      </basicCommandClass>
+    </entry>
+    <entry>
+      <commandClass>ASSOCIATION</commandClass>
+      <associationCommandClass>
+        <version>1</version>
+        <instances>1</instances>
+        <versionSupported>1</versionSupported>
+        <maxGroups>4</maxGroups>
+      </associationCommandClass>
     </entry>
     <entry>
       <commandClass>SWITCH_ALL</commandClass>
@@ -73,6 +82,38 @@
         <isGetSupported>true</isGetSupported>
         <mode>SWITCH_ALL_INCLUDE_ON_OFF</mode>
       </switchAllCommandClass>
+    </entry>
+    <entry>
+      <commandClass>CRC_16_ENCAP</commandClass>
+      <crc16EncapsulationCommandClass>
+        <version>1</version>
+        <instances>1</instances>
+        <versionSupported>1</versionSupported>
+      </crc16EncapsulationCommandClass>
+    </entry>
+    <entry>
+      <commandClass>PROTECTION</commandClass>
+      <protectionCommandClass>
+        <version>2</version>
+        <instances>1</instances>
+        <versionSupported>2</versionSupported>
+        <localModes>
+          <localProtection>UNPROTECTED</localProtection>
+          <localProtection>PROTECTED</localProtection>
+        </localModes>
+        <rfModes>
+          <rfProtection>UNPROTECTED</rfProtection>
+          <rfProtection>NORFCONTROL</rfProtection>
+        </rfModes>
+      </protectionCommandClass>
+    </entry>
+    <entry>
+      <commandClass>NO_OPERATION</commandClass>
+      <noOperationCommandClass>
+        <version>1</version>
+        <instances>1</instances>
+        <versionSupported>1</versionSupported>
+      </noOperationCommandClass>
     </entry>
     <entry>
       <commandClass>CONFIGURATION</commandClass>
@@ -135,41 +176,434 @@
       </configurationCommandClass>
     </entry>
     <entry>
-      <commandClass>BASIC</commandClass>
-      <basicCommandClass>
-        <version>1</version>
+      <commandClass>MULTI_INSTANCE</commandClass>
+      <multiInstanceCommandClass>
+        <version>2</version>
         <instances>1</instances>
-        <versionSupported>1</versionSupported>
-        <isGetSupported>true</isGetSupported>
-      </basicCommandClass>
+        <versionSupported>3</versionSupported>
+        <endpoints>
+          <entry>
+            <int>1</int>
+            <endPoint>
+              <deviceClass>
+                <basicDeviceClass>ROUTING_SLAVE</basicDeviceClass>
+                <genericDeviceClass>BINARY_SWITCH</genericDeviceClass>
+                <specificDeviceClass>POWER_SWITCH_BINARY</specificDeviceClass>
+              </deviceClass>
+              <endpointId>1</endpointId>
+              <supportedCommandClasses>
+                <entry>
+                  <commandClass>BASIC</commandClass>
+                  <basicCommandClass>
+                    <endpoint reference="../../../.."/>
+                    <version>0</version>
+                    <instances>0</instances>
+                    <versionSupported>0</versionSupported>
+                    <isGetSupported>true</isGetSupported>
+                  </basicCommandClass>
+                </entry>
+                <entry>
+                  <commandClass>PROTECTION</commandClass>
+                  <protectionCommandClass>
+                    <endpoint reference="../../../.."/>
+                    <version>2</version>
+                    <instances>1</instances>
+                    <versionSupported>2</versionSupported>
+                    <localModes>
+                      <localProtection>UNPROTECTED</localProtection>
+                      <localProtection>PROTECTED</localProtection>
+                    </localModes>
+                    <rfModes>
+                      <rfProtection>UNPROTECTED</rfProtection>
+                      <rfProtection>NORFCONTROL</rfProtection>
+                    </rfModes>
+                  </protectionCommandClass>
+                </entry>
+                <entry>
+                  <commandClass>METER</commandClass>
+                  <meterCommandClass>
+                    <endpoint reference="../../../.."/>
+                    <version>2</version>
+                    <instances>1</instances>
+                    <versionSupported>2</versionSupported>
+                    <meterType>ELECTRIC</meterType>
+                    <meterScales>
+                      <meterScale>E_W</meterScale>
+                      <meterScale>E_KWh</meterScale>
+                    </meterScales>
+                    <canReset>true</canReset>
+                    <isGetSupported>true</isGetSupported>
+                    <isSupportRequestSupported>true</isSupportRequestSupported>
+                  </meterCommandClass>
+                </entry>
+                <entry>
+                  <commandClass>SWITCH_BINARY</commandClass>
+                  <binarySwitchCommandClass>
+                    <endpoint reference="../../../.."/>
+                    <version>1</version>
+                    <instances>1</instances>
+                    <versionSupported>1</versionSupported>
+                    <isGetSupported>true</isGetSupported>
+                  </binarySwitchCommandClass>
+                </entry>
+              </supportedCommandClasses>
+            </endPoint>
+          </entry>
+          <entry>
+            <int>2</int>
+            <endPoint>
+              <deviceClass>
+                <basicDeviceClass>ROUTING_SLAVE</basicDeviceClass>
+                <genericDeviceClass>BINARY_SWITCH</genericDeviceClass>
+                <specificDeviceClass>POWER_SWITCH_BINARY</specificDeviceClass>
+              </deviceClass>
+              <endpointId>2</endpointId>
+              <supportedCommandClasses>
+                <entry>
+                  <commandClass>BASIC</commandClass>
+                  <basicCommandClass>
+                    <endpoint reference="../../../.."/>
+                    <version>0</version>
+                    <instances>0</instances>
+                    <versionSupported>0</versionSupported>
+                    <isGetSupported>true</isGetSupported>
+                  </basicCommandClass>
+                </entry>
+                <entry>
+                  <commandClass>PROTECTION</commandClass>
+                  <protectionCommandClass>
+                    <endpoint reference="../../../.."/>
+                    <version>2</version>
+                    <instances>1</instances>
+                    <versionSupported>2</versionSupported>
+                    <localModes>
+                      <localProtection>UNPROTECTED</localProtection>
+                      <localProtection>PROTECTED</localProtection>
+                    </localModes>
+                    <rfModes>
+                      <rfProtection>UNPROTECTED</rfProtection>
+                      <rfProtection>NORFCONTROL</rfProtection>
+                    </rfModes>
+                  </protectionCommandClass>
+                </entry>
+                <entry>
+                  <commandClass>METER</commandClass>
+                  <meterCommandClass>
+                    <endpoint reference="../../../.."/>
+                    <version>2</version>
+                    <instances>1</instances>
+                    <versionSupported>2</versionSupported>
+                    <meterType>ELECTRIC</meterType>
+                    <meterScales>
+                      <meterScale>E_W</meterScale>
+                      <meterScale>E_KWh</meterScale>
+                    </meterScales>
+                    <canReset>true</canReset>
+                    <isGetSupported>true</isGetSupported>
+                    <isSupportRequestSupported>true</isSupportRequestSupported>
+                  </meterCommandClass>
+                </entry>
+                <entry>
+                  <commandClass>SWITCH_BINARY</commandClass>
+                  <binarySwitchCommandClass>
+                    <endpoint reference="../../../.."/>
+                    <version>1</version>
+                    <instances>1</instances>
+                    <versionSupported>1</versionSupported>
+                    <isGetSupported>true</isGetSupported>
+                  </binarySwitchCommandClass>
+                </entry>
+              </supportedCommandClasses>
+            </endPoint>
+          </entry>
+          <entry>
+            <int>3</int>
+            <endPoint>
+              <deviceClass>
+                <basicDeviceClass>ROUTING_SLAVE</basicDeviceClass>
+                <genericDeviceClass>BINARY_SWITCH</genericDeviceClass>
+                <specificDeviceClass>POWER_SWITCH_BINARY</specificDeviceClass>
+              </deviceClass>
+              <endpointId>3</endpointId>
+              <supportedCommandClasses>
+                <entry>
+                  <commandClass>BASIC</commandClass>
+                  <basicCommandClass>
+                    <endpoint reference="../../../.."/>
+                    <version>0</version>
+                    <instances>0</instances>
+                    <versionSupported>0</versionSupported>
+                    <isGetSupported>true</isGetSupported>
+                  </basicCommandClass>
+                </entry>
+                <entry>
+                  <commandClass>PROTECTION</commandClass>
+                  <protectionCommandClass>
+                    <endpoint reference="../../../.."/>
+                    <version>2</version>
+                    <instances>1</instances>
+                    <versionSupported>2</versionSupported>
+                    <localModes>
+                      <localProtection>UNPROTECTED</localProtection>
+                      <localProtection>PROTECTED</localProtection>
+                    </localModes>
+                    <rfModes>
+                      <rfProtection>UNPROTECTED</rfProtection>
+                      <rfProtection>NORFCONTROL</rfProtection>
+                    </rfModes>
+                  </protectionCommandClass>
+                </entry>
+                <entry>
+                  <commandClass>METER</commandClass>
+                  <meterCommandClass>
+                    <endpoint reference="../../../.."/>
+                    <version>2</version>
+                    <instances>1</instances>
+                    <versionSupported>2</versionSupported>
+                    <meterType>ELECTRIC</meterType>
+                    <meterScales>
+                      <meterScale>E_W</meterScale>
+                      <meterScale>E_KWh</meterScale>
+                    </meterScales>
+                    <canReset>true</canReset>
+                    <isGetSupported>true</isGetSupported>
+                    <isSupportRequestSupported>true</isSupportRequestSupported>
+                  </meterCommandClass>
+                </entry>
+                <entry>
+                  <commandClass>SWITCH_BINARY</commandClass>
+                  <binarySwitchCommandClass>
+                    <endpoint reference="../../../.."/>
+                    <version>1</version>
+                    <instances>1</instances>
+                    <versionSupported>1</versionSupported>
+                    <isGetSupported>true</isGetSupported>
+                  </binarySwitchCommandClass>
+                </entry>
+              </supportedCommandClasses>
+            </endPoint>
+          </entry>
+          <entry>
+            <int>4</int>
+            <endPoint>
+              <deviceClass>
+                <basicDeviceClass>ROUTING_SLAVE</basicDeviceClass>
+                <genericDeviceClass>BINARY_SWITCH</genericDeviceClass>
+                <specificDeviceClass>POWER_SWITCH_BINARY</specificDeviceClass>
+              </deviceClass>
+              <endpointId>4</endpointId>
+              <supportedCommandClasses>
+                <entry>
+                  <commandClass>BASIC</commandClass>
+                  <basicCommandClass>
+                    <endpoint reference="../../../.."/>
+                    <version>0</version>
+                    <instances>0</instances>
+                    <versionSupported>0</versionSupported>
+                    <isGetSupported>true</isGetSupported>
+                  </basicCommandClass>
+                </entry>
+                <entry>
+                  <commandClass>PROTECTION</commandClass>
+                  <protectionCommandClass>
+                    <endpoint reference="../../../.."/>
+                    <version>2</version>
+                    <instances>1</instances>
+                    <versionSupported>2</versionSupported>
+                    <localModes>
+                      <localProtection>UNPROTECTED</localProtection>
+                      <localProtection>PROTECTED</localProtection>
+                    </localModes>
+                    <rfModes>
+                      <rfProtection>UNPROTECTED</rfProtection>
+                      <rfProtection>NORFCONTROL</rfProtection>
+                    </rfModes>
+                  </protectionCommandClass>
+                </entry>
+                <entry>
+                  <commandClass>METER</commandClass>
+                  <meterCommandClass>
+                    <endpoint reference="../../../.."/>
+                    <version>2</version>
+                    <instances>1</instances>
+                    <versionSupported>2</versionSupported>
+                    <meterType>ELECTRIC</meterType>
+                    <meterScales>
+                      <meterScale>E_W</meterScale>
+                      <meterScale>E_KWh</meterScale>
+                    </meterScales>
+                    <canReset>true</canReset>
+                    <isGetSupported>true</isGetSupported>
+                    <isSupportRequestSupported>true</isSupportRequestSupported>
+                  </meterCommandClass>
+                </entry>
+                <entry>
+                  <commandClass>SWITCH_BINARY</commandClass>
+                  <binarySwitchCommandClass>
+                    <endpoint reference="../../../.."/>
+                    <version>1</version>
+                    <instances>1</instances>
+                    <versionSupported>1</versionSupported>
+                    <isGetSupported>true</isGetSupported>
+                  </binarySwitchCommandClass>
+                </entry>
+              </supportedCommandClasses>
+            </endPoint>
+          </entry>
+          <entry>
+            <int>5</int>
+            <endPoint>
+              <deviceClass>
+                <basicDeviceClass>ROUTING_SLAVE</basicDeviceClass>
+                <genericDeviceClass>BINARY_SWITCH</genericDeviceClass>
+                <specificDeviceClass>POWER_SWITCH_BINARY</specificDeviceClass>
+              </deviceClass>
+              <endpointId>5</endpointId>
+              <supportedCommandClasses>
+                <entry>
+                  <commandClass>BASIC</commandClass>
+                  <basicCommandClass>
+                    <endpoint reference="../../../.."/>
+                    <version>0</version>
+                    <instances>0</instances>
+                    <versionSupported>0</versionSupported>
+                    <isGetSupported>true</isGetSupported>
+                  </basicCommandClass>
+                </entry>
+                <entry>
+                  <commandClass>PROTECTION</commandClass>
+                  <protectionCommandClass>
+                    <endpoint reference="../../../.."/>
+                    <version>2</version>
+                    <instances>1</instances>
+                    <versionSupported>2</versionSupported>
+                    <localModes>
+                      <localProtection>UNPROTECTED</localProtection>
+                      <localProtection>PROTECTED</localProtection>
+                    </localModes>
+                    <rfModes>
+                      <rfProtection>UNPROTECTED</rfProtection>
+                      <rfProtection>NORFCONTROL</rfProtection>
+                    </rfModes>
+                  </protectionCommandClass>
+                </entry>
+                <entry>
+                  <commandClass>METER</commandClass>
+                  <meterCommandClass>
+                    <endpoint reference="../../../.."/>
+                    <version>2</version>
+                    <instances>1</instances>
+                    <versionSupported>2</versionSupported>
+                    <meterType>ELECTRIC</meterType>
+                    <meterScales>
+                      <meterScale>E_W</meterScale>
+                      <meterScale>E_KWh</meterScale>
+                    </meterScales>
+                    <canReset>true</canReset>
+                    <isGetSupported>true</isGetSupported>
+                    <isSupportRequestSupported>true</isSupportRequestSupported>
+                  </meterCommandClass>
+                </entry>
+                <entry>
+                  <commandClass>SWITCH_BINARY</commandClass>
+                  <binarySwitchCommandClass>
+                    <endpoint reference="../../../.."/>
+                    <version>1</version>
+                    <instances>1</instances>
+                    <versionSupported>1</versionSupported>
+                    <isGetSupported>true</isGetSupported>
+                  </binarySwitchCommandClass>
+                </entry>
+              </supportedCommandClasses>
+            </endPoint>
+          </entry>
+          <entry>
+            <int>6</int>
+            <endPoint>
+              <deviceClass>
+                <basicDeviceClass>ROUTING_SLAVE</basicDeviceClass>
+                <genericDeviceClass>BINARY_SWITCH</genericDeviceClass>
+                <specificDeviceClass>POWER_SWITCH_BINARY</specificDeviceClass>
+              </deviceClass>
+              <endpointId>6</endpointId>
+              <supportedCommandClasses>
+                <entry>
+                  <commandClass>BASIC</commandClass>
+                  <basicCommandClass>
+                    <endpoint reference="../../../.."/>
+                    <version>0</version>
+                    <instances>0</instances>
+                    <versionSupported>0</versionSupported>
+                    <isGetSupported>true</isGetSupported>
+                  </basicCommandClass>
+                </entry>
+                <entry>
+                  <commandClass>PROTECTION</commandClass>
+                  <protectionCommandClass>
+                    <endpoint reference="../../../.."/>
+                    <version>2</version>
+                    <instances>1</instances>
+                    <versionSupported>2</versionSupported>
+                    <localModes>
+                      <localProtection>UNPROTECTED</localProtection>
+                      <localProtection>PROTECTED</localProtection>
+                    </localModes>
+                    <rfModes>
+                      <rfProtection>UNPROTECTED</rfProtection>
+                      <rfProtection>NORFCONTROL</rfProtection>
+                    </rfModes>
+                  </protectionCommandClass>
+                </entry>
+                <entry>
+                  <commandClass>METER</commandClass>
+                  <meterCommandClass>
+                    <endpoint reference="../../../.."/>
+                    <version>2</version>
+                    <instances>1</instances>
+                    <versionSupported>2</versionSupported>
+                    <meterType>ELECTRIC</meterType>
+                    <meterScales>
+                      <meterScale>E_W</meterScale>
+                      <meterScale>E_KWh</meterScale>
+                    </meterScales>
+                    <canReset>true</canReset>
+                    <isGetSupported>true</isGetSupported>
+                    <isSupportRequestSupported>true</isSupportRequestSupported>
+                  </meterCommandClass>
+                </entry>
+                <entry>
+                  <commandClass>SWITCH_BINARY</commandClass>
+                  <binarySwitchCommandClass>
+                    <endpoint reference="../../../.."/>
+                    <version>1</version>
+                    <instances>1</instances>
+                    <versionSupported>1</versionSupported>
+                    <isGetSupported>true</isGetSupported>
+                  </binarySwitchCommandClass>
+                </entry>
+              </supportedCommandClasses>
+            </endPoint>
+          </entry>
+        </endpoints>
+        <useDestEndpointAsSource>true</useDestEndpointAsSource>
+        <endpointsAreTheSameDeviceClass>true</endpointsAreTheSameDeviceClass>
+      </multiInstanceCommandClass>
     </entry>
     <entry>
-      <commandClass>PROTECTION</commandClass>
-      <protectionCommandClass>
+      <commandClass>METER</commandClass>
+      <meterCommandClass>
         <version>2</version>
         <instances>1</instances>
         <versionSupported>2</versionSupported>
-        <localModes>
-          <localProtection>UNPROTECTED</localProtection>
-          <localProtection>PROTECTED</localProtection>
-        </localModes>
-        <rfModes>
-          <rfProtection>UNPROTECTED</rfProtection>
-          <rfProtection>NORFCONTROL</rfProtection>
-        </rfModes>
-      </protectionCommandClass>
-    </entry>
-    <entry>
-      <commandClass>MANUFACTURER_SPECIFIC</commandClass>
-      <manufacturerSpecificCommandClass>
-        <version>1</version>
-        <instances>1</instances>
-        <versionSupported>2</versionSupported>
-        <initSerialNumber>false</initSerialNumber>
-        <deviceManufacturer>153</deviceManufacturer>
-        <deviceType>3</deviceType>
-        <deviceId>4</deviceId>
-      </manufacturerSpecificCommandClass>
+        <meterType>ELECTRIC</meterType>
+        <meterScales>
+          <meterScale>E_W</meterScale>
+          <meterScale>E_KWh</meterScale>
+        </meterScales>
+        <canReset>true</canReset>
+        <isGetSupported>true</isGetSupported>
+        <isSupportRequestSupported>true</isSupportRequestSupported>
+      </meterCommandClass>
     </entry>
     <entry>
       <commandClass>INDICATOR</commandClass>
@@ -180,17 +614,6 @@
         <indicator>0</indicator>
         <isGetSupported>true</isGetSupported>
       </indicatorCommandClass>
-    </entry>
-    <entry>
-      <commandClass>VERSION</commandClass>
-      <versionCommandClass>
-        <version>1</version>
-        <instances>1</instances>
-        <versionSupported>1</versionSupported>
-        <libraryType>LIB_SLAVE_ENHANCED</libraryType>
-        <protocolVersion>3.41</protocolVersion>
-        <applicationVersion>4.27</applicationVersion>
-      </versionCommandClass>
     </entry>
     <entry>
       <commandClass>SWITCH_BINARY</commandClass>
@@ -211,429 +634,6 @@
         <v1Supported>false</v1Supported>
         <isGetSupported>true</isGetSupported>
       </alarmCommandClass>
-    </entry>
-    <entry>
-      <commandClass>MULTI_INSTANCE</commandClass>
-      <multiInstanceCommandClass>
-        <version>2</version>
-        <instances>1</instances>
-        <versionSupported>3</versionSupported>
-        <endpoints>
-          <entry>
-            <int>1</int>
-            <endPoint>
-              <deviceClass>
-                <basicDeviceClass>ROUTING_SLAVE</basicDeviceClass>
-                <genericDeviceClass>BINARY_SWITCH</genericDeviceClass>
-                <specificDeviceClass>POWER_SWITCH_BINARY</specificDeviceClass>
-              </deviceClass>
-              <endpointId>1</endpointId>
-              <supportedCommandClasses>
-                <entry>
-                  <commandClass>PROTECTION</commandClass>
-                  <protectionCommandClass>
-                    <endpoint reference="../../../.."/>
-                    <version>2</version>
-                    <instances>1</instances>
-                    <versionSupported>2</versionSupported>
-                    <localModes>
-                      <localProtection>UNPROTECTED</localProtection>
-                      <localProtection>PROTECTED</localProtection>
-                    </localModes>
-                    <rfModes>
-                      <rfProtection>UNPROTECTED</rfProtection>
-                      <rfProtection>NORFCONTROL</rfProtection>
-                    </rfModes>
-                  </protectionCommandClass>
-                </entry>
-                <entry>
-                  <commandClass>METER</commandClass>
-                  <meterCommandClass>
-                    <endpoint reference="../../../.."/>
-                    <version>2</version>
-                    <instances>1</instances>
-                    <versionSupported>2</versionSupported>
-                    <meterType>ELECTRIC</meterType>
-                    <meterScales>
-                      <meterScale>E_KWh</meterScale>
-                      <meterScale>E_W</meterScale>
-                    </meterScales>
-                    <canReset>true</canReset>
-                    <isGetSupported>true</isGetSupported>
-                    <isSupportRequestSupported>true</isSupportRequestSupported>
-                  </meterCommandClass>
-                </entry>
-                <entry>
-                  <commandClass>SWITCH_BINARY</commandClass>
-                  <binarySwitchCommandClass>
-                    <endpoint reference="../../../.."/>
-                    <version>1</version>
-                    <instances>1</instances>
-                    <versionSupported>1</versionSupported>
-                    <isGetSupported>true</isGetSupported>
-                  </binarySwitchCommandClass>
-                </entry>
-                <entry>
-                  <commandClass>BASIC</commandClass>
-                  <basicCommandClass>
-                    <endpoint reference="../../../.."/>
-                    <version>0</version>
-                    <instances>0</instances>
-                    <versionSupported>0</versionSupported>
-                    <isGetSupported>true</isGetSupported>
-                  </basicCommandClass>
-                </entry>
-              </supportedCommandClasses>
-            </endPoint>
-          </entry>
-          <entry>
-            <int>2</int>
-            <endPoint>
-              <deviceClass>
-                <basicDeviceClass>ROUTING_SLAVE</basicDeviceClass>
-                <genericDeviceClass>BINARY_SWITCH</genericDeviceClass>
-                <specificDeviceClass>POWER_SWITCH_BINARY</specificDeviceClass>
-              </deviceClass>
-              <endpointId>2</endpointId>
-              <supportedCommandClasses>
-                <entry>
-                  <commandClass>PROTECTION</commandClass>
-                  <protectionCommandClass>
-                    <endpoint reference="../../../.."/>
-                    <version>2</version>
-                    <instances>1</instances>
-                    <versionSupported>2</versionSupported>
-                    <localModes>
-                      <localProtection>UNPROTECTED</localProtection>
-                      <localProtection>PROTECTED</localProtection>
-                    </localModes>
-                    <rfModes>
-                      <rfProtection>UNPROTECTED</rfProtection>
-                      <rfProtection>NORFCONTROL</rfProtection>
-                    </rfModes>
-                  </protectionCommandClass>
-                </entry>
-                <entry>
-                  <commandClass>METER</commandClass>
-                  <meterCommandClass>
-                    <endpoint reference="../../../.."/>
-                    <version>2</version>
-                    <instances>1</instances>
-                    <versionSupported>2</versionSupported>
-                    <meterType>ELECTRIC</meterType>
-                    <meterScales>
-                      <meterScale>E_KWh</meterScale>
-                      <meterScale>E_W</meterScale>
-                    </meterScales>
-                    <canReset>true</canReset>
-                    <isGetSupported>true</isGetSupported>
-                    <isSupportRequestSupported>true</isSupportRequestSupported>
-                  </meterCommandClass>
-                </entry>
-                <entry>
-                  <commandClass>SWITCH_BINARY</commandClass>
-                  <binarySwitchCommandClass>
-                    <endpoint reference="../../../.."/>
-                    <version>1</version>
-                    <instances>1</instances>
-                    <versionSupported>1</versionSupported>
-                    <isGetSupported>true</isGetSupported>
-                  </binarySwitchCommandClass>
-                </entry>
-                <entry>
-                  <commandClass>BASIC</commandClass>
-                  <basicCommandClass>
-                    <endpoint reference="../../../.."/>
-                    <version>0</version>
-                    <instances>0</instances>
-                    <versionSupported>0</versionSupported>
-                    <isGetSupported>true</isGetSupported>
-                  </basicCommandClass>
-                </entry>
-              </supportedCommandClasses>
-            </endPoint>
-          </entry>
-          <entry>
-            <int>3</int>
-            <endPoint>
-              <deviceClass>
-                <basicDeviceClass>ROUTING_SLAVE</basicDeviceClass>
-                <genericDeviceClass>BINARY_SWITCH</genericDeviceClass>
-                <specificDeviceClass>POWER_SWITCH_BINARY</specificDeviceClass>
-              </deviceClass>
-              <endpointId>3</endpointId>
-              <supportedCommandClasses>
-                <entry>
-                  <commandClass>PROTECTION</commandClass>
-                  <protectionCommandClass>
-                    <endpoint reference="../../../.."/>
-                    <version>2</version>
-                    <instances>1</instances>
-                    <versionSupported>2</versionSupported>
-                    <localModes>
-                      <localProtection>UNPROTECTED</localProtection>
-                      <localProtection>PROTECTED</localProtection>
-                    </localModes>
-                    <rfModes>
-                      <rfProtection>UNPROTECTED</rfProtection>
-                      <rfProtection>NORFCONTROL</rfProtection>
-                    </rfModes>
-                  </protectionCommandClass>
-                </entry>
-                <entry>
-                  <commandClass>METER</commandClass>
-                  <meterCommandClass>
-                    <endpoint reference="../../../.."/>
-                    <version>2</version>
-                    <instances>1</instances>
-                    <versionSupported>2</versionSupported>
-                    <meterType>ELECTRIC</meterType>
-                    <meterScales>
-                      <meterScale>E_KWh</meterScale>
-                      <meterScale>E_W</meterScale>
-                    </meterScales>
-                    <canReset>true</canReset>
-                    <isGetSupported>true</isGetSupported>
-                    <isSupportRequestSupported>true</isSupportRequestSupported>
-                  </meterCommandClass>
-                </entry>
-                <entry>
-                  <commandClass>SWITCH_BINARY</commandClass>
-                  <binarySwitchCommandClass>
-                    <endpoint reference="../../../.."/>
-                    <version>1</version>
-                    <instances>1</instances>
-                    <versionSupported>1</versionSupported>
-                    <isGetSupported>true</isGetSupported>
-                  </binarySwitchCommandClass>
-                </entry>
-                <entry>
-                  <commandClass>BASIC</commandClass>
-                  <basicCommandClass>
-                    <endpoint reference="../../../.."/>
-                    <version>0</version>
-                    <instances>0</instances>
-                    <versionSupported>0</versionSupported>
-                    <isGetSupported>true</isGetSupported>
-                  </basicCommandClass>
-                </entry>
-              </supportedCommandClasses>
-            </endPoint>
-          </entry>
-          <entry>
-            <int>4</int>
-            <endPoint>
-              <deviceClass>
-                <basicDeviceClass>ROUTING_SLAVE</basicDeviceClass>
-                <genericDeviceClass>BINARY_SWITCH</genericDeviceClass>
-                <specificDeviceClass>POWER_SWITCH_BINARY</specificDeviceClass>
-              </deviceClass>
-              <endpointId>4</endpointId>
-              <supportedCommandClasses>
-                <entry>
-                  <commandClass>PROTECTION</commandClass>
-                  <protectionCommandClass>
-                    <endpoint reference="../../../.."/>
-                    <version>2</version>
-                    <instances>1</instances>
-                    <versionSupported>2</versionSupported>
-                    <localModes>
-                      <localProtection>UNPROTECTED</localProtection>
-                      <localProtection>PROTECTED</localProtection>
-                    </localModes>
-                    <rfModes>
-                      <rfProtection>UNPROTECTED</rfProtection>
-                      <rfProtection>NORFCONTROL</rfProtection>
-                    </rfModes>
-                  </protectionCommandClass>
-                </entry>
-                <entry>
-                  <commandClass>METER</commandClass>
-                  <meterCommandClass>
-                    <endpoint reference="../../../.."/>
-                    <version>2</version>
-                    <instances>1</instances>
-                    <versionSupported>2</versionSupported>
-                    <meterType>ELECTRIC</meterType>
-                    <meterScales>
-                      <meterScale>E_KWh</meterScale>
-                      <meterScale>E_W</meterScale>
-                    </meterScales>
-                    <canReset>true</canReset>
-                    <isGetSupported>true</isGetSupported>
-                    <isSupportRequestSupported>true</isSupportRequestSupported>
-                  </meterCommandClass>
-                </entry>
-                <entry>
-                  <commandClass>SWITCH_BINARY</commandClass>
-                  <binarySwitchCommandClass>
-                    <endpoint reference="../../../.."/>
-                    <version>1</version>
-                    <instances>1</instances>
-                    <versionSupported>1</versionSupported>
-                    <isGetSupported>true</isGetSupported>
-                  </binarySwitchCommandClass>
-                </entry>
-                <entry>
-                  <commandClass>BASIC</commandClass>
-                  <basicCommandClass>
-                    <endpoint reference="../../../.."/>
-                    <version>0</version>
-                    <instances>0</instances>
-                    <versionSupported>0</versionSupported>
-                    <isGetSupported>true</isGetSupported>
-                  </basicCommandClass>
-                </entry>
-              </supportedCommandClasses>
-            </endPoint>
-          </entry>
-          <entry>
-            <int>5</int>
-            <endPoint>
-              <deviceClass>
-                <basicDeviceClass>ROUTING_SLAVE</basicDeviceClass>
-                <genericDeviceClass>BINARY_SWITCH</genericDeviceClass>
-                <specificDeviceClass>POWER_SWITCH_BINARY</specificDeviceClass>
-              </deviceClass>
-              <endpointId>5</endpointId>
-              <supportedCommandClasses>
-                <entry>
-                  <commandClass>PROTECTION</commandClass>
-                  <protectionCommandClass>
-                    <endpoint reference="../../../.."/>
-                    <version>2</version>
-                    <instances>1</instances>
-                    <versionSupported>2</versionSupported>
-                    <localModes>
-                      <localProtection>UNPROTECTED</localProtection>
-                      <localProtection>PROTECTED</localProtection>
-                    </localModes>
-                    <rfModes>
-                      <rfProtection>UNPROTECTED</rfProtection>
-                      <rfProtection>NORFCONTROL</rfProtection>
-                    </rfModes>
-                  </protectionCommandClass>
-                </entry>
-                <entry>
-                  <commandClass>METER</commandClass>
-                  <meterCommandClass>
-                    <endpoint reference="../../../.."/>
-                    <version>2</version>
-                    <instances>1</instances>
-                    <versionSupported>2</versionSupported>
-                    <meterType>ELECTRIC</meterType>
-                    <meterScales>
-                      <meterScale>E_KWh</meterScale>
-                      <meterScale>E_W</meterScale>
-                    </meterScales>
-                    <canReset>true</canReset>
-                    <isGetSupported>true</isGetSupported>
-                    <isSupportRequestSupported>true</isSupportRequestSupported>
-                  </meterCommandClass>
-                </entry>
-                <entry>
-                  <commandClass>SWITCH_BINARY</commandClass>
-                  <binarySwitchCommandClass>
-                    <endpoint reference="../../../.."/>
-                    <version>1</version>
-                    <instances>1</instances>
-                    <versionSupported>1</versionSupported>
-                    <isGetSupported>true</isGetSupported>
-                  </binarySwitchCommandClass>
-                </entry>
-                <entry>
-                  <commandClass>BASIC</commandClass>
-                  <basicCommandClass>
-                    <endpoint reference="../../../.."/>
-                    <version>0</version>
-                    <instances>0</instances>
-                    <versionSupported>0</versionSupported>
-                    <isGetSupported>true</isGetSupported>
-                  </basicCommandClass>
-                </entry>
-              </supportedCommandClasses>
-            </endPoint>
-          </entry>
-          <entry>
-            <int>6</int>
-            <endPoint>
-              <deviceClass>
-                <basicDeviceClass>ROUTING_SLAVE</basicDeviceClass>
-                <genericDeviceClass>BINARY_SWITCH</genericDeviceClass>
-                <specificDeviceClass>POWER_SWITCH_BINARY</specificDeviceClass>
-              </deviceClass>
-              <endpointId>6</endpointId>
-              <supportedCommandClasses>
-                <entry>
-                  <commandClass>PROTECTION</commandClass>
-                  <protectionCommandClass>
-                    <endpoint reference="../../../.."/>
-                    <version>2</version>
-                    <instances>1</instances>
-                    <versionSupported>2</versionSupported>
-                    <localModes>
-                      <localProtection>UNPROTECTED</localProtection>
-                      <localProtection>PROTECTED</localProtection>
-                    </localModes>
-                    <rfModes>
-                      <rfProtection>UNPROTECTED</rfProtection>
-                      <rfProtection>NORFCONTROL</rfProtection>
-                    </rfModes>
-                  </protectionCommandClass>
-                </entry>
-                <entry>
-                  <commandClass>METER</commandClass>
-                  <meterCommandClass>
-                    <endpoint reference="../../../.."/>
-                    <version>2</version>
-                    <instances>1</instances>
-                    <versionSupported>2</versionSupported>
-                    <meterType>ELECTRIC</meterType>
-                    <meterScales>
-                      <meterScale>E_KWh</meterScale>
-                      <meterScale>E_W</meterScale>
-                    </meterScales>
-                    <canReset>true</canReset>
-                    <isGetSupported>true</isGetSupported>
-                    <isSupportRequestSupported>true</isSupportRequestSupported>
-                  </meterCommandClass>
-                </entry>
-                <entry>
-                  <commandClass>SWITCH_BINARY</commandClass>
-                  <binarySwitchCommandClass>
-                    <endpoint reference="../../../.."/>
-                    <version>1</version>
-                    <instances>1</instances>
-                    <versionSupported>1</versionSupported>
-                    <isGetSupported>true</isGetSupported>
-                  </binarySwitchCommandClass>
-                </entry>
-                <entry>
-                  <commandClass>BASIC</commandClass>
-                  <basicCommandClass>
-                    <endpoint reference="../../../.."/>
-                    <version>0</version>
-                    <instances>0</instances>
-                    <versionSupported>0</versionSupported>
-                    <isGetSupported>true</isGetSupported>
-                  </basicCommandClass>
-                </entry>
-              </supportedCommandClasses>
-            </endPoint>
-          </entry>
-        </endpoints>
-        <useDestEndpointAsSource>true</useDestEndpointAsSource>
-        <endpointsAreTheSameDeviceClass>true</endpointsAreTheSameDeviceClass>
-      </multiInstanceCommandClass>
-    </entry>
-    <entry>
-      <commandClass>ASSOCIATION</commandClass>
-      <associationCommandClass>
-        <version>1</version>
-        <instances>1</instances>
-        <versionSupported>1</versionSupported>
-        <maxGroups>4</maxGroups>
-      </associationCommandClass>
     </entry>
   </supportedCommandClasses>
   <securedCommandClasses/>
@@ -678,7 +678,9 @@
     <int>5</int>
     <int>8</int>
     <int>9</int>
+    <int>11</int>
+    <int>12</int>
   </nodeNeighbors>
-  <lastSent>2017-07-21 09:59:59.643 UTC</lastSent>
-  <lastReceived>2017-07-21 09:59:59.793 UTC</lastReceived>
+  <lastSent>2017-10-08 19:59:04.498 UTC</lastSent>
+  <lastReceived>2017-10-08 19:59:04.647 UTC</lastReceived>
 </node>

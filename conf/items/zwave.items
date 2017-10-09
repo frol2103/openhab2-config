@@ -4,6 +4,8 @@ Group OnlyWhenPresent
 Group bedroom 	    "Bedroom" 	<bedroom> 	(ALL)
 Group bathroom 	    "Bathroom" 	<bath> 	(ALL)
 Group livingroom 	"Livingroom" 	<sofa> 	(ALL)
+Group kitchen 	"Kitchen" 	<kitchen> 	(ALL)
+Group outdoor 	"Extérieur" 	<garden> 	(ALL)
 
 Switch Blanket_Switch "Blanket" <socket> (bedroom, OnlyWhenPresent) {channel="zwave:device:5259a243:node2:switch_binary"} 
 Number Blanket_Power "Blanket power [%.1f W]" (bedroom) {channel="zwave:device:5259a243:node2:meter_watts"}
@@ -13,8 +15,7 @@ Number Blanket_Power "Blanket power [%.1f W]" (bedroom) {channel="zwave:device:5
 Switch Floor_Lamp "Floor Lamp" (livingroom, OnlyWhenPresent) {channel="zwave:device:5259a243:node3:switch_binary"} 
 Switch heater  (bathroom, OnlyWhenPresent) {channel="zwave:device:5259a243:node8:switch_binary"} 
 
-Switch Light_Living "Living" (livingroom, OnlyWhenPresent) {channel="zwave:device:5259a243:node5:switch_binary2"} 
-Switch Light_Dining "Dining" (livingroom, OnlyWhenPresent) {channel="zwave:device:5259a243:node5:switch_binary1"} 
+
 Rollershutter volume  (livingroom) {samsungtv="UP:TV:KEY_VOLUP, DOWN:TV:KEY_VOLDOWN"}
 
 Switch Tree <socket> (livingroom, OnlyWhenPresent)  {channel="zwave:device:5259a243:node7:switch_binary1"} 
@@ -41,3 +42,9 @@ Switch Mpd_Livingroom_play   "Start/Stop"    (livingroom)  { mpd="ON:livingroomp
 Dimmer Mpd_Bathroom_VolumeControl   "Volume [%d%%]"       (livingroom)  { mpd="INCREASE:livingroompi:volume_increase, DECREASE:livingroompi:volume_decrease, PERCENT:livingroompi:volume" }
 
 Dimmer LivingLight "Living" (livingroom) {channel="zwave:device:5259a243:node9:switch_dimmer1"}
+
+Switch Light_Garden "Jardin" (outdoor, OnlyWhenPresent) {channel="zwave:device:5259a243:node5:switch_binary1"} 
+Switch Light_Patio "Terasse" (outdoor, OnlyWhenPresent) {channel="zwave:device:5259a243:node5:switch_binary2"} 
+
+Switch Light_Kitchen "Cuisine" (kitchen, OnlyWhenPresent) {channel="zwave:device:5259a243:node11:switch_binary2"}
+Switch Light_Dining "Salle à manger"  (kitchen, OnlyWhenPresent) {channel="zwave:device:5259a243:node11:switch_binary1"}

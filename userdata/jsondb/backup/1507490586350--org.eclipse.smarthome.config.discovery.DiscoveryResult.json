@@ -1,0 +1,169 @@
+{
+  "zwave:device:5259a243:node11": {
+    "class": "org.eclipse.smarthome.config.discovery.internal.DiscoveryResultImpl",
+    "value": {
+      "bridgeUID": {
+        "segments": [
+          "zwave",
+          "serial_zstick",
+          "5259a243"
+        ]
+      },
+      "thingUID": {
+        "segments": [
+          "zwave",
+          "device",
+          "5259a243",
+          "node11"
+        ]
+      },
+      "thingTypeUID": {
+        "segments": [
+          "zwave",
+          "device"
+        ]
+      },
+      "properties": {
+        "zwave_class_basic": "ROUTING_SLAVE",
+        "zwave_class_generic": "BINARY_SWITCH",
+        "zwave_frequent": "false",
+        "zwave_version": "3.2",
+        "zwave_listening": "true",
+        "zwave_deviceid": "4096",
+        "zwave_nodeid": "11",
+        "zwave_routing": "true",
+        "zwave_beaming": "true",
+        "zwave_class_specific": "POWER_SWITCH_BINARY",
+        "zwave_manufacturer": "271",
+        "zwave_devicetype": "515"
+      },
+      "flag": "NEW",
+      "label": "Z-Wave Node 11: FGS223 Double Switch 2",
+      "timestamp": 1507490585846,
+      "timeToLive": -1
+    }
+  },
+  "zwave:device:5259a243:node8": {
+    "class": "org.eclipse.smarthome.config.discovery.internal.DiscoveryResultImpl",
+    "value": {
+      "bridgeUID": {
+        "segments": [
+          "zwave",
+          "serial_zstick",
+          "5259a243"
+        ]
+      },
+      "thingUID": {
+        "segments": [
+          "zwave",
+          "device",
+          "5259a243",
+          "node8"
+        ]
+      },
+      "thingTypeUID": {
+        "segments": [
+          "zwave",
+          "device"
+        ]
+      },
+      "properties": {
+        "zwave_class_basic": "ROUTING_SLAVE",
+        "zwave_class_generic": "BINARY_SWITCH",
+        "zwave_frequent": "false",
+        "zwave_nodeid": "8",
+        "zwave_version": "0.0",
+        "zwave_listening": "true",
+        "zwave_routing": "true",
+        "zwave_beaming": "true",
+        "zwave_class_specific": "POWER_SWITCH_BINARY"
+      },
+      "flag": "NEW",
+      "label": "Z-Wave Node 8",
+      "timestamp": 1507490585841,
+      "timeToLive": -1
+    }
+  },
+  "zwave:device:5259a243:node12": {
+    "class": "org.eclipse.smarthome.config.discovery.internal.DiscoveryResultImpl",
+    "value": {
+      "bridgeUID": {
+        "segments": [
+          "zwave",
+          "serial_zstick",
+          "5259a243"
+        ]
+      },
+      "thingUID": {
+        "segments": [
+          "zwave",
+          "device",
+          "5259a243",
+          "node12"
+        ]
+      },
+      "thingTypeUID": {
+        "segments": [
+          "zwave",
+          "device"
+        ]
+      },
+      "properties": {
+        "zwave_class_basic": "ROUTING_SLAVE",
+        "zwave_class_generic": "THERMOSTAT",
+        "zwave_frequent": "false",
+        "zwave_nodeid": "12",
+        "zwave_version": "0.0",
+        "zwave_listening": "false",
+        "zwave_routing": "true",
+        "zwave_beaming": "true",
+        "zwave_class_specific": "THERMOSTAT_GENERAL_V2"
+      },
+      "flag": "NEW",
+      "label": "Z-Wave Node 12",
+      "timestamp": 1507490585848,
+      "timeToLive": -1
+    }
+  },
+  "zwave:device:5259a243:node2": {
+    "class": "org.eclipse.smarthome.config.discovery.internal.DiscoveryResultImpl",
+    "value": {
+      "bridgeUID": {
+        "segments": [
+          "zwave",
+          "serial_zstick",
+          "5259a243"
+        ]
+      },
+      "thingUID": {
+        "segments": [
+          "zwave",
+          "device",
+          "5259a243",
+          "node2"
+        ]
+      },
+      "thingTypeUID": {
+        "segments": [
+          "zwave",
+          "device"
+        ]
+      },
+      "properties": {
+        "zwave_class_basic": "ROUTING_SLAVE",
+        "zwave_class_generic": "BINARY_SWITCH",
+        "zwave_frequent": "false",
+        "zwave_nodeid": "2",
+        "zwave_version": "0.0",
+        "zwave_listening": "true",
+        "zwave_routing": "true",
+        "zwave_beaming": "true",
+        "zwave_class_specific": "NOT_USED"
+      },
+      "flag": "NEW",
+      "label": "Z-Wave Node 2",
+      "timestamp": 1507490585833,
+      "timeToLive": -1
+    }
+  }
+}
