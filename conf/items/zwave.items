@@ -1,5 +1,6 @@
 Group All
 Group OnlyWhenPresent
+Group OnlyWhenPresentDimmer
 
 Group bedroom 	    "Bedroom" 	<bedroom> 	(ALL)
 Group bathroom 	    "Bathroom" 	<bath> 	(ALL)
@@ -16,7 +17,7 @@ Switch Floor_Lamp "Floor Lamp" (livingroom, OnlyWhenPresent) {channel="zwave:dev
 Switch heater  (bathroom, OnlyWhenPresent) {channel="zwave:device:5259a243:node8:switch_binary"} 
 
 
-Switch Tree <socket> (livingroom, OnlyWhenPresent)  {channel="zwave:device:5259a243:node7:switch_binary1"} 
+Switch Tel <socket> (livingroom)  {channel="zwave:device:5259a243:node7:switch_binary1"} 
 Switch Router <socket> (livingroom)  {channel="zwave:device:5259a243:node7:switch_binary2"} 
 Switch Decoder <socket> (livingroom)  {cchannel="zwave:device:5259a243:node7:switch_binary3"} 
 Switch Ampli "Ampli" <socket> (livingroom, OnlyWhenPresent)  {channel="zwave:device:5259a243:node7:switch_binary4"} 
@@ -30,7 +31,7 @@ Switch switch_living_living "MultiSwitch2"  {enocean="{id=00:29:5C:5E,eep=F6:02:
 
 Switch general
 
-Dimmer LivingLight "Living" (livingroom) {channel="zwave:device:5259a243:node9:switch_dimmer1"}
+Dimmer LivingLight "Living" (livingroom, OnlyWhenPresentDimmer) {channel="zwave:device:5259a243:node9:switch_dimmer1"}
 
 Switch Light_Garden "Jardin" (outdoor, OnlyWhenPresent) {channel="zwave:device:5259a243:node5:switch_binary1"} 
 Switch Light_Patio "Terasse" (outdoor, OnlyWhenPresent) {channel="zwave:device:5259a243:node5:switch_binary2"} 

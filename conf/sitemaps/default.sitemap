@@ -7,5 +7,6 @@ sitemap default label="Main Menu"
         Group item=kitchen
         Group item=outdoor
         Switch item=general
+        Group item=OnlyWhenPresentDimmer
 	}
 }

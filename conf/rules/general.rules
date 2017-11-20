@@ -1,8 +1,9 @@
     rule "cut all when cutting general"
 when
-    Item general update OFF
+    Item general changed to OFF
 then
     sendCommand(OnlyWhenPresent, OFF)
+    sendCommand(OnlyWhenPresentDimmer,0)
     sendCommand(general, ON)
 end
 
