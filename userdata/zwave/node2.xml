@@ -5,7 +5,7 @@
     <specificDeviceClass>NOT_USED</specificDeviceClass>
   </deviceClass>
   <homeId>0x184eba7</homeId>
-  <nodeId>3</nodeId>
+  <nodeId>2</nodeId>
   <version>4</version>
   <manufacturer>0x10f</manufacturer>
   <deviceId>0x1000</deviceId>
@@ -386,12 +386,12 @@
   </associationGroups>
   <nodeNeighbors>
     <int>1</int>
-    <int>2</int>
+    <int>3</int>
     <int>5</int>
+    <int>6</int>
     <int>7</int>
     <int>8</int>
-    <int>11</int>
   </nodeNeighbors>
-  <lastSent>2017-11-22 22:45:30.627 UTC</lastSent>
-  <lastReceived>2017-11-22 22:45:30.655 UTC</lastReceived>
+  <lastSent>2017-11-22 22:45:30.850 UTC</lastSent>
+  <lastReceived>2017-11-22 22:45:30.877 UTC</lastReceived>
 </node>

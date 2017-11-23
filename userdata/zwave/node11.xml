@@ -39,13 +39,43 @@
   </nodeInformationFrame>
   <supportedCommandClasses>
     <entry>
-      <commandClass>CENTRAL_SCENE</commandClass>
-      <centralSceneCommandClass>
-        <version>2</version>
+      <commandClass>FIRMWARE_UPDATE_MD</commandClass>
+      <firmwareUpdateCommandClass>
+        <version>1</version>
+        <instances>1</instances>
+        <versionSupported>3</versionSupported>
+      </firmwareUpdateCommandClass>
+    </entry>
+    <entry>
+      <commandClass>ZWAVE_PLUS_INFO</commandClass>
+      <zwavePlusCommandClass>
+        <version>1</version>
         <instances>1</instances>
         <versionSupported>2</versionSupported>
-        <sceneCount>2</sceneCount>
-      </centralSceneCommandClass>
+        <zwPlusVersion>1</zwPlusVersion>
+        <zwPlusRole>5</zwPlusRole>
+        <zwPlusNodeType>0</zwPlusNodeType>
+        <zwPlusDeviceType>0x700</zwPlusDeviceType>
+        <zwPlusInstallerIcon>0x700</zwPlusInstallerIcon>
+        <isGetSupported>true</isGetSupported>
+      </zwavePlusCommandClass>
+    </entry>
+    <entry>
+      <commandClass>CRC_16_ENCAP</commandClass>
+      <crc16EncapsulationCommandClass>
+        <version>1</version>
+        <instances>1</instances>
+        <versionSupported>1</versionSupported>
+      </crc16EncapsulationCommandClass>
+    </entry>
+    <entry>
+      <commandClass>MULTI_INSTANCE_ASSOCIATION</commandClass>
+      <multiAssociationCommandClass>
+        <version>3</version>
+        <instances>1</instances>
+        <versionSupported>3</versionSupported>
+        <maxGroups>5</maxGroups>
+      </multiAssociationCommandClass>
     </entry>
     <entry>
       <commandClass>MANUFACTURER_SPECIFIC</commandClass>
@@ -60,78 +90,20 @@
       </manufacturerSpecificCommandClass>
     </entry>
     <entry>
-      <commandClass>VERSION</commandClass>
-      <versionCommandClass>
-        <version>2</version>
-        <instances>1</instances>
-        <versionSupported>2</versionSupported>
-        <libraryType>LIB_SLAVE_ENHANCED</libraryType>
-        <protocolVersion>4.5</protocolVersion>
-        <applicationVersion>3.2</applicationVersion>
-        <hardwareVersion>3</hardwareVersion>
-      </versionCommandClass>
-    </entry>
-    <entry>
-      <commandClass>BASIC</commandClass>
-      <basicCommandClass>
-        <version>1</version>
-        <instances>1</instances>
-        <versionSupported>1</versionSupported>
-        <isGetSupported>true</isGetSupported>
-      </basicCommandClass>
-    </entry>
-    <entry>
-      <commandClass>DEVICE_RESET_LOCALLY</commandClass>
-      <deviceResetLocallyCommandClass>
-        <version>1</version>
-        <instances>1</instances>
-        <versionSupported>1</versionSupported>
-      </deviceResetLocallyCommandClass>
-    </entry>
-    <entry>
-      <commandClass>MULTI_INSTANCE_ASSOCIATION</commandClass>
-      <multiAssociationCommandClass>
+      <commandClass>METER</commandClass>
+      <meterCommandClass>
         <version>3</version>
         <instances>1</instances>
         <versionSupported>3</versionSupported>
-        <maxGroups>5</maxGroups>
-      </multiAssociationCommandClass>
-    </entry>
-    <entry>
-      <commandClass>APPLICATION_STATUS</commandClass>
-      <ZWaveApplicationStatusClass>
-        <version>1</version>
-        <instances>1</instances>
-        <versionSupported>1</versionSupported>
-      </ZWaveApplicationStatusClass>
-    </entry>
-    <entry>
-      <commandClass>ASSOCIATION</commandClass>
-      <associationCommandClass>
-        <version>2</version>
-        <instances>1</instances>
-        <versionSupported>2</versionSupported>
-        <maxGroups>5</maxGroups>
-      </associationCommandClass>
-    </entry>
-    <entry>
-      <commandClass>ASSOCIATION_GROUP_INFO</commandClass>
-      <associationGroupInfoCommandClass>
-        <version>1</version>
-        <instances>1</instances>
-        <versionSupported>1</versionSupported>
-        <autoSubscribeGroups>
-          <int>1</int>
-        </autoSubscribeGroups>
-      </associationGroupInfoCommandClass>
-    </entry>
-    <entry>
-      <commandClass>CRC_16_ENCAP</commandClass>
-      <crc16EncapsulationCommandClass>
-        <version>1</version>
-        <instances>1</instances>
-        <versionSupported>1</versionSupported>
-      </crc16EncapsulationCommandClass>
+        <meterType>ELECTRIC</meterType>
+        <meterScales>
+          <meterScale>E_W</meterScale>
+          <meterScale>E_KWh</meterScale>
+        </meterScales>
+        <canReset>true</canReset>
+        <isGetSupported>true</isGetSupported>
+        <isSupportRequestSupported>true</isSupportRequestSupported>
+      </meterCommandClass>
     </entry>
     <entry>
       <commandClass>PROTECTION</commandClass>
@@ -150,12 +122,71 @@
       </protectionCommandClass>
     </entry>
     <entry>
-      <commandClass>NO_OPERATION</commandClass>
-      <noOperationCommandClass>
+      <commandClass>SWITCH_BINARY</commandClass>
+      <binarySwitchCommandClass>
         <version>1</version>
         <instances>1</instances>
         <versionSupported>1</versionSupported>
-      </noOperationCommandClass>
+        <isGetSupported>true</isGetSupported>
+      </binarySwitchCommandClass>
+    </entry>
+    <entry>
+      <commandClass>DEVICE_RESET_LOCALLY</commandClass>
+      <deviceResetLocallyCommandClass>
+        <version>1</version>
+        <instances>1</instances>
+        <versionSupported>1</versionSupported>
+      </deviceResetLocallyCommandClass>
+    </entry>
+    <entry>
+      <commandClass>ALARM</commandClass>
+      <alarmCommandClass>
+        <version>5</version>
+        <instances>1</instances>
+        <versionSupported>5</versionSupported>
+        <alarms>
+          <entry>
+            <alarmType>POWER_MANAGEMENT</alarmType>
+            <alarmState>
+              <alarmType>POWER_MANAGEMENT</alarmType>
+              <reportedEvents>
+                <int>6</int>
+              </reportedEvents>
+              <outer-class reference="../../../.."/>
+            </alarmState>
+          </entry>
+          <entry>
+            <alarmType>HEAT</alarmType>
+            <alarmState>
+              <alarmType>HEAT</alarmType>
+              <reportedEvents>
+                <int>2</int>
+              </reportedEvents>
+              <outer-class reference="../../../.."/>
+            </alarmState>
+          </entry>
+        </alarms>
+        <v1Supported>true</v1Supported>
+        <isGetSupported>true</isGetSupported>
+      </alarmCommandClass>
+    </entry>
+    <entry>
+      <commandClass>ASSOCIATION</commandClass>
+      <associationCommandClass>
+        <version>2</version>
+        <instances>1</instances>
+        <versionSupported>2</versionSupported>
+        <maxGroups>5</maxGroups>
+      </associationCommandClass>
+    </entry>
+    <entry>
+      <commandClass>CENTRAL_SCENE</commandClass>
+      <centralSceneCommandClass>
+        <version>2</version>
+        <instances>1</instances>
+        <versionSupported>2</versionSupported>
+        <sceneCount>2</sceneCount>
+      </centralSceneCommandClass>
     </entry>
     <entry>
       <commandClass>POWERLEVEL</commandClass>
@@ -166,6 +197,54 @@
         <powerLevel>0</powerLevel>
         <powerTimeout>0</powerTimeout>
       </powerLevelCommandClass>
+    </entry>
+    <entry>
+      <commandClass>VERSION</commandClass>
+      <versionCommandClass>
+        <version>2</version>
+        <instances>1</instances>
+        <versionSupported>2</versionSupported>
+        <libraryType>LIB_SLAVE_ENHANCED</libraryType>
+        <protocolVersion>4.5</protocolVersion>
+        <applicationVersion>3.2</applicationVersion>
+        <hardwareVersion>3</hardwareVersion>
+      </versionCommandClass>
+    </entry>
+    <entry>
+      <commandClass>NO_OPERATION</commandClass>
+      <noOperationCommandClass>
+        <version>1</version>
+        <instances>1</instances>
+        <versionSupported>1</versionSupported>
+      </noOperationCommandClass>
+    </entry>
+    <entry>
+      <commandClass>APPLICATION_STATUS</commandClass>
+      <ZWaveApplicationStatusClass>
+        <version>1</version>
+        <instances>1</instances>
+        <versionSupported>1</versionSupported>
+      </ZWaveApplicationStatusClass>
+    </entry>
+    <entry>
+      <commandClass>BASIC</commandClass>
+      <basicCommandClass>
+        <version>1</version>
+        <instances>1</instances>
+        <versionSupported>1</versionSupported>
+        <isGetSupported>true</isGetSupported>
+      </basicCommandClass>
+    </entry>
+    <entry>
+      <commandClass>ASSOCIATION_GROUP_INFO</commandClass>
+      <associationGroupInfoCommandClass>
+        <version>1</version>
+        <instances>1</instances>
+        <versionSupported>1</versionSupported>
+        <autoSubscribeGroups>
+          <int>1</int>
+        </autoSubscribeGroups>
+      </associationGroupInfoCommandClass>
     </entry>
     <entry>
       <commandClass>CONFIGURATION</commandClass>
@@ -538,20 +617,6 @@
       </configurationCommandClass>
     </entry>
     <entry>
-      <commandClass>ZWAVE_PLUS_INFO</commandClass>
-      <zwavePlusCommandClass>
-        <version>1</version>
-        <instances>1</instances>
-        <versionSupported>2</versionSupported>
-        <zwPlusVersion>1</zwPlusVersion>
-        <zwPlusRole>5</zwPlusRole>
-        <zwPlusNodeType>0</zwPlusNodeType>
-        <zwPlusDeviceType>0x700</zwPlusDeviceType>
-        <zwPlusInstallerIcon>0x700</zwPlusInstallerIcon>
-        <isGetSupported>true</isGetSupported>
-      </zwavePlusCommandClass>
-    </entry>
-    <entry>
       <commandClass>MULTI_INSTANCE</commandClass>
       <multiInstanceCommandClass>
         <version>2</version>
@@ -569,48 +634,6 @@
               <endpointId>1</endpointId>
               <supportedCommandClasses>
                 <entry>
-                  <commandClass>VERSION</commandClass>
-                  <versionCommandClass>
-                    <endpoint reference="../../../.."/>
-                    <version>2</version>
-                    <instances>1</instances>
-                    <versionSupported>2</versionSupported>
-                    <libraryType>LIB_UNKNOWN</libraryType>
-                  </versionCommandClass>
-                </entry>
-                <entry>
-                  <commandClass>ASSOCIATION</commandClass>
-                  <associationCommandClass>
-                    <endpoint reference="../../../.."/>
-                    <version>2</version>
-                    <instances>1</instances>
-                    <versionSupported>2</versionSupported>
-                    <maxGroups>3</maxGroups>
-                  </associationCommandClass>
-                </entry>
-                <entry>
-                  <commandClass>ASSOCIATION_GROUP_INFO</commandClass>
-                  <associationGroupInfoCommandClass>
-                    <endpoint reference="../../../.."/>
-                    <version>1</version>
-                    <instances>1</instances>
-                    <versionSupported>1</versionSupported>
-                    <autoSubscribeGroups>
-                      <int>1</int>
-                    </autoSubscribeGroups>
-                  </associationGroupInfoCommandClass>
-                </entry>
-                <entry>
-                  <commandClass>BASIC</commandClass>
-                  <basicCommandClass>
-                    <endpoint reference="../../../.."/>
-                    <version>0</version>
-                    <instances>0</instances>
-                    <versionSupported>0</versionSupported>
-                    <isGetSupported>true</isGetSupported>
-                  </basicCommandClass>
-                </entry>
-                <entry>
                   <commandClass>ZWAVE_PLUS_INFO</commandClass>
                   <zwavePlusCommandClass>
                     <endpoint reference="../../../.."/>
@@ -624,6 +647,46 @@
                     <zwPlusInstallerIcon>0x700</zwPlusInstallerIcon>
                     <isGetSupported>true</isGetSupported>
                   </zwavePlusCommandClass>
+                </entry>
+                <entry>
+                  <commandClass>ASSOCIATION</commandClass>
+                  <associationCommandClass>
+                    <endpoint reference="../../../.."/>
+                    <version>2</version>
+                    <instances>1</instances>
+                    <versionSupported>2</versionSupported>
+                    <maxGroups>3</maxGroups>
+                  </associationCommandClass>
+                </entry>
+                <entry>
+                  <commandClass>MULTI_INSTANCE_ASSOCIATION</commandClass>
+                  <multiAssociationCommandClass>
+                    <endpoint reference="../../../.."/>
+                    <version>3</version>
+                    <instances>1</instances>
+                    <versionSupported>3</versionSupported>
+                    <maxGroups>3</maxGroups>
+                  </multiAssociationCommandClass>
+                </entry>
+                <entry>
+                  <commandClass>VERSION</commandClass>
+                  <versionCommandClass>
+                    <endpoint reference="../../../.."/>
+                    <version>2</version>
+                    <instances>1</instances>
+                    <versionSupported>2</versionSupported>
+                    <libraryType>LIB_UNKNOWN</libraryType>
+                  </versionCommandClass>
+                </entry>
+                <entry>
+                  <commandClass>BASIC</commandClass>
+                  <basicCommandClass>
+                    <endpoint reference="../../../.."/>
+                    <version>0</version>
+                    <instances>0</instances>
+                    <versionSupported>0</versionSupported>
+                    <isGetSupported>true</isGetSupported>
+                  </basicCommandClass>
                 </entry>
                 <entry>
                   <commandClass>METER</commandClass>
@@ -643,14 +706,16 @@
                   </meterCommandClass>
                 </entry>
                 <entry>
-                  <commandClass>MULTI_INSTANCE_ASSOCIATION</commandClass>
-                  <multiAssociationCommandClass>
+                  <commandClass>ASSOCIATION_GROUP_INFO</commandClass>
+                  <associationGroupInfoCommandClass>
                     <endpoint reference="../../../.."/>
-                    <version>3</version>
+                    <version>1</version>
                     <instances>1</instances>
-                    <versionSupported>3</versionSupported>
-                    <maxGroups>3</maxGroups>
-                  </multiAssociationCommandClass>
+                    <versionSupported>1</versionSupported>
+                    <autoSubscribeGroups>
+                      <int>1</int>
+                    </autoSubscribeGroups>
+                  </associationGroupInfoCommandClass>
                 </entry>
                 <entry>
                   <commandClass>SWITCH_BINARY</commandClass>
@@ -676,46 +741,6 @@
               <endpointId>2</endpointId>
               <supportedCommandClasses>
                 <entry>
-                  <commandClass>VERSION</commandClass>
-                  <versionCommandClass>
-                    <endpoint reference="../../../.."/>
-                    <version>2</version>
-                    <instances>1</instances>
-                    <versionSupported>2</versionSupported>
-                    <libraryType>LIB_UNKNOWN</libraryType>
-                  </versionCommandClass>
-                </entry>
-                <entry>
-                  <commandClass>ASSOCIATION</commandClass>
-                  <associationCommandClass>
-                    <endpoint reference="../../../.."/>
-                    <version>2</version>
-                    <instances>1</instances>
-                    <versionSupported>2</versionSupported>
-                    <maxGroups>3</maxGroups>
-                  </associationCommandClass>
-                </entry>
-                <entry>
-                  <commandClass>ASSOCIATION_GROUP_INFO</commandClass>
-                  <associationGroupInfoCommandClass>
-                    <endpoint reference="../../../.."/>
-                    <version>1</version>
-                    <instances>1</instances>
-                    <versionSupported>1</versionSupported>
-                    <autoSubscribeGroups/>
-                  </associationGroupInfoCommandClass>
-                </entry>
-                <entry>
-                  <commandClass>BASIC</commandClass>
-                  <basicCommandClass>
-                    <endpoint reference="../../../.."/>
-                    <version>0</version>
-                    <instances>0</instances>
-                    <versionSupported>0</versionSupported>
-                    <isGetSupported>true</isGetSupported>
-                  </basicCommandClass>
-                </entry>
-                <entry>
                   <commandClass>ZWAVE_PLUS_INFO</commandClass>
                   <zwavePlusCommandClass>
                     <endpoint reference="../../../.."/>
@@ -729,6 +754,46 @@
                     <zwPlusInstallerIcon>0x700</zwPlusInstallerIcon>
                     <isGetSupported>true</isGetSupported>
                   </zwavePlusCommandClass>
+                </entry>
+                <entry>
+                  <commandClass>ASSOCIATION</commandClass>
+                  <associationCommandClass>
+                    <endpoint reference="../../../.."/>
+                    <version>2</version>
+                    <instances>1</instances>
+                    <versionSupported>2</versionSupported>
+                    <maxGroups>3</maxGroups>
+                  </associationCommandClass>
+                </entry>
+                <entry>
+                  <commandClass>MULTI_INSTANCE_ASSOCIATION</commandClass>
+                  <multiAssociationCommandClass>
+                    <endpoint reference="../../../.."/>
+                    <version>3</version>
+                    <instances>1</instances>
+                    <versionSupported>3</versionSupported>
+                    <maxGroups>3</maxGroups>
+                  </multiAssociationCommandClass>
+                </entry>
+                <entry>
+                  <commandClass>VERSION</commandClass>
+                  <versionCommandClass>
+                    <endpoint reference="../../../.."/>
+                    <version>2</version>
+                    <instances>1</instances>
+                    <versionSupported>2</versionSupported>
+                    <libraryType>LIB_UNKNOWN</libraryType>
+                  </versionCommandClass>
+                </entry>
+                <entry>
+                  <commandClass>BASIC</commandClass>
+                  <basicCommandClass>
+                    <endpoint reference="../../../.."/>
+                    <version>0</version>
+                    <instances>0</instances>
+                    <versionSupported>0</versionSupported>
+                    <isGetSupported>true</isGetSupported>
+                  </basicCommandClass>
                 </entry>
                 <entry>
                   <commandClass>METER</commandClass>
@@ -748,14 +813,14 @@
                   </meterCommandClass>
                 </entry>
                 <entry>
-                  <commandClass>MULTI_INSTANCE_ASSOCIATION</commandClass>
-                  <multiAssociationCommandClass>
+                  <commandClass>ASSOCIATION_GROUP_INFO</commandClass>
+                  <associationGroupInfoCommandClass>
                     <endpoint reference="../../../.."/>
-                    <version>3</version>
+                    <version>1</version>
                     <instances>1</instances>
-                    <versionSupported>3</versionSupported>
-                    <maxGroups>3</maxGroups>
-                  </multiAssociationCommandClass>
+                    <versionSupported>1</versionSupported>
+                    <autoSubscribeGroups/>
+                  </associationGroupInfoCommandClass>
                 </entry>
                 <entry>
                   <commandClass>SWITCH_BINARY</commandClass>
@@ -774,71 +839,6 @@
         <useDestEndpointAsSource>false</useDestEndpointAsSource>
         <endpointsAreTheSameDeviceClass>true</endpointsAreTheSameDeviceClass>
       </multiInstanceCommandClass>
-    </entry>
-    <entry>
-      <commandClass>METER</commandClass>
-      <meterCommandClass>
-        <version>3</version>
-        <instances>1</instances>
-        <versionSupported>3</versionSupported>
-        <meterType>ELECTRIC</meterType>
-        <meterScales>
-          <meterScale>E_W</meterScale>
-          <meterScale>E_KWh</meterScale>
-        </meterScales>
-        <canReset>true</canReset>
-        <isGetSupported>true</isGetSupported>
-        <isSupportRequestSupported>true</isSupportRequestSupported>
-      </meterCommandClass>
-    </entry>
-    <entry>
-      <commandClass>FIRMWARE_UPDATE_MD</commandClass>
-      <firmwareUpdateCommandClass>
-        <version>1</version>
-        <instances>1</instances>
-        <versionSupported>3</versionSupported>
-      </firmwareUpdateCommandClass>
-    </entry>
-    <entry>
-      <commandClass>SWITCH_BINARY</commandClass>
-      <binarySwitchCommandClass>
-        <version>1</version>
-        <instances>1</instances>
-        <versionSupported>1</versionSupported>
-        <isGetSupported>true</isGetSupported>
-      </binarySwitchCommandClass>
-    </entry>
-    <entry>
-      <commandClass>ALARM</commandClass>
-      <alarmCommandClass>
-        <version>5</version>
-        <instances>1</instances>
-        <versionSupported>5</versionSupported>
-        <alarms>
-          <entry>
-            <alarmType>HEAT</alarmType>
-            <alarmState>
-              <alarmType>HEAT</alarmType>
-              <reportedEvents>
-                <int>2</int>
-              </reportedEvents>
-              <outer-class reference="../../../.."/>
-            </alarmState>
-          </entry>
-          <entry>
-            <alarmType>POWER_MANAGEMENT</alarmType>
-            <alarmState>
-              <alarmType>POWER_MANAGEMENT</alarmType>
-              <reportedEvents>
-                <int>6</int>
-              </reportedEvents>
-              <outer-class reference="../../../.."/>
-            </alarmState>
-          </entry>
-        </alarms>
-        <v1Supported>true</v1Supported>
-        <isGetSupported>true</isGetSupported>
-      </alarmCommandClass>
     </entry>
   </supportedCommandClasses>
   <securedCommandClasses/>
@@ -914,8 +914,7 @@
   <nodeNeighbors>
     <int>3</int>
     <int>7</int>
-    <int>12</int>
   </nodeNeighbors>
-  <lastSent>2017-10-08 19:59:08.31 UTC</lastSent>
-  <lastReceived>2017-10-08 19:59:08.177 UTC</lastReceived>
+  <lastSent>2017-11-22 22:46:00.733 UTC</lastSent>
+  <lastReceived>2017-11-22 22:46:01.585 UTC</lastReceived>
 </node>

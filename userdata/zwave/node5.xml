@@ -30,16 +30,50 @@
   </nodeInformationFrame>
   <supportedCommandClasses>
     <entry>
-      <commandClass>MANUFACTURER_SPECIFIC</commandClass>
-      <manufacturerSpecificCommandClass>
+      <commandClass>FIRMWARE_UPDATE_MD</commandClass>
+      <firmwareUpdateCommandClass>
         <version>1</version>
         <instances>1</instances>
         <versionSupported>1</versionSupported>
-        <initSerialNumber>false</initSerialNumber>
-        <deviceManufacturer>271</deviceManufacturer>
-        <deviceType>512</deviceType>
-        <deviceId>4106</deviceId>
-      </manufacturerSpecificCommandClass>
+      </firmwareUpdateCommandClass>
+    </entry>
+    <entry>
+      <commandClass>ASSOCIATION</commandClass>
+      <associationCommandClass>
+        <version>2</version>
+        <instances>1</instances>
+        <versionSupported>2</versionSupported>
+        <maxGroups>3</maxGroups>
+      </associationCommandClass>
+    </entry>
+    <entry>
+      <commandClass>MULTI_INSTANCE_ASSOCIATION</commandClass>
+      <multiAssociationCommandClass>
+        <version>1</version>
+        <instances>1</instances>
+        <versionSupported>1</versionSupported>
+        <maxGroups>2</maxGroups>
+      </multiAssociationCommandClass>
+    </entry>
+    <entry>
+      <commandClass>SWITCH_ALL</commandClass>
+      <switchAllCommandClass>
+        <version>1</version>
+        <instances>1</instances>
+        <versionSupported>1</versionSupported>
+        <isGetSupported>true</isGetSupported>
+        <mode>SWITCH_ALL_INCLUDE_ON_OFF</mode>
+      </switchAllCommandClass>
+    </entry>
+    <entry>
+      <commandClass>POWERLEVEL</commandClass>
+      <powerLevelCommandClass>
+        <version>1</version>
+        <instances>1</instances>
+        <versionSupported>1</versionSupported>
+        <powerLevel>0</powerLevel>
+        <powerTimeout>0</powerTimeout>
+      </powerLevelCommandClass>
     </entry>
     <entry>
       <commandClass>VERSION</commandClass>
@@ -53,23 +87,24 @@
       </versionCommandClass>
     </entry>
     <entry>
-      <commandClass>ASSOCIATION</commandClass>
-      <associationCommandClass>
-        <version>2</version>
-        <instances>1</instances>
-        <versionSupported>2</versionSupported>
-        <maxGroups>3</maxGroups>
-      </associationCommandClass>
-    </entry>
-    <entry>
-      <commandClass>SWITCH_ALL</commandClass>
-      <switchAllCommandClass>
+      <commandClass>MANUFACTURER_SPECIFIC</commandClass>
+      <manufacturerSpecificCommandClass>
         <version>1</version>
         <instances>1</instances>
         <versionSupported>1</versionSupported>
-        <isGetSupported>true</isGetSupported>
-        <mode>SWITCH_ALL_INCLUDE_ON_OFF</mode>
-      </switchAllCommandClass>
+        <initSerialNumber>false</initSerialNumber>
+        <deviceManufacturer>271</deviceManufacturer>
+        <deviceType>512</deviceType>
+        <deviceId>4106</deviceId>
+      </manufacturerSpecificCommandClass>
+    </entry>
+    <entry>
+      <commandClass>NO_OPERATION</commandClass>
+      <noOperationCommandClass>
+        <version>1</version>
+        <instances>1</instances>
+        <versionSupported>1</versionSupported>
+      </noOperationCommandClass>
     </entry>
     <entry>
       <commandClass>BASIC</commandClass>
@@ -81,22 +116,13 @@
       </basicCommandClass>
     </entry>
     <entry>
-      <commandClass>NO_OPERATION</commandClass>
-      <noOperationCommandClass>
+      <commandClass>SWITCH_BINARY</commandClass>
+      <binarySwitchCommandClass>
         <version>1</version>
         <instances>1</instances>
         <versionSupported>1</versionSupported>
-      </noOperationCommandClass>
-    </entry>
-    <entry>
-      <commandClass>POWERLEVEL</commandClass>
-      <powerLevelCommandClass>
-        <version>1</version>
-        <instances>1</instances>
-        <versionSupported>1</versionSupported>
-        <powerLevel>0</powerLevel>
-        <powerTimeout>0</powerTimeout>
-      </powerLevelCommandClass>
+        <isGetSupported>true</isGetSupported>
+      </binarySwitchCommandClass>
     </entry>
     <entry>
       <commandClass>CONFIGURATION</commandClass>
@@ -376,32 +402,6 @@
         <endpointsAreTheSameDeviceClass>true</endpointsAreTheSameDeviceClass>
       </multiInstanceCommandClass>
     </entry>
-    <entry>
-      <commandClass>MULTI_INSTANCE_ASSOCIATION</commandClass>
-      <multiAssociationCommandClass>
-        <version>1</version>
-        <instances>1</instances>
-        <versionSupported>1</versionSupported>
-        <maxGroups>2</maxGroups>
-      </multiAssociationCommandClass>
-    </entry>
-    <entry>
-      <commandClass>FIRMWARE_UPDATE_MD</commandClass>
-      <firmwareUpdateCommandClass>
-        <version>1</version>
-        <instances>1</instances>
-        <versionSupported>1</versionSupported>
-      </firmwareUpdateCommandClass>
-    </entry>
-    <entry>
-      <commandClass>SWITCH_BINARY</commandClass>
-      <binarySwitchCommandClass>
-        <version>1</version>
-        <instances>1</instances>
-        <versionSupported>1</versionSupported>
-        <isGetSupported>true</isGetSupported>
-      </binarySwitchCommandClass>
-    </entry>
   </supportedCommandClasses>
   <securedCommandClasses/>
   <associationGroups>
@@ -443,8 +443,7 @@
     <int>3</int>
     <int>6</int>
     <int>7</int>
-    <int>12</int>
   </nodeNeighbors>
-  <lastSent>2017-10-08 19:59:05.589 UTC</lastSent>
-  <lastReceived>2017-10-08 19:59:05.616 UTC</lastReceived>
+  <lastSent>2017-11-22 22:45:29.896 UTC</lastSent>
+  <lastReceived>2017-11-22 22:45:29.926 UTC</lastReceived>
 </node>

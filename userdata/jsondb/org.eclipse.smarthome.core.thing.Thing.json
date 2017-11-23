@@ -311,6 +311,7 @@
       ],
       "configuration": {
         "properties": {
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@563e838a": [],
           "config_31_2": 255,
           "config_54_1": 20,
           "config_10_1": 0,
@@ -318,43 +319,83 @@
           "group_1": [
             "node_1_0"
           ],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@6bf42d65": [],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@551b7b4b": [],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@17f0820f": [],
           "config_16_1": 0,
           "config_37_2": 0,
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@27647b34": [],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@7f87d788": [],
           "config_12_2": 50,
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@56b2d813": [
             "node_1_0"
           ],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@28b040ce": [
+            "node_1_0"
+          ],
           "config_18_2": 5,
           "config_33_2": 99,
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@4e037dee": [],
           "config_35_1": 0,
           "config_58_2": 3600,
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@1b24004b": [],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@50a3cc7a": [],
           "config_20_1": 2,
           "config_41_1": 2,
           "config_43_1": 1,
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@7edacaf": [],
           "config_60_1": 0,
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@50e077d0": [],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@1f356c5a": [],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@1513919b": [],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@37b88ed": [],
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@58493d26": [],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@79357230": [],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@431c3a0": [
+            "node_1_0"
+          ],
           "config_28_1": 0,
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@1b49c95b": [
+            "node_1_0"
+          ],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@4d63a2": [],
           "config_9_1": 1,
           "powerlevel_timeout": 0,
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@7b157c20": [],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@13e2a3ab": [
+            "node_1_0"
+          ],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@38e59792": [],
           "config_30_1": 0,
           "config_55_1": 10,
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@2ffd3f4": [],
           "config_32_2": 0,
           "config_53_2": 100,
           "config_11_1": 0,
           "config_51_1": 10,
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@67ddc73": [],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@b01e2ea": [
+            "node_1_0"
+          ],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@740411a4": [],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@12e37e52": [],
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@4a3ae0f6": [],
           "config_38_2": 99,
           "config_59_2": 3600,
           "config_17_2": 50,
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@6909a0b4": [],
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@47287a21": [
+            "node_1_0"
+          ],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@2a42724f": [
             "node_1_0"
           ],
           "config_13_2": 5,
           "config_15_1": 0,
           "config_36_2": 255,
           "config_57_2": 100,
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@526be485": [],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@50478d1d": [],
           "config_42_1": 3,
           "config_21_1": 0,
           "config_40_1": 3,
@@ -365,14 +406,15 @@
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@3ff33b6e": [],
           "config_29_1": 0,
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@d8496a0": [],
-          "config_44_2": 600
+          "config_44_2": 600,
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@5329feab": []
         }
       },
       "properties": {
         "zwave_class_basic": "ROUTING_SLAVE",
         "zwave_class_generic": "BINARY_SWITCH",
         "zwave_frequent": "false",
-        "zwave_neighbours": "3,7,12",
+        "zwave_neighbours": "3,7",
         "zwave_version": "3.2",
         "zwave_listening": "true",
         "zwave_plus_devicetype": "ON_OFF_POWER_SWITCH",
@@ -704,10 +746,20 @@
           ],
           "config_31_1": 2,
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@5f69f14b": [],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@6c88673f": [
+            "node_1_0"
+          ],
           "config_33_1": 1,
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@7f79b4dd": [
+            "node_1_0"
+          ],
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@3c6855bd": [
             "node_1_0"
           ],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@6a17fcc6": [
+            "node_1_0"
+          ],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@7581dfad": [],
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@55b49f62": [
             "node_1_0"
           ],
@@ -719,7 +771,9 @@
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@258a6b1": [
             "node_1_0"
           ],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@495d3029": [],
           "config_14_1": 1,
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@5946131a": [],
           "config_41_1": 2,
           "config_43_1": 1,
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@58f6f747": [],
@@ -736,6 +790,9 @@
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@9ea8872": [
             "node_1_0"
           ],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@31a207d": [
+            "node_1_0"
+          ],
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@62c15c3a": [
             "node_1_0"
           ],
@@ -745,6 +802,9 @@
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@6613ed3": [],
           "config_1_1": -1,
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@4e4bb072": [
+            "node_1_0"
+          ],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@329fa6e2": [
             "node_1_0"
           ],
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@4f752d47": [],
@@ -770,15 +830,25 @@
             "node_1_0"
           ],
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@3702e0d2": [],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@2c8c0d24": [
+            "node_1_0"
+          ],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@64d01e2c": [
+            "node_1_0"
+          ],
           "switchall_mode": 255,
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@3bea1d2e": [
             "node_1_0"
           ],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@6e28755c": [],
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@206ddbb9": [],
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@11089005": [
             "node_1_0"
           ],
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@4e3be3e2": [],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@4618a6da": [
+            "node_1_0"
+          ],
           "config_13_1": 0,
           "config_15_1": 0,
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@55ef1e91": [],
@@ -787,16 +857,30 @@
             "node_1_0"
           ],
           "config_40_1": 3,
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@51582112": [
+            "node_1_0"
+          ],
           "powerlevel_level": 0,
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@153706fc": [],
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@475a289e": [
             "node_1_0"
           ],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@10824cc1": [],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@68b7ee76": [],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@71be4542": [
+            "node_1_0"
+          ],
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@36e121b1": [],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@624f8506": [
+            "node_1_0"
+          ],
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@2899b5a8": [
             "node_1_0"
           ],
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@10b61bb0": [
+            "node_1_0"
+          ],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@145aadfd": [
             "node_1_0"
           ],
           "config_4_2": 0,
@@ -808,7 +892,7 @@
         "zwave_class_basic": "ROUTING_SLAVE",
         "zwave_class_generic": "BINARY_SWITCH",
         "zwave_frequent": "false",
-        "zwave_neighbours": "1,2,3,6,7,12",
+        "zwave_neighbours": "1,2,3,6,7",
         "zwave_version": "2.1",
         "zwave_listening": "true",
         "zwave_deviceid": "4106",
@@ -846,21 +930,280 @@
           "5259a243"
         ]
       },
-      "channels": [],
+      "channels": [
+        {
+          "acceptedItemType": "Switch",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "zwave",
+              "device",
+              "5259a243",
+              "node2",
+              "switch_binary"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "zwave",
+              "switch_binary"
+            ]
+          },
+          "label": "Switch",
+          "configuration": {
+            "properties": {}
+          },
+          "properties": {
+            "binding:*:OnOffType": "SWITCH_BINARY,BASIC"
+          },
+          "defaultTags": []
+        },
+        {
+          "acceptedItemType": "Number",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "zwave",
+              "device",
+              "5259a243",
+              "node2",
+              "sensor_power"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "zwave",
+              "sensor_power"
+            ]
+          },
+          "label": "Sensor (power)",
+          "configuration": {
+            "properties": {}
+          },
+          "properties": {
+            "binding:*:DecimalType": "SENSOR_MULTILEVEL;type\u003dPOWER"
+          },
+          "defaultTags": []
+        },
+        {
+          "acceptedItemType": "Number",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "zwave",
+              "device",
+              "5259a243",
+              "node2",
+              "meter_kwh"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "zwave",
+              "meter_kwh"
+            ]
+          },
+          "label": "Electric meter (kWh)",
+          "configuration": {
+            "properties": {}
+          },
+          "properties": {
+            "binding:*:DecimalType": "METER;type\u003dE_KWh"
+          },
+          "defaultTags": []
+        },
+        {
+          "acceptedItemType": "Number",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "zwave",
+              "device",
+              "5259a243",
+              "node2",
+              "meter_watts"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "zwave",
+              "meter_watts"
+            ]
+          },
+          "label": "Electric meter (watts)",
+          "configuration": {
+            "properties": {}
+          },
+          "properties": {
+            "binding:*:DecimalType": "METER;type\u003dE_W"
+          },
+          "defaultTags": []
+        },
+        {
+          "acceptedItemType": "Switch",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "zwave",
+              "device",
+              "5259a243",
+              "node2",
+              "meter_reset"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "zwave",
+              "meter_reset"
+            ]
+          },
+          "label": "Reset the total power consumption",
+          "configuration": {
+            "properties": {}
+          },
+          "properties": {
+            "binding:*:OnOffType": "METER"
+          },
+          "defaultTags": []
+        },
+        {
+          "acceptedItemType": "Number",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "zwave",
+              "device",
+              "5259a243",
+              "node2",
+              "config_decimal_param61"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "zwave",
+              "fibaro_fgwp101_00_000_config_decimal_param61"
+            ]
+          },
+          "label": "LED color when device is on",
+          "configuration": {
+            "properties": {}
+          },
+          "properties": {
+            "binding:*:DecimalType": "CONFIGURATION;parameter\u003d61"
+          },
+          "defaultTags": []
+        },
+        {
+          "acceptedItemType": "Number",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "zwave",
+              "device",
+              "5259a243",
+              "node2",
+              "config_decimal_param62"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "zwave",
+              "fibaro_fgwp101_00_000_config_decimal_param62"
+            ]
+          },
+          "label": "LED color when device is off",
+          "configuration": {
+            "properties": {}
+          },
+          "properties": {
+            "binding:*:DecimalType": "CONFIGURATION;parameter\u003d62"
+          },
+          "defaultTags": []
+        },
+        {
+          "acceptedItemType": "Number",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "zwave",
+              "device",
+              "5259a243",
+              "node2",
+              "notification_send"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "zwave",
+              "notification_send"
+            ]
+          },
+          "label": "Start Alarm LED Illumination",
+          "configuration": {
+            "properties": {}
+          },
+          "properties": {
+            "binding:*:DecimalType": "ALARM;event1\u003dSMOKE:1,event3\u003dBURGLAR:1"
+          },
+          "defaultTags": []
+        }
+      ],
       "configuration": {
-        "properties": {}
+        "properties": {
+          "config_51_2": 500,
+          "config_52_1": 6,
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@62ad440c": [],
+          "config_50_2": 300,
+          "config_70_2": -1,
+          "group_1": [],
+          "group_2": [],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@7633e1a5": [],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@6a09286d": [],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@720c6bbb": [],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@78f400cb": [],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@556330da": [],
+          "config_16_1": 1,
+          "config_39_2": 600,
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@2ef165ab": [],
+          "config_34_1": 63,
+          "config_35_1": 0,
+          "config_42_1": 15,
+          "config_63_1": 1,
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@15a2fbbf": [],
+          "config_43_1": 30,
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@53027256": [],
+          "config_60_2": 25000,
+          "config_61_1": 1,
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@66164b09": [],
+          "config_62_1": 8,
+          "config_40_1": 80,
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@6e36a1f4": [],
+          "powerlevel_level": 0,
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@1061a412": [],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@6cee2079": [],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@64ceca84": [],
+          "config_1_1": 1,
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@68d1a9bb": [],
+          "config_49_1": 0,
+          "powerlevel_timeout": 0,
+          "config_45_1": 10,
+          "config_47_2": 3600
+        }
       },
       "properties": {
         "zwave_class_basic": "ROUTING_SLAVE",
         "zwave_class_generic": "BINARY_SWITCH",
         "zwave_frequent": "false",
         "zwave_neighbours": "1,3,5,6,7,8",
-        "zwave_nodeid": "2",
-        "zwave_version": "0.0",
+        "zwave_version": "25.25",
         "zwave_listening": "true",
+        "zwave_deviceid": "4096",
+        "zwave_nodeid": "2",
         "zwave_routing": "true",
         "zwave_beaming": "true",
-        "zwave_class_specific": "NOT_USED"
+        "zwave_class_specific": "NOT_USED",
+        "zwave_manufacturer": "271",
+        "zwave_devicetype": "1536"
       },
       "uid": {
         "segments": [
@@ -873,7 +1216,7 @@
       "thingTypeUID": {
         "segments": [
           "zwave",
-          "device"
+          "fibaro_fgwp101_00_000"
         ]
       }
     }
@@ -1109,11 +1452,16 @@
       ],
       "configuration": {
         "properties": {
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@be14d27": [],
           "config_52_1": 6,
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@9ba347d": [],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@41deab3a": [],
           "config_50_2": 300,
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@4de145a0": [],
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@1f158f3c": [],
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@237beeaa": [],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@45e127d9": [],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@4f194ca9": [],
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@741f41d1": [],
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@217ffd1f": [],
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@108eda4b": [],
@@ -1129,26 +1477,37 @@
           "config_62_1": 8,
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@15ede44c": [],
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@2fb80698": [],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@29fb1dd7": [],
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@5ab75327": [],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@526a3f3": [],
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@11d262ae": [],
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@6164532d": [],
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@66b613de": [],
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@5a13aa2f": [],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@547763fa": [],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@1232f211": [],
           "config_1_1": 1,
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@44d76b1c": [],
           "config_49_1": 0,
           "powerlevel_timeout": 0,
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@51fba927": [],
           "config_45_1": 10,
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@6a24fc75": [],
           "config_47_2": 3600,
           "config_51_2": 500,
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@4e2f006c": [],
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@e9a9a7e": [],
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@49ded843": [],
           "config_70_2": -1,
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@40cd938e": [],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@40e8e7d9": [],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@fdec883": [],
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@7c4852f7": [],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@77dcae2": [],
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@25406de8": [],
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@8e3d278": [],
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@60db1356": [],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@d85a192": [],
           "config_34_1": 63,
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@6abd89de": [],
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@6971ac9d": [],
@@ -1158,12 +1517,14 @@
           "config_63_1": 1,
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@54d45f1d": [],
           "config_61_1": 1,
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@6cf9868c": [],
           "config_40_1": 80,
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@2c732fd7": [],
           "powerlevel_level": 0,
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@69eae9ce": [],
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@33da4e1": [],
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@11038af1": [],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@77d0625": [],
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@1a75699c": [],
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@56e95260": [],
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@50ebc15f": [],
@@ -1175,7 +1536,7 @@
         "zwave_class_basic": "ROUTING_SLAVE",
         "zwave_class_generic": "BINARY_SWITCH",
         "zwave_frequent": "false",
-        "zwave_neighbours": "1,2,5,7,8,11,12",
+        "zwave_neighbours": "1,2,5,7,8,11",
         "zwave_version": "25.25",
         "zwave_listening": "true",
         "zwave_deviceid": "4096",
@@ -1657,6 +2018,9 @@
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@751246a0": [
             "node_1_0"
           ],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@260a78fa": [],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@553aeaeb": [],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@68a19bd9": [],
           "config_14_1": 1,
           "config_37_1": 1,
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@3dd1416e": [
@@ -1669,12 +2033,17 @@
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@4cc2574a": [
             "node_1_0"
           ],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@139aaf9f": [
+            "node_1_0"
+          ],
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@344629ce": [],
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@3a5990af": [],
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@7020ead5": [
             "node_1_0"
           ],
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@344355e0": [],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@78424c7d": [],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@615275f4": [],
           "config_7_1": 1,
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@79d7bda8": [],
           "config_49_1": 1,
@@ -1688,9 +2057,12 @@
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@5f53e8eb": [
             "node_1_0"
           ],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@2449b04e": [],
           "config_53_2": 10,
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@40eace09": [],
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@1cbdfcc1": [],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@50266723": [],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@4223a7da": [],
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@17848f5": [
             "node_1_0"
           ],
@@ -1704,17 +2076,20 @@
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@d0e3c10": [],
           "config_15_1": 30,
           "config_42_1": 3,
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@67849220": [],
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@63e99365": [],
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@22f2ff21": [
             "node_1_0"
           ],
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@11b854b3": [],
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@1c25b642": [],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@40080892": [],
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@2ed348ff": [],
           "config_2_1": 63,
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@15c60bcf": [],
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@54c9ce3d": [],
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@586b020a": [],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@2192a71d": [],
           "config_6_2": 1,
           "config_27_1": 15,
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@492c996b": [],
@@ -1722,17 +2097,34 @@
           "config_46_1": 1,
           "config_31_1": 1,
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@59b45c08": [],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@270e2bd2": [
+            "node_1_0"
+          ],
           "config_54_1": 0,
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@11750886": [
+            "node_1_0"
+          ],
           "config_50_1": 10,
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@504802bd": [],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@6d41e9b4": [],
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@4febc937": [
             "node_1_0"
           ],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@5468dff2": [
+            "node_1_0"
+          ],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@257dc694": [],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@160eebfa": [],
           "config_16_2": 5,
           "config_39_2": 250,
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@6cef8397": [
+            "node_1_0"
+          ],
           "config_35_1": 1,
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@41b62d38": [],
           "config_58_1": 0,
           "config_20_1": 1,
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@11cd1718": [],
           "config_43_1": 1,
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@6bc9706d": [],
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@1892d082": [],
@@ -1741,12 +2133,17 @@
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@6572fd6a": [
             "node_1_0"
           ],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@21a43f18": [],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@5952d008": [],
           "config_1_1": 7,
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@1e70e836": [],
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@7f62ddc6": [],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@5f0e95b1": [],
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@2199d277": [
             "node_1_0"
           ],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@2bfbfe44": [],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@58da7751": [],
           "config_28_1": 0,
           "config_9_1": 1,
           "powerlevel_timeout": 0,
@@ -1756,12 +2153,16 @@
           "config_5_1": 1,
           "config_47_1": 1,
           "config_32_1": 2,
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@2244261f": [
+            "node_1_0"
+          ],
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@112f33a7": [
             "node_1_0"
           ],
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@4eecc13a": [],
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@6ffcd291": [],
           "switchall_mode": 255,
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@154a8e70": [],
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@26d5addb": [],
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@2ec33e75": [
             "node_1_0"
@@ -1771,6 +2172,7 @@
           "config_13_1": 1,
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@161cbc36": [],
           "config_21_1": 0,
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@3e4d6656": [],
           "config_40_1": 3,
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@79eb78e4": [],
           "powerlevel_level": 0,
@@ -1779,6 +2181,7 @@
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@3d4feb81": [],
           "config_8_2": 5,
           "config_29_1": 0,
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@56982388": [],
           "config_44_2": 600,
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@4e9df97c": [],
           "config_4_2": 0,
@@ -1790,7 +2193,7 @@
         "zwave_class_basic": "ROUTING_SLAVE",
         "zwave_class_generic": "MULTILEVEL_SWITCH",
         "zwave_frequent": "false",
-        "zwave_neighbours": "7,12",
+        "zwave_neighbours": "7",
         "zwave_version": "3.5",
         "zwave_listening": "true",
         "zwave_plus_devicetype": "LIGHT_DIMMER_SWITCH",
@@ -1996,27 +2399,39 @@
       ],
       "configuration": {
         "properties": {
-          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@21b320a9": [],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@44c0af6b": [],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@543f2955": [],
           "config_11_1": 12,
           "config_10_1": 12,
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@2f74caef": [],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@3e03e81a": [],
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@1d5dae35": [],
-          "wakeup_interval": 86400,
-          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@206e03d7": [],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@4a4b38ef": [],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@42c6bd44": [],
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@1b74d86a": [],
-          "config_2_1": -1,
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@e447cdd": [],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@6ac5b031": [],
           "wakeup_node": 1,
-          "config_8_1": 3,
-          "config_9_1": 4,
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@3ac4708a": [],
           "config_12_1": 12,
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@2ea9f872": [],
+          "config_13_1": 12,
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@21b320a9": [],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@4e74a57e": [],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@1af0a261": [],
+          "wakeup_interval": 86400,
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@206e03d7": [],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@5113a4ca": [],
+          "config_2_1": -1,
+          "config_8_1": 3,
+          "config_9_1": 4,
           "config_3_1": 0,
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@3eeb55f4": [],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@68c3e1ff": [],
           "config_4_1": 99,
-          "config_13_1": 12,
           "config_5_1": 0,
-          "config_6_1": 6
+          "config_6_1": 6,
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@5ab2d94c": []
         }
       },
       "properties": {
@@ -2029,6 +2444,7 @@
         "zwave_deviceid": "2",
         "zwave_nodeid": "6",
         "zwave_routing": "true",
+        "zwave_wakeup_time": "2017-11-14T00:20:33Z",
         "zwave_beaming": "true",
         "zwave_class_specific": "ROUTING_SENSOR_BINARY",
         "zwave_manufacturer": "316",
@@ -2659,12 +3075,15 @@
       ],
       "configuration": {
         "properties": {
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@334cba01": [],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@71d78802": [],
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@366ca998": [],
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@7e7413e2": [],
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@60b28f27": [],
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@2b750859": [
             "node_1_0"
           ],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@4bc10b7a": [],
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@3615060": [],
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@20c7468f": [
             "node_1_0"
@@ -2673,13 +3092,22 @@
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@4ff2e99d": [],
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@1e74b520": [],
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@236bd2ba": [],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@59ad9b0": [],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@60435778": [],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@4f8bd14": [],
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@2643f98c": [
             "node_1_0"
           ],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@29717367": [
+            "node_1_0"
+          ],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@7d3a0341": [],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@31fe08b8": [],
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@fab9cbf": [],
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@66695013": [
             "node_1_0"
           ],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@68e21f98": [],
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@1eb89b05": [],
           "config_1_1": 2,
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@1220b03b": [],
@@ -2698,9 +3126,17 @@
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@8f0e722": [
             "node_1_0"
           ],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@6b80a894": [],
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@14dfeffd": [],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@1cd282c8": [
+            "node_1_0"
+          ],
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@5f49bf1b": [],
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@36e2c1ef": [],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@48c6ebd2": [],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@31a92542": [
+            "node_1_0"
+          ],
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@6147f1df": [],
           "switchall_mode": 255,
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@18653de8": [
@@ -2710,7 +3146,16 @@
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@7a4b98f4": [
             "node_1_0"
           ],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@2da68fc8": [],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@3177de5d": [
+            "node_1_0"
+          ],
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@75ed4d4": [
+            "node_1_0"
+          ],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@21b73bc8": [],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@6335df32": [],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@43c96705": [
             "node_1_0"
           ],
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@1e67de59": [],
@@ -2723,8 +3168,10 @@
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@2ed19601": [
             "node_1_0"
           ],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@e3a101": [],
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@721e850": [],
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@1945231b": [],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@3be7d451": [],
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@1a4b2236": [
             "node_1_0"
           ],
@@ -2732,15 +3179,20 @@
             "node_1_0"
           ],
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@585f7652": [],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@1d90b0d3": [
+            "node_1_0"
+          ],
           "config_0_1": 10,
           "config_2_1": -128,
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@65c5dcf3": [],
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@41b55238": [
             "node_1_0"
           ],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@5840d5aa": [],
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@12f0d8e9": [],
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@10b34946": [],
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@da6bfa4": [],
+          "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@2db56d04": [],
           "config_4_1": 1,
           "group_org.openhab.binding.zwave.internal.protocol.ZWaveAssociationGroup@58befb5c": []
         }
@@ -2749,7 +3201,7 @@
         "zwave_class_basic": "ROUTING_SLAVE",
         "zwave_class_generic": "BINARY_SWITCH",
         "zwave_frequent": "false",
-        "zwave_neighbours": "2,3,5,8,9,11,12",
+        "zwave_neighbours": "2,3,5,8,9,11",
         "zwave_version": "4.27",
         "zwave_listening": "true",
         "zwave_deviceid": "4",

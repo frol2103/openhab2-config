@@ -33,6 +33,14 @@
   </nodeInformationFrame>
   <supportedCommandClasses>
     <entry>
+      <commandClass>CRC_16_ENCAP</commandClass>
+      <crc16EncapsulationCommandClass>
+        <version>1</version>
+        <instances>1</instances>
+        <versionSupported>1</versionSupported>
+      </crc16EncapsulationCommandClass>
+    </entry>
+    <entry>
       <commandClass>MANUFACTURER_SPECIFIC</commandClass>
       <manufacturerSpecificCommandClass>
         <version>1</version>
@@ -45,24 +53,66 @@
       </manufacturerSpecificCommandClass>
     </entry>
     <entry>
-      <commandClass>VERSION</commandClass>
-      <versionCommandClass>
+      <commandClass>METER</commandClass>
+      <meterCommandClass>
+        <version>2</version>
+        <instances>1</instances>
+        <versionSupported>2</versionSupported>
+        <meterType>ELECTRIC</meterType>
+        <meterScales>
+          <meterScale>E_W</meterScale>
+          <meterScale>E_KWh</meterScale>
+        </meterScales>
+        <canReset>true</canReset>
+        <isGetSupported>true</isGetSupported>
+        <isSupportRequestSupported>true</isSupportRequestSupported>
+      </meterCommandClass>
+    </entry>
+    <entry>
+      <commandClass>PROTECTION</commandClass>
+      <protectionCommandClass>
+        <version>2</version>
+        <instances>1</instances>
+        <versionSupported>2</versionSupported>
+        <localModes>
+          <localProtection>UNPROTECTED</localProtection>
+          <localProtection>PROTECTED</localProtection>
+        </localModes>
+        <rfModes>
+          <rfProtection>UNPROTECTED</rfProtection>
+          <rfProtection>NORFCONTROL</rfProtection>
+        </rfModes>
+      </protectionCommandClass>
+    </entry>
+    <entry>
+      <commandClass>INDICATOR</commandClass>
+      <indicatorCommandClass>
         <version>1</version>
         <instances>1</instances>
         <versionSupported>1</versionSupported>
-        <libraryType>LIB_SLAVE_ENHANCED</libraryType>
-        <protocolVersion>3.41</protocolVersion>
-        <applicationVersion>4.27</applicationVersion>
-      </versionCommandClass>
+        <indicator>0</indicator>
+        <isGetSupported>true</isGetSupported>
+      </indicatorCommandClass>
     </entry>
     <entry>
-      <commandClass>BASIC</commandClass>
-      <basicCommandClass>
+      <commandClass>SWITCH_BINARY</commandClass>
+      <binarySwitchCommandClass>
         <version>1</version>
         <instances>1</instances>
         <versionSupported>1</versionSupported>
         <isGetSupported>true</isGetSupported>
-      </basicCommandClass>
+      </binarySwitchCommandClass>
+    </entry>
+    <entry>
+      <commandClass>ALARM</commandClass>
+      <alarmCommandClass>
+        <version>1</version>
+        <instances>1</instances>
+        <versionSupported>1</versionSupported>
+        <alarms/>
+        <v1Supported>false</v1Supported>
+        <isGetSupported>true</isGetSupported>
+      </alarmCommandClass>
     </entry>
     <entry>
       <commandClass>ASSOCIATION</commandClass>
@@ -84,28 +134,15 @@
       </switchAllCommandClass>
     </entry>
     <entry>
-      <commandClass>CRC_16_ENCAP</commandClass>
-      <crc16EncapsulationCommandClass>
+      <commandClass>VERSION</commandClass>
+      <versionCommandClass>
         <version>1</version>
         <instances>1</instances>
         <versionSupported>1</versionSupported>
-      </crc16EncapsulationCommandClass>
-    </entry>
-    <entry>
-      <commandClass>PROTECTION</commandClass>
-      <protectionCommandClass>
-        <version>2</version>
-        <instances>1</instances>
-        <versionSupported>2</versionSupported>
-        <localModes>
-          <localProtection>UNPROTECTED</localProtection>
-          <localProtection>PROTECTED</localProtection>
-        </localModes>
-        <rfModes>
-          <rfProtection>UNPROTECTED</rfProtection>
-          <rfProtection>NORFCONTROL</rfProtection>
-        </rfModes>
-      </protectionCommandClass>
+        <libraryType>LIB_SLAVE_ENHANCED</libraryType>
+        <protocolVersion>3.41</protocolVersion>
+        <applicationVersion>4.27</applicationVersion>
+      </versionCommandClass>
     </entry>
     <entry>
       <commandClass>NO_OPERATION</commandClass>
@@ -114,6 +151,15 @@
         <instances>1</instances>
         <versionSupported>1</versionSupported>
       </noOperationCommandClass>
+    </entry>
+    <entry>
+      <commandClass>BASIC</commandClass>
+      <basicCommandClass>
+        <version>1</version>
+        <instances>1</instances>
+        <versionSupported>1</versionSupported>
+        <isGetSupported>true</isGetSupported>
+      </basicCommandClass>
     </entry>
     <entry>
       <commandClass>CONFIGURATION</commandClass>
@@ -203,23 +249,6 @@
                   </basicCommandClass>
                 </entry>
                 <entry>
-                  <commandClass>PROTECTION</commandClass>
-                  <protectionCommandClass>
-                    <endpoint reference="../../../.."/>
-                    <version>2</version>
-                    <instances>1</instances>
-                    <versionSupported>2</versionSupported>
-                    <localModes>
-                      <localProtection>UNPROTECTED</localProtection>
-                      <localProtection>PROTECTED</localProtection>
-                    </localModes>
-                    <rfModes>
-                      <rfProtection>UNPROTECTED</rfProtection>
-                      <rfProtection>NORFCONTROL</rfProtection>
-                    </rfModes>
-                  </protectionCommandClass>
-                </entry>
-                <entry>
                   <commandClass>METER</commandClass>
                   <meterCommandClass>
                     <endpoint reference="../../../.."/>
@@ -235,6 +264,23 @@
                     <isGetSupported>true</isGetSupported>
                     <isSupportRequestSupported>true</isSupportRequestSupported>
                   </meterCommandClass>
+                </entry>
+                <entry>
+                  <commandClass>PROTECTION</commandClass>
+                  <protectionCommandClass>
+                    <endpoint reference="../../../.."/>
+                    <version>2</version>
+                    <instances>1</instances>
+                    <versionSupported>2</versionSupported>
+                    <localModes>
+                      <localProtection>UNPROTECTED</localProtection>
+                      <localProtection>PROTECTED</localProtection>
+                    </localModes>
+                    <rfModes>
+                      <rfProtection>UNPROTECTED</rfProtection>
+                      <rfProtection>NORFCONTROL</rfProtection>
+                    </rfModes>
+                  </protectionCommandClass>
                 </entry>
                 <entry>
                   <commandClass>SWITCH_BINARY</commandClass>
@@ -270,23 +316,6 @@
                   </basicCommandClass>
                 </entry>
                 <entry>
-                  <commandClass>PROTECTION</commandClass>
-                  <protectionCommandClass>
-                    <endpoint reference="../../../.."/>
-                    <version>2</version>
-                    <instances>1</instances>
-                    <versionSupported>2</versionSupported>
-                    <localModes>
-                      <localProtection>UNPROTECTED</localProtection>
-                      <localProtection>PROTECTED</localProtection>
-                    </localModes>
-                    <rfModes>
-                      <rfProtection>UNPROTECTED</rfProtection>
-                      <rfProtection>NORFCONTROL</rfProtection>
-                    </rfModes>
-                  </protectionCommandClass>
-                </entry>
-                <entry>
                   <commandClass>METER</commandClass>
                   <meterCommandClass>
                     <endpoint reference="../../../.."/>
@@ -302,6 +331,23 @@
                     <isGetSupported>true</isGetSupported>
                     <isSupportRequestSupported>true</isSupportRequestSupported>
                   </meterCommandClass>
+                </entry>
+                <entry>
+                  <commandClass>PROTECTION</commandClass>
+                  <protectionCommandClass>
+                    <endpoint reference="../../../.."/>
+                    <version>2</version>
+                    <instances>1</instances>
+                    <versionSupported>2</versionSupported>
+                    <localModes>
+                      <localProtection>UNPROTECTED</localProtection>
+                      <localProtection>PROTECTED</localProtection>
+                    </localModes>
+                    <rfModes>
+                      <rfProtection>UNPROTECTED</rfProtection>
+                      <rfProtection>NORFCONTROL</rfProtection>
+                    </rfModes>
+                  </protectionCommandClass>
                 </entry>
                 <entry>
                   <commandClass>SWITCH_BINARY</commandClass>
@@ -337,23 +383,6 @@
                   </basicCommandClass>
                 </entry>
                 <entry>
-                  <commandClass>PROTECTION</commandClass>
-                  <protectionCommandClass>
-                    <endpoint reference="../../../.."/>
-                    <version>2</version>
-                    <instances>1</instances>
-                    <versionSupported>2</versionSupported>
-                    <localModes>
-                      <localProtection>UNPROTECTED</localProtection>
-                      <localProtection>PROTECTED</localProtection>
-                    </localModes>
-                    <rfModes>
-                      <rfProtection>UNPROTECTED</rfProtection>
-                      <rfProtection>NORFCONTROL</rfProtection>
-                    </rfModes>
-                  </protectionCommandClass>
-                </entry>
-                <entry>
                   <commandClass>METER</commandClass>
                   <meterCommandClass>
                     <endpoint reference="../../../.."/>
@@ -369,6 +398,23 @@
                     <isGetSupported>true</isGetSupported>
                     <isSupportRequestSupported>true</isSupportRequestSupported>
                   </meterCommandClass>
+                </entry>
+                <entry>
+                  <commandClass>PROTECTION</commandClass>
+                  <protectionCommandClass>
+                    <endpoint reference="../../../.."/>
+                    <version>2</version>
+                    <instances>1</instances>
+                    <versionSupported>2</versionSupported>
+                    <localModes>
+                      <localProtection>UNPROTECTED</localProtection>
+                      <localProtection>PROTECTED</localProtection>
+                    </localModes>
+                    <rfModes>
+                      <rfProtection>UNPROTECTED</rfProtection>
+                      <rfProtection>NORFCONTROL</rfProtection>
+                    </rfModes>
+                  </protectionCommandClass>
                 </entry>
                 <entry>
                   <commandClass>SWITCH_BINARY</commandClass>
@@ -404,23 +450,6 @@
                   </basicCommandClass>
                 </entry>
                 <entry>
-                  <commandClass>PROTECTION</commandClass>
-                  <protectionCommandClass>
-                    <endpoint reference="../../../.."/>
-                    <version>2</version>
-                    <instances>1</instances>
-                    <versionSupported>2</versionSupported>
-                    <localModes>
-                      <localProtection>UNPROTECTED</localProtection>
-                      <localProtection>PROTECTED</localProtection>
-                    </localModes>
-                    <rfModes>
-                      <rfProtection>UNPROTECTED</rfProtection>
-                      <rfProtection>NORFCONTROL</rfProtection>
-                    </rfModes>
-                  </protectionCommandClass>
-                </entry>
-                <entry>
                   <commandClass>METER</commandClass>
                   <meterCommandClass>
                     <endpoint reference="../../../.."/>
@@ -436,6 +465,23 @@
                     <isGetSupported>true</isGetSupported>
                     <isSupportRequestSupported>true</isSupportRequestSupported>
                   </meterCommandClass>
+                </entry>
+                <entry>
+                  <commandClass>PROTECTION</commandClass>
+                  <protectionCommandClass>
+                    <endpoint reference="../../../.."/>
+                    <version>2</version>
+                    <instances>1</instances>
+                    <versionSupported>2</versionSupported>
+                    <localModes>
+                      <localProtection>UNPROTECTED</localProtection>
+                      <localProtection>PROTECTED</localProtection>
+                    </localModes>
+                    <rfModes>
+                      <rfProtection>UNPROTECTED</rfProtection>
+                      <rfProtection>NORFCONTROL</rfProtection>
+                    </rfModes>
+                  </protectionCommandClass>
                 </entry>
                 <entry>
                   <commandClass>SWITCH_BINARY</commandClass>
@@ -471,23 +517,6 @@
                   </basicCommandClass>
                 </entry>
                 <entry>
-                  <commandClass>PROTECTION</commandClass>
-                  <protectionCommandClass>
-                    <endpoint reference="../../../.."/>
-                    <version>2</version>
-                    <instances>1</instances>
-                    <versionSupported>2</versionSupported>
-                    <localModes>
-                      <localProtection>UNPROTECTED</localProtection>
-                      <localProtection>PROTECTED</localProtection>
-                    </localModes>
-                    <rfModes>
-                      <rfProtection>UNPROTECTED</rfProtection>
-                      <rfProtection>NORFCONTROL</rfProtection>
-                    </rfModes>
-                  </protectionCommandClass>
-                </entry>
-                <entry>
                   <commandClass>METER</commandClass>
                   <meterCommandClass>
                     <endpoint reference="../../../.."/>
@@ -503,6 +532,23 @@
                     <isGetSupported>true</isGetSupported>
                     <isSupportRequestSupported>true</isSupportRequestSupported>
                   </meterCommandClass>
+                </entry>
+                <entry>
+                  <commandClass>PROTECTION</commandClass>
+                  <protectionCommandClass>
+                    <endpoint reference="../../../.."/>
+                    <version>2</version>
+                    <instances>1</instances>
+                    <versionSupported>2</versionSupported>
+                    <localModes>
+                      <localProtection>UNPROTECTED</localProtection>
+                      <localProtection>PROTECTED</localProtection>
+                    </localModes>
+                    <rfModes>
+                      <rfProtection>UNPROTECTED</rfProtection>
+                      <rfProtection>NORFCONTROL</rfProtection>
+                    </rfModes>
+                  </protectionCommandClass>
                 </entry>
                 <entry>
                   <commandClass>SWITCH_BINARY</commandClass>
@@ -538,23 +584,6 @@
                   </basicCommandClass>
                 </entry>
                 <entry>
-                  <commandClass>PROTECTION</commandClass>
-                  <protectionCommandClass>
-                    <endpoint reference="../../../.."/>
-                    <version>2</version>
-                    <instances>1</instances>
-                    <versionSupported>2</versionSupported>
-                    <localModes>
-                      <localProtection>UNPROTECTED</localProtection>
-                      <localProtection>PROTECTED</localProtection>
-                    </localModes>
-                    <rfModes>
-                      <rfProtection>UNPROTECTED</rfProtection>
-                      <rfProtection>NORFCONTROL</rfProtection>
-                    </rfModes>
-                  </protectionCommandClass>
-                </entry>
-                <entry>
                   <commandClass>METER</commandClass>
                   <meterCommandClass>
                     <endpoint reference="../../../.."/>
@@ -570,6 +599,23 @@
                     <isGetSupported>true</isGetSupported>
                     <isSupportRequestSupported>true</isSupportRequestSupported>
                   </meterCommandClass>
+                </entry>
+                <entry>
+                  <commandClass>PROTECTION</commandClass>
+                  <protectionCommandClass>
+                    <endpoint reference="../../../.."/>
+                    <version>2</version>
+                    <instances>1</instances>
+                    <versionSupported>2</versionSupported>
+                    <localModes>
+                      <localProtection>UNPROTECTED</localProtection>
+                      <localProtection>PROTECTED</localProtection>
+                    </localModes>
+                    <rfModes>
+                      <rfProtection>UNPROTECTED</rfProtection>
+                      <rfProtection>NORFCONTROL</rfProtection>
+                    </rfModes>
+                  </protectionCommandClass>
                 </entry>
                 <entry>
                   <commandClass>SWITCH_BINARY</commandClass>
@@ -588,52 +634,6 @@
         <useDestEndpointAsSource>true</useDestEndpointAsSource>
         <endpointsAreTheSameDeviceClass>true</endpointsAreTheSameDeviceClass>
       </multiInstanceCommandClass>
-    </entry>
-    <entry>
-      <commandClass>METER</commandClass>
-      <meterCommandClass>
-        <version>2</version>
-        <instances>1</instances>
-        <versionSupported>2</versionSupported>
-        <meterType>ELECTRIC</meterType>
-        <meterScales>
-          <meterScale>E_W</meterScale>
-          <meterScale>E_KWh</meterScale>
-        </meterScales>
-        <canReset>true</canReset>
-        <isGetSupported>true</isGetSupported>
-        <isSupportRequestSupported>true</isSupportRequestSupported>
-      </meterCommandClass>
-    </entry>
-    <entry>
-      <commandClass>INDICATOR</commandClass>
-      <indicatorCommandClass>
-        <version>1</version>
-        <instances>1</instances>
-        <versionSupported>1</versionSupported>
-        <indicator>0</indicator>
-        <isGetSupported>true</isGetSupported>
-      </indicatorCommandClass>
-    </entry>
-    <entry>
-      <commandClass>SWITCH_BINARY</commandClass>
-      <binarySwitchCommandClass>
-        <version>1</version>
-        <instances>1</instances>
-        <versionSupported>1</versionSupported>
-        <isGetSupported>true</isGetSupported>
-      </binarySwitchCommandClass>
-    </entry>
-    <entry>
-      <commandClass>ALARM</commandClass>
-      <alarmCommandClass>
-        <version>1</version>
-        <instances>1</instances>
-        <versionSupported>1</versionSupported>
-        <alarms/>
-        <v1Supported>false</v1Supported>
-        <isGetSupported>true</isGetSupported>
-      </alarmCommandClass>
     </entry>
   </supportedCommandClasses>
   <securedCommandClasses/>
@@ -679,8 +679,7 @@
     <int>8</int>
     <int>9</int>
     <int>11</int>
-    <int>12</int>
   </nodeNeighbors>
-  <lastSent>2017-10-08 19:59:04.498 UTC</lastSent>
-  <lastReceived>2017-10-08 19:59:04.647 UTC</lastReceived>
+  <lastSent>2017-11-22 22:45:45.127 UTC</lastSent>
+  <lastReceived>2017-11-22 22:45:45.277 UTC</lastReceived>
 </node>

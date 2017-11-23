@@ -37,6 +37,31 @@
       </associationCommandClass>
     </entry>
     <entry>
+      <commandClass>SENSOR_BINARY</commandClass>
+      <binarySensorCommandClass>
+        <version>2</version>
+        <instances>1</instances>
+        <versionSupported>2</versionSupported>
+        <isGetSupported>true</isGetSupported>
+        <types>
+          <binarySensorType>DOORWINDOW</binarySensorType>
+          <binarySensorType>TAMPER</binarySensorType>
+        </types>
+      </binarySensorCommandClass>
+    </entry>
+    <entry>
+      <commandClass>MANUFACTURER_SPECIFIC</commandClass>
+      <manufacturerSpecificCommandClass>
+        <version>1</version>
+        <instances>1</instances>
+        <versionSupported>2</versionSupported>
+        <initSerialNumber>false</initSerialNumber>
+        <deviceManufacturer>316</deviceManufacturer>
+        <deviceType>2</deviceType>
+        <deviceId>2</deviceId>
+      </manufacturerSpecificCommandClass>
+    </entry>
+    <entry>
       <commandClass>WAKE_UP</commandClass>
       <WakeUpCommandClass>
         <version>2</version>
@@ -48,9 +73,45 @@
         <maxInterval>432000</maxInterval>
         <defaultInterval>86400</defaultInterval>
         <intervalStep>1800</intervalStep>
-        <lastWakeup>2017-10-02 21:41:41.860 UTC</lastWakeup>
+        <lastWakeup>2017-11-19 20:29:29.987 UTC</lastWakeup>
         <isGetSupported>true</isGetSupported>
       </WakeUpCommandClass>
+    </entry>
+    <entry>
+      <commandClass>SENSOR_MULTILEVEL</commandClass>
+      <multiLevelSensorCommandClass>
+        <version>5</version>
+        <instances>1</instances>
+        <versionSupported>5</versionSupported>
+        <sensors>
+          <entry>
+            <multilevelSensorType>LUMINANCE</multilevelSensorType>
+            <multilevelSensor>
+              <sensorType>LUMINANCE</sensorType>
+              <initialised>true</initialised>
+            </multilevelSensor>
+          </entry>
+          <entry>
+            <multilevelSensorType>TEMPERATURE</multilevelSensorType>
+            <multilevelSensor>
+              <sensorType>TEMPERATURE</sensorType>
+              <initialised>true</initialised>
+            </multilevelSensor>
+          </entry>
+        </sensors>
+        <isGetSupported>true</isGetSupported>
+      </multiLevelSensorCommandClass>
+    </entry>
+    <entry>
+      <commandClass>BATTERY</commandClass>
+      <batteryCommandClass>
+        <version>1</version>
+        <instances>1</instances>
+        <versionSupported>1</versionSupported>
+        <batteryLevel>80</batteryLevel>
+        <batteryLow>false</batteryLow>
+        <isGetSupported>true</isGetSupported>
+      </batteryCommandClass>
     </entry>
     <entry>
       <commandClass>CONFIGURATION</commandClass>
@@ -173,18 +234,6 @@
       </configurationCommandClass>
     </entry>
     <entry>
-      <commandClass>MANUFACTURER_SPECIFIC</commandClass>
-      <manufacturerSpecificCommandClass>
-        <version>1</version>
-        <instances>1</instances>
-        <versionSupported>2</versionSupported>
-        <initSerialNumber>false</initSerialNumber>
-        <deviceManufacturer>316</deviceManufacturer>
-        <deviceType>2</deviceType>
-        <deviceId>2</deviceId>
-      </manufacturerSpecificCommandClass>
-    </entry>
-    <entry>
       <commandClass>BASIC</commandClass>
       <basicCommandClass>
         <version>1</version>
@@ -192,19 +241,6 @@
         <versionSupported>1</versionSupported>
         <isGetSupported>true</isGetSupported>
       </basicCommandClass>
-    </entry>
-    <entry>
-      <commandClass>SENSOR_BINARY</commandClass>
-      <binarySensorCommandClass>
-        <version>2</version>
-        <instances>1</instances>
-        <versionSupported>2</versionSupported>
-        <isGetSupported>true</isGetSupported>
-        <types>
-          <binarySensorType>TAMPER</binarySensorType>
-          <binarySensorType>DOORWINDOW</binarySensorType>
-        </types>
-      </binarySensorCommandClass>
     </entry>
     <entry>
       <commandClass>VERSION</commandClass>
@@ -224,42 +260,6 @@
         <instances>1</instances>
         <versionSupported>1</versionSupported>
       </noOperationCommandClass>
-    </entry>
-    <entry>
-      <commandClass>BATTERY</commandClass>
-      <batteryCommandClass>
-        <version>1</version>
-        <instances>1</instances>
-        <versionSupported>1</versionSupported>
-        <batteryLevel>100</batteryLevel>
-        <batteryLow>false</batteryLow>
-        <isGetSupported>true</isGetSupported>
-      </batteryCommandClass>
-    </entry>
-    <entry>
-      <commandClass>SENSOR_MULTILEVEL</commandClass>
-      <multiLevelSensorCommandClass>
-        <version>5</version>
-        <instances>1</instances>
-        <versionSupported>5</versionSupported>
-        <sensors>
-          <entry>
-            <multilevelSensorType>TEMPERATURE</multilevelSensorType>
-            <multilevelSensor>
-              <sensorType>TEMPERATURE</sensorType>
-              <initialised>true</initialised>
-            </multilevelSensor>
-          </entry>
-          <entry>
-            <multilevelSensorType>LUMINANCE</multilevelSensorType>
-            <multilevelSensor>
-              <sensorType>LUMINANCE</sensorType>
-              <initialised>true</initialised>
-            </multilevelSensor>
-          </entry>
-        </sensors>
-        <isGetSupported>true</isGetSupported>
-      </multiLevelSensorCommandClass>
     </entry>
   </supportedCommandClasses>
   <securedCommandClasses/>
@@ -283,6 +283,6 @@
     <int>2</int>
     <int>5</int>
   </nodeNeighbors>
-  <lastSent>2017-10-02 21:41:42.598 UTC</lastSent>
-  <lastReceived>2017-10-02 21:41:42.747 UTC</lastReceived>
+  <lastSent>2017-11-19 20:29:35.617 UTC</lastSent>
+  <lastReceived>2017-11-19 20:29:35.765 UTC</lastReceived>
 </node>
