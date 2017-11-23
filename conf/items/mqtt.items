@@ -1,0 +1,2 @@
+Number hall_temp "hall temp [%.1f]" (Temperatures)  {mqtt="<[sankal:hall/temp:state:default]"}
+Switch generalStop "generalStop" {mqtt="<[sankal:hall/button:state:default]"}

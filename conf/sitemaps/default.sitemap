@@ -6,7 +6,11 @@ sitemap default label="Main Menu"
         Group item=livingroom
         Group item=kitchen
         Group item=outdoor
-        Switch item=general
-        Group item=OnlyWhenPresentDimmer
 	}
+	Frame label="Infos"{
+        Group item=Temperatures
+  }
+	Frame label="Actions"{
+        Switch item=general
+  }
 }
