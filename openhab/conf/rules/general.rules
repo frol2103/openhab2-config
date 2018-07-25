@@ -1,9 +1,15 @@
-    rule "cut all when cutting general"
+var Timer timer
+
+  rule "cut all when cutting general"
 when
     Item generalStop changed to ON
 then
     sendCommand(OnlyWhenPresent, OFF)
     sendCommand(OnlyWhenPresentDimmer,0)
+    timer = createTimer(now.plusSeconds(300)) [|
+        sendCommand(OnlyWhenPresentPlus5, OFF)
+    ]
+    sendCommand(generalStop, OFF)
 end
 
 

@@ -1,5 +1,5 @@
 Number hall_temp "hall temp [%.1f]" (Temperatures)  {mqtt="<[sankal:hall/temp:state:default]"}
-Number living_temp "living temp [%.1f]" (Temperatures)  {mqtt="<[sankal:living/temp:state:default]"}
+Number living_temp "living temp [%.1f]" (Temperatures)  {mqtt="<[sankal:5C-CF-7F-0F-55-EB/temp:state:default]"}
 
 
 Switch generalStop "generalStop" {mqtt="<[sankal:hall/button:state:default]"}

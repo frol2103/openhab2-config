@@ -1,6 +1,7 @@
 Group All
 Group OnlyWhenPresent
 Group OnlyWhenPresentDimmer
+Group OnlyWhenPresentPlus5
 Group Temperatures
 
 Group bedroom 	    "Bedroom" 	<bedroom> 	(ALL)
@@ -8,15 +9,23 @@ Group bathroom 	    "Bathroom" 	<bath> 	(ALL)
 Group livingroom 	"Livingroom" 	<sofa> 	(ALL)
 Group kitchen 	"Kitchen" 	<kitchen> 	(ALL)
 Group outdoor 	"Extérieur" 	<garden> 	(ALL)
+Group hall 	"Extérieur" 	<corridor> 	(ALL)
 
 Switch Blanket_Switch "Blanket" <socket> (bedroom, OnlyWhenPresent) {channel="zwave:device:5259a243:node2:switch_binary"} 
 Number Blanket_Power "Blanket power [%.1f W]" (bedroom) {channel="zwave:device:5259a243:node2:meter_watts"}
 
 
 
-Switch Floor_Lamp "Floor Lamp" (livingroom, OnlyWhenPresent) {channel="zwave:device:5259a243:node3:switch_binary"} 
+Switch Front_Tree "Tree" (outdoor,OnlyWhenPresentPlus5 ) {channel="zwave:device:5259a243:node3:switch_binary"} 
+
+Switch Floor_Lamp "Floor lamp" (livingroom,OnlyWhenPresent) {channel="zwave:device:5259a243:node24:switch_binary"} 
+
+Switch Hall_deco_Lamp "deco lamp" (hall,OnlyWhenPresent) {channel="zwave:device:5259a243:node25:switch_binary"} 
+
 Switch heater  (bathroom, OnlyWhenPresent) {channel="zwave:device:5259a243:node8:switch_binary"} 
 
+
+Number Scene_General "Scene" <sofa>
 
 Switch Tel <socket> (livingroom)  {channel="zwave:device:5259a243:node7:switch_binary1"} 
 Switch Router <socket> (livingroom)  {channel="zwave:device:5259a243:node7:switch_binary2"} 

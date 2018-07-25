@@ -1,0 +1,8 @@
+// increase the counter at midnight
+rule "Increase counter"
+when
+    Time cron "0 0 6,7 ? * MON-FRI *"
+then
+    sendCommand(Front_Tree, ON )
+    sendCommand(Light_Deco, ON )
+end

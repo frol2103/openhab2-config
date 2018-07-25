@@ -5,5 +5,5 @@ Strategies {
 }
 
 Items {
-    * : strategy = everyChange
+    * : strategy = everyUpdate
 }

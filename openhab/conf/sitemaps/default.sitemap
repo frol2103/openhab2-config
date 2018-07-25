@@ -1,16 +1,26 @@
 sitemap default label="Main Menu"
 {
-	Frame label="Room"{
+  Frame label="Room"{
+        Text label="livingroom" icon=sofa {
+          Switch item=Scene_General label="Scene" mappings=[1=Day, 2=Mix, 3=Cosy]
+          Switch item=Floor_Lamp
+          Switch item=Ampli
+          Switch item=Light_Deco
+          Slider item=LivingLight
+          Text item=living_temp
+        }
         Group item=bedroom
         Group item=bathroom
-        Group item=livingroom
         Group item=kitchen
         Group item=outdoor
-	}
-	Frame label="Infos"{
+        Group item=hall
+  }
+  Frame label="Infos"{
         Group item=Temperatures
   }
-	Frame label="Actions"{
-        Switch item=general
+  Frame label="Actions"{
+        Switch item=generalStop
   }
 }
+
+
